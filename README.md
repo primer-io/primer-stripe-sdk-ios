@@ -7,7 +7,7 @@
 
 ## Description
 
-PrimerStripeSDK is a wrapper of the Stripe iOS SDK that exposes functionality for STripe-Backed Primer payment methods. It is intended to be used within the PrimerSDK as a seperate module. This repository provides the PrimerStripeSDK as a binary universal framework, which can be integrated manually, or via Cocoapods or Swift Package Manager.
+PrimerStripeSDK is a wrapper of the Stripe iOS SDK that exposes functionality for Stripe-Backed Primer payment methods. It is intended to be used within the PrimerSDK as a seperate module. This repository provides the PrimerStripeSDK as a binary universal framework, which can be integrated manually, or via Cocoapods or Swift Package Manager.
 
 ## This repository consists of
 - PrimerStripeSDK
