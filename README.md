@@ -18,3 +18,7 @@ PrimerStripeSDK is a wrapper of the Stripe iOS SDK that exposes functionality fo
 ## Building locally
 run `fastlane build_xcframeworks`
 Built frameworks can be found in the `build` folder.
+
+## Updating Dependencies
+- Replace `StripeSDK.xcframework` and `StripeFinancialConnections.xcframework` in the `Frameworks` directory with the new versions.
+- Run `fastlane build_xcframeworks`
