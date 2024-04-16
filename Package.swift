@@ -18,15 +18,15 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "PrimerStripeSDKFramework",
-            path: "./PrimerStripeSDK.xcframework"
+            path: "./Frameworks/PrimerStripeSDK.xcframework"
         ),
         .binaryTarget(
             name: "StripeSDKFramework",
-            path: "./StripeSDK.xcframework"
+            path: "./Frameworks/StripeSDK.xcframework"
         ),
         .binaryTarget(
             name: "StripeFinancialConnectionsFramework",
-            path: "./StripeFinancialConnections.xcframework"
+            path: "./Frameworks/StripeFinancialConnections.xcframework"
         )
     ]
 )

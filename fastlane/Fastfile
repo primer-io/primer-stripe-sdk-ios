@@ -43,17 +43,15 @@ platform :ios do
   private_lane :finalize do
 
     copy_artifacts(
-      target_path: 'build/XCFrameworks',
+      target_path: 'Frameworks',
       artifacts: [
-        'build/PrimerStripeSDK.xcframework', 
-        'Dependencies/Stripe.xcframework', 
-        'Dependencies/StripeFinancialConnections.xcframework'
+        'build/PrimerStripeSDK.xcframework'
       ]
     )
 
     # Zip XCFrameworks
     zip(
-      path: 'build/XCFrameworks',
+      path: 'Frameworks',
       output_path: 'build/XCFrameworks.zip'
     )
   end
