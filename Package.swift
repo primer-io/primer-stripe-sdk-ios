@@ -10,7 +10,7 @@ let package = Package(
             name: "PrimerStripeSDK",
             targets: [
                 "PrimerStripeSDKFramework",
-                "StripeSDKFramework",
+                "StripeFramework",
                 "StripeFinancialConnectionsFramework"
             ]
         )
@@ -21,8 +21,8 @@ let package = Package(
             path: "./Frameworks/PrimerStripeSDK.xcframework"
         ),
         .binaryTarget(
-            name: "StripeSDKFramework",
-            path: "./Frameworks/StripeSDK.xcframework"
+            name: "StripeFramework",
+            path: "./Frameworks/Stripe.xcframework"
         ),
         .binaryTarget(
             name: "StripeFinancialConnectionsFramework",
