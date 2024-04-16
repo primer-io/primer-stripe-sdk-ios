@@ -1,0 +1,60 @@
+default_platform(:ios)
+
+platform :ios do
+  lane :build_xcframeworks do
+    prepare
+    archive
+    build
+    finalize
+  end
+
+  private_lane :prepare do
+    sh('rm -rf ../build')
+  end
+
+  private_lane :archive do
+    # Archive for iOS Devices
+    xcarchive(
+      scheme: 'PrimerStripeSDK',
+      destination: 'generic/platform=iOS',
+      archive_path: 'build/PrimerStripeSDK-iOS',
+      xcargs: 'SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES'
+    )
+
+    # Archive for iOS Simulators
+    xcarchive(
+      scheme: 'PrimerStripeSDK',
+      destination: 'generic/platform=iOS Simulator',
+      archive_path: 'build/PrimerStripeSDK-Simulator',
+      xcargs: 'SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES'
+    )
+  end
+
+  private_lane :build do
+    create_xcframework(
+      frameworks: [
+        'build/PrimerStripeSDK-iOS.xcarchive/Products/Library/Frameworks/PrimerStripeSDK.framework',
+        'build/PrimerStripeSDK-Simulator.xcarchive/Products/Library/Frameworks/PrimerStripeSDK.framework'
+      ],
+      output: 'build/PrimerStripeSDK.xcframework'
+    )
+  end
+
+  private_lane :finalize do
+
+    copy_artifacts(
+      target_path: 'build/XCFrameworks',
+      artifacts: [
+        'build/PrimerStripeSDK.xcframework', 
+        'Dependencies/Stripe.xcframework', 
+        'Dependencies/StripeFinancialConnections.xcframework'
+      ]
+    )
+
+    # Zip XCFrameworks
+    zip(
+      path: 'build/XCFrameworks',
+      output_path: 'build/XCFrameworks.zip'
+    )
+  end
+end
