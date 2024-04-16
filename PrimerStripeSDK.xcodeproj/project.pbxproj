@@ -7,77 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F08FA40B2BCE746A004541B7 /* PrimerStripeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08FA4022BCE746A004541B7 /* PrimerStripeSDK.framework */; };
-		F08FA4102BCE746A004541B7 /* PrimerStripeSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08FA40F2BCE746A004541B7 /* PrimerStripeSDKTests.swift */; };
-		F08FA4112BCE746A004541B7 /* PrimerStripeSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F08FA4052BCE746A004541B7 /* PrimerStripeSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F08FA42D2BCE777F004541B7 /* PrimerStripeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08FA4242BCE777F004541B7 /* PrimerStripeSDK.framework */; };
+		F08FA4322BCE777F004541B7 /* PrimerStripeSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08FA4312BCE777F004541B7 /* PrimerStripeSDKTests.swift */; };
+		F08FA4332BCE777F004541B7 /* PrimerStripeSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F08FA40C2BCE746A004541B7 /* PBXContainerItemProxy */ = {
+		F08FA42E2BCE777F004541B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F08FA3F92BCE746A004541B7 /* Project object */;
+			containerPortal = F08FA41B2BCE777F004541B7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F08FA4012BCE746A004541B7;
+			remoteGlobalIDString = F08FA4232BCE777F004541B7;
 			remoteInfo = PrimerStripeSDK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F08FA4022BCE746A004541B7 /* PrimerStripeSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimerStripeSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F08FA4052BCE746A004541B7 /* PrimerStripeSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimerStripeSDK.h; sourceTree = "<group>"; };
-		F08FA40A2BCE746A004541B7 /* PrimerStripeSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimerStripeSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F08FA40F2BCE746A004541B7 /* PrimerStripeSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerStripeSDKTests.swift; sourceTree = "<group>"; };
+		F08FA4242BCE777F004541B7 /* PrimerStripeSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimerStripeSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimerStripeSDK.h; sourceTree = "<group>"; };
+		F08FA42C2BCE777F004541B7 /* PrimerStripeSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimerStripeSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08FA4312BCE777F004541B7 /* PrimerStripeSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerStripeSDKTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F08FA3FF2BCE746A004541B7 /* Frameworks */ = {
+		F08FA4212BCE777F004541B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F08FA4072BCE746A004541B7 /* Frameworks */ = {
+		F08FA4292BCE777F004541B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08FA40B2BCE746A004541B7 /* PrimerStripeSDK.framework in Frameworks */,
+				F08FA42D2BCE777F004541B7 /* PrimerStripeSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F08FA3F82BCE746A004541B7 = {
+		F08FA41A2BCE777F004541B7 = {
 			isa = PBXGroup;
 			children = (
-				F08FA4042BCE746A004541B7 /* PrimerStripeSDK */,
-				F08FA40E2BCE746A004541B7 /* PrimerStripeSDKTests */,
-				F08FA4032BCE746A004541B7 /* Products */,
+				F08FA4262BCE777F004541B7 /* PrimerStripeSDK */,
+				F08FA4302BCE777F004541B7 /* PrimerStripeSDKTests */,
+				F08FA4252BCE777F004541B7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F08FA4032BCE746A004541B7 /* Products */ = {
+		F08FA4252BCE777F004541B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F08FA4022BCE746A004541B7 /* PrimerStripeSDK.framework */,
-				F08FA40A2BCE746A004541B7 /* PrimerStripeSDKTests.xctest */,
+				F08FA4242BCE777F004541B7 /* PrimerStripeSDK.framework */,
+				F08FA42C2BCE777F004541B7 /* PrimerStripeSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F08FA4042BCE746A004541B7 /* PrimerStripeSDK */ = {
+		F08FA4262BCE777F004541B7 /* PrimerStripeSDK */ = {
 			isa = PBXGroup;
 			children = (
-				F08FA4052BCE746A004541B7 /* PrimerStripeSDK.h */,
+				F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */,
 			);
 			path = PrimerStripeSDK;
 			sourceTree = "<group>";
 		};
-		F08FA40E2BCE746A004541B7 /* PrimerStripeSDKTests */ = {
+		F08FA4302BCE777F004541B7 /* PrimerStripeSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				F08FA40F2BCE746A004541B7 /* PrimerStripeSDKTests.swift */,
+				F08FA4312BCE777F004541B7 /* PrimerStripeSDKTests.swift */,
 			);
 			path = PrimerStripeSDKTests;
 			sourceTree = "<group>";
@@ -85,25 +85,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F08FA3FD2BCE746A004541B7 /* Headers */ = {
+		F08FA41F2BCE777F004541B7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08FA4112BCE746A004541B7 /* PrimerStripeSDK.h in Headers */,
+				F08FA4332BCE777F004541B7 /* PrimerStripeSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F08FA4012BCE746A004541B7 /* PrimerStripeSDK */ = {
+		F08FA4232BCE777F004541B7 /* PrimerStripeSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F08FA4142BCE746A004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDK" */;
+			buildConfigurationList = F08FA4362BCE777F004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDK" */;
 			buildPhases = (
-				F08FA3FD2BCE746A004541B7 /* Headers */,
-				F08FA3FE2BCE746A004541B7 /* Sources */,
-				F08FA3FF2BCE746A004541B7 /* Frameworks */,
-				F08FA4002BCE746A004541B7 /* Resources */,
+				F08FA41F2BCE777F004541B7 /* Headers */,
+				F08FA4202BCE777F004541B7 /* Sources */,
+				F08FA4212BCE777F004541B7 /* Frameworks */,
+				F08FA4222BCE777F004541B7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -111,46 +111,46 @@
 			);
 			name = PrimerStripeSDK;
 			productName = PrimerStripeSDK;
-			productReference = F08FA4022BCE746A004541B7 /* PrimerStripeSDK.framework */;
+			productReference = F08FA4242BCE777F004541B7 /* PrimerStripeSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F08FA4092BCE746A004541B7 /* PrimerStripeSDKTests */ = {
+		F08FA42B2BCE777F004541B7 /* PrimerStripeSDKTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F08FA4172BCE746A004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDKTests" */;
+			buildConfigurationList = F08FA4392BCE777F004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDKTests" */;
 			buildPhases = (
-				F08FA4062BCE746A004541B7 /* Sources */,
-				F08FA4072BCE746A004541B7 /* Frameworks */,
-				F08FA4082BCE746A004541B7 /* Resources */,
+				F08FA4282BCE777F004541B7 /* Sources */,
+				F08FA4292BCE777F004541B7 /* Frameworks */,
+				F08FA42A2BCE777F004541B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F08FA40D2BCE746A004541B7 /* PBXTargetDependency */,
+				F08FA42F2BCE777F004541B7 /* PBXTargetDependency */,
 			);
 			name = PrimerStripeSDKTests;
 			productName = PrimerStripeSDKTests;
-			productReference = F08FA40A2BCE746A004541B7 /* PrimerStripeSDKTests.xctest */;
+			productReference = F08FA42C2BCE777F004541B7 /* PrimerStripeSDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F08FA3F92BCE746A004541B7 /* Project object */ = {
+		F08FA41B2BCE777F004541B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					F08FA4012BCE746A004541B7 = {
+					F08FA4232BCE777F004541B7 = {
 						CreatedOnToolsVersion = 15.2;
 					};
-					F08FA4092BCE746A004541B7 = {
+					F08FA42B2BCE777F004541B7 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = F08FA3FC2BCE746A004541B7 /* Build configuration list for PBXProject "PrimerStripeSDK" */;
+			buildConfigurationList = F08FA41E2BCE777F004541B7 /* Build configuration list for PBXProject "PrimerStripeSDK" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -158,26 +158,26 @@
 				en,
 				Base,
 			);
-			mainGroup = F08FA3F82BCE746A004541B7;
-			productRefGroup = F08FA4032BCE746A004541B7 /* Products */;
+			mainGroup = F08FA41A2BCE777F004541B7;
+			productRefGroup = F08FA4252BCE777F004541B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F08FA4012BCE746A004541B7 /* PrimerStripeSDK */,
-				F08FA4092BCE746A004541B7 /* PrimerStripeSDKTests */,
+				F08FA4232BCE777F004541B7 /* PrimerStripeSDK */,
+				F08FA42B2BCE777F004541B7 /* PrimerStripeSDKTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F08FA4002BCE746A004541B7 /* Resources */ = {
+		F08FA4222BCE777F004541B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F08FA4082BCE746A004541B7 /* Resources */ = {
+		F08FA42A2BCE777F004541B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,33 +187,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F08FA3FE2BCE746A004541B7 /* Sources */ = {
+		F08FA4202BCE777F004541B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F08FA4062BCE746A004541B7 /* Sources */ = {
+		F08FA4282BCE777F004541B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08FA4102BCE746A004541B7 /* PrimerStripeSDKTests.swift in Sources */,
+				F08FA4322BCE777F004541B7 /* PrimerStripeSDKTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F08FA40D2BCE746A004541B7 /* PBXTargetDependency */ = {
+		F08FA42F2BCE777F004541B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F08FA4012BCE746A004541B7 /* PrimerStripeSDK */;
-			targetProxy = F08FA40C2BCE746A004541B7 /* PBXContainerItemProxy */;
+			target = F08FA4232BCE777F004541B7 /* PrimerStripeSDK */;
+			targetProxy = F08FA42E2BCE777F004541B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F08FA4122BCE746A004541B7 /* Debug */ = {
+		F08FA4342BCE777F004541B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,7 +279,7 @@
 			};
 			name = Debug;
 		};
-		F08FA4132BCE746A004541B7 /* Release */ = {
+		F08FA4352BCE777F004541B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -338,7 +338,7 @@
 			};
 			name = Release;
 		};
-		F08FA4152BCE746A004541B7 /* Debug */ = {
+		F08FA4372BCE777F004541B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -352,7 +352,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 130;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,7 +374,7 @@
 			};
 			name = Debug;
 		};
-		F08FA4162BCE746A004541B7 /* Release */ = {
+		F08FA4382BCE777F004541B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -388,7 +388,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 130;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +410,7 @@
 			};
 			name = Release;
 		};
-		F08FA4182BCE746A004541B7 /* Debug */ = {
+		F08FA43A2BCE777F004541B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -426,7 +426,7 @@
 			};
 			name = Debug;
 		};
-		F08FA4192BCE746A004541B7 /* Release */ = {
+		F08FA43B2BCE777F004541B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -445,34 +445,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F08FA3FC2BCE746A004541B7 /* Build configuration list for PBXProject "PrimerStripeSDK" */ = {
+		F08FA41E2BCE777F004541B7 /* Build configuration list for PBXProject "PrimerStripeSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F08FA4122BCE746A004541B7 /* Debug */,
-				F08FA4132BCE746A004541B7 /* Release */,
+				F08FA4342BCE777F004541B7 /* Debug */,
+				F08FA4352BCE777F004541B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F08FA4142BCE746A004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDK" */ = {
+		F08FA4362BCE777F004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F08FA4152BCE746A004541B7 /* Debug */,
-				F08FA4162BCE746A004541B7 /* Release */,
+				F08FA4372BCE777F004541B7 /* Debug */,
+				F08FA4382BCE777F004541B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F08FA4172BCE746A004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDKTests" */ = {
+		F08FA4392BCE777F004541B7 /* Build configuration list for PBXNativeTarget "PrimerStripeSDKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F08FA4182BCE746A004541B7 /* Debug */,
-				F08FA4192BCE746A004541B7 /* Release */,
+				F08FA43A2BCE777F004541B7 /* Debug */,
+				F08FA43B2BCE777F004541B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F08FA3F92BCE746A004541B7 /* Project object */;
+	rootObject = F08FA41B2BCE777F004541B7 /* Project object */;
 }
