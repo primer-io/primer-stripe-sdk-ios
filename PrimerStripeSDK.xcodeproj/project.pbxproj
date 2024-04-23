@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87899C452BD6D73A00C74F68 /* StripeFinancialConnections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87899C432BD6D73A00C74F68 /* StripeFinancialConnections.xcframework */; };
+		87899C462BD6D73A00C74F68 /* Stripe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87899C442BD6D73A00C74F68 /* Stripe.xcframework */; };
+		87899C4E2BD6D7E100C74F68 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C4D2BD6D7E100C74F68 /* Version.swift */; };
+		87899C502BD6D82300C74F68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C4F2BD6D82300C74F68 /* Date+String.swift */; };
+		87899C522BD6D84400C74F68 /* PrimerStripeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C512BD6D84400C74F68 /* PrimerStripeModels.swift */; };
+		87899C542BD6D85600C74F68 /* PrimerStripeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C532BD6D85600C74F68 /* PrimerStripeError.swift */; };
+		87899C562BD6D89200C74F68 /* PrimerStripeCollectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C552BD6D89200C74F68 /* PrimerStripeCollectorViewController.swift */; };
 		F08FA42D2BCE777F004541B7 /* PrimerStripeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08FA4242BCE777F004541B7 /* PrimerStripeSDK.framework */; };
 		F08FA4322BCE777F004541B7 /* PrimerStripeSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08FA4312BCE777F004541B7 /* PrimerStripeSDKTests.swift */; };
 		F08FA4332BCE777F004541B7 /* PrimerStripeSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87899C432BD6D73A00C74F68 /* StripeFinancialConnections.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StripeFinancialConnections.xcframework; path = Frameworks/StripeFinancialConnections.xcframework; sourceTree = SOURCE_ROOT; };
+		87899C442BD6D73A00C74F68 /* Stripe.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Stripe.xcframework; path = Frameworks/Stripe.xcframework; sourceTree = SOURCE_ROOT; };
+		87899C4D2BD6D7E100C74F68 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		87899C4F2BD6D82300C74F68 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		87899C512BD6D84400C74F68 /* PrimerStripeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerStripeModels.swift; sourceTree = "<group>"; };
+		87899C532BD6D85600C74F68 /* PrimerStripeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerStripeError.swift; sourceTree = "<group>"; };
+		87899C552BD6D89200C74F68 /* PrimerStripeCollectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerStripeCollectorViewController.swift; sourceTree = "<group>"; };
 		F08FA4242BCE777F004541B7 /* PrimerStripeSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimerStripeSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimerStripeSDK.h; sourceTree = "<group>"; };
 		F08FA42C2BCE777F004541B7 /* PrimerStripeSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimerStripeSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87899C462BD6D73A00C74F68 /* Stripe.xcframework in Frameworks */,
+				87899C452BD6D73A00C74F68 /* StripeFinancialConnections.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +64,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87899C422BD6D56600C74F68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87899C442BD6D73A00C74F68 /* Stripe.xcframework */,
+				87899C432BD6D73A00C74F68 /* StripeFinancialConnections.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		87899C472BD6D74A00C74F68 /* Version */ = {
+			isa = PBXGroup;
+			children = (
+				87899C4D2BD6D7E100C74F68 /* Version.swift */,
+			);
+			path = Version;
+			sourceTree = "<group>";
+		};
+		87899C482BD6D75400C74F68 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				87899C532BD6D85600C74F68 /* PrimerStripeError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		87899C492BD6D75F00C74F68 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				87899C472BD6D74A00C74F68 /* Version */,
+				87899C4A2BD6D77500C74F68 /* Extensions */,
+				87899C4C2BD6D79E00C74F68 /* Model */,
+				87899C482BD6D75400C74F68 /* Error */,
+				87899C4B2BD6D78F00C74F68 /* ViewController */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		87899C4A2BD6D77500C74F68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				87899C4F2BD6D82300C74F68 /* Date+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		87899C4B2BD6D78F00C74F68 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87899C552BD6D89200C74F68 /* PrimerStripeCollectorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		87899C4C2BD6D79E00C74F68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87899C512BD6D84400C74F68 /* PrimerStripeModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F08FA41A2BCE777F004541B7 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +146,8 @@
 		F08FA4262BCE777F004541B7 /* PrimerStripeSDK */ = {
 			isa = PBXGroup;
 			children = (
+				87899C422BD6D56600C74F68 /* Frameworks */,
+				87899C492BD6D75F00C74F68 /* Sources */,
 				F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */,
 			);
 			path = PrimerStripeSDK;
@@ -144,6 +223,7 @@
 				TargetAttributes = {
 					F08FA4232BCE777F004541B7 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1530;
 					};
 					F08FA42B2BCE777F004541B7 = {
 						CreatedOnToolsVersion = 15.2;
@@ -191,6 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87899C502BD6D82300C74F68 /* Date+String.swift in Sources */,
+				87899C4E2BD6D7E100C74F68 /* Version.swift in Sources */,
+				87899C562BD6D89200C74F68 /* PrimerStripeCollectorViewController.swift in Sources */,
+				87899C542BD6D85600C74F68 /* PrimerStripeError.swift in Sources */,
+				87899C522BD6D84400C74F68 /* PrimerStripeModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,10 +426,11 @@
 		F08FA4372BCE777F004541B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N8UN9TR5DY;
+				DEVELOPMENT_TEAM = 79GC94CGR8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -369,6 +455,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,10 +464,11 @@
 		F08FA4382BCE777F004541B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N8UN9TR5DY;
+				DEVELOPMENT_TEAM = 79GC94CGR8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -413,6 +501,7 @@
 		F08FA43A2BCE777F004541B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8UN9TR5DY;
@@ -429,6 +518,7 @@
 		F08FA43B2BCE777F004541B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8UN9TR5DY;
