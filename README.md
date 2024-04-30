@@ -20,5 +20,5 @@ run `fastlane build_xcframeworks`
 Built frameworks can be found in the `build` folder.
 
 ## Updating Dependencies
-- Replace `StripeSDK.xcframework` and `StripeFinancialConnections.xcframework` in the `Frameworks` directory with the new versions.
+- Replace `StripeSDK.xcframework` and `StripeFinancialConnections.xcframework` in the `Frameworks` directory with the new versions. Stripe releases all sub dependencies with each new release, so it is important to replace all the dependencies.
 - Run `fastlane build_xcframeworks`
