@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87899C452BD6D73A00C74F68 /* StripeFinancialConnections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87899C432BD6D73A00C74F68 /* StripeFinancialConnections.xcframework */; };
-		87899C462BD6D73A00C74F68 /* Stripe.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87899C442BD6D73A00C74F68 /* Stripe.xcframework */; };
 		87899C4E2BD6D7E100C74F68 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C4D2BD6D7E100C74F68 /* Version.swift */; };
 		87899C502BD6D82300C74F68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C4F2BD6D82300C74F68 /* Date+String.swift */; };
 		87899C522BD6D84400C74F68 /* PrimerStripeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87899C512BD6D84400C74F68 /* PrimerStripeModels.swift */; };
@@ -30,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87899C432BD6D73A00C74F68 /* StripeFinancialConnections.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StripeFinancialConnections.xcframework; path = Frameworks/StripeFinancialConnections.xcframework; sourceTree = SOURCE_ROOT; };
-		87899C442BD6D73A00C74F68 /* Stripe.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Stripe.xcframework; path = Frameworks/Stripe.xcframework; sourceTree = SOURCE_ROOT; };
 		87899C4D2BD6D7E100C74F68 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		87899C4F2BD6D82300C74F68 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		87899C512BD6D84400C74F68 /* PrimerStripeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerStripeModels.swift; sourceTree = "<group>"; };
@@ -48,8 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87899C462BD6D73A00C74F68 /* Stripe.xcframework in Frameworks */,
-				87899C452BD6D73A00C74F68 /* StripeFinancialConnections.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,15 +58,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87899C422BD6D56600C74F68 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				87899C442BD6D73A00C74F68 /* Stripe.xcframework */,
-				87899C432BD6D73A00C74F68 /* StripeFinancialConnections.xcframework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		87899C472BD6D74A00C74F68 /* Version */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +131,6 @@
 		F08FA4262BCE777F004541B7 /* PrimerStripeSDK */ = {
 			isa = PBXGroup;
 			children = (
-				87899C422BD6D56600C74F68 /* Frameworks */,
 				87899C492BD6D75F00C74F68 /* Sources */,
 				F08FA4272BCE777F004541B7 /* PrimerStripeSDK.h */,
 			);
@@ -426,6 +410,7 @@
 		F08FA4372BCE777F004541B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -464,6 +449,7 @@
 		F08FA4382BCE777F004541B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

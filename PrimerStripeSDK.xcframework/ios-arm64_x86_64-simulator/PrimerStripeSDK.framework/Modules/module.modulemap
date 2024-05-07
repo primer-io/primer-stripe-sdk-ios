@@ -1,6 +1,0 @@
-framework module PrimerStripeSDK {
-  umbrella header "PrimerStripeSDK.h"
-  export *
-
-  module * { export * }
-}
