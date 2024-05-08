@@ -7,5 +7,5 @@
 
 import UIKit
 import Stripe
-
+import StripeFinancialConnections
 

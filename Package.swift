@@ -1,4 +1,4 @@
-// swift-tools-version: 5.3
+// swift-tools-version: 5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -12,17 +12,14 @@ let package = Package(
         .library(
             name: "PrimerStripeSDK",
             targets: [
-                "PrimerStripeSDK"
+                "PrimerStripeSDKFramework"
             ]
         )
     ],
-//    dependencies: [
-//        .package(url: "https://github.com/stripe/stripe-ios-spm", from: "23.27.2")
-//    ],
     targets: [
-       .target(
-            name: "PrimerStripeSDK",
-            path: "PrimerStripeSDK/Sources"
+       .binaryTarget(
+            name: "PrimerStripeSDKFramework",
+            path: "./PrimerStripeSDK.xcframework"
         )
     ],
     swiftLanguageVersions: [.v5]
