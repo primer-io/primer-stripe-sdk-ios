@@ -1,0 +1,87 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Stripe",
+        "printedName": "Stripe",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "StripeFinancialConnections",
+        "printedName": "StripeFinancialConnections",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/niallquinn\/Code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Extensions\/Date+String.swift",
+      "kind": "StringLiteral",
+      "offset": 184,
+      "length": 28,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\""
+    },
+    {
+      "filePath": "\/Users\/niallquinn\/Code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 29,
+      "length": 7,
+      "value": "\"1.0.0\""
+    },
+    {
+      "filePath": "\/Users\/niallquinn\/Code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
+      "kind": "StringLiteral",
+      "offset": 60,
+      "length": 9,
+      "value": "\"23.27.0\""
+    }
+  ]
+}

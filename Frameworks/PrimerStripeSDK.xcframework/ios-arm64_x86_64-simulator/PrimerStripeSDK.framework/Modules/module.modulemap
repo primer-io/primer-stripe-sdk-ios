@@ -1,0 +1,11 @@
+framework module PrimerStripeSDK {
+  umbrella header "PrimerStripeSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module PrimerStripeSDK.Swift {
+  header "PrimerStripeSDK-Swift.h"
+  requires objc
+}
