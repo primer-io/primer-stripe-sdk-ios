@@ -12,14 +12,54 @@ let package = Package(
         .library(
             name: "PrimerStripeSDK",
             targets: [
-                "PrimerStripeSDKFramework"
+                "PrimerStripeSDKFramework",
+                "StripeFramework",
+                "Stripe3DS2Framework",
+                "StripeApplePayFramework",
+                "StripeCoreFramework",
+                "StripePaymentsFramework",
+                "StripePaymentsUIFramework",
+                "StripeUICoreFramework",
+                "StripeFinancialConnectionsFramework"
             ]
         )
     ],
     targets: [
        .binaryTarget(
             name: "PrimerStripeSDKFramework",
-            path: "./PrimerStripeSDK.xcframework"
+            path: "Frameworks/PrimerStripeSDK.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripeFramework",
+            path: "Frameworks/Stripe.xcframework"
+        ),
+        .binaryTarget(
+            name: "Stripe3DS2Framework",
+            path: "Frameworks/Stripe3DS2.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripeApplePayFramework",
+            path: "Frameworks/StripeApplePay.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripeCoreFramework",
+            path: "Frameworks/StripeCore.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripePaymentsFramework",
+            path: "Frameworks/StripePayments.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripePaymentsUIFramework",
+            path: "Frameworks/StripePaymentsUI.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripeUICoreFramework",
+            path: "Frameworks/StripeUICore.xcframework"
+        ),
+        .binaryTarget(
+            name: "StripeFinancialConnectionsFramework",
+            path: "Frameworks/StripeFinancialConnections.xcframework"
         )
     ],
     swiftLanguageVersions: [.v5]
