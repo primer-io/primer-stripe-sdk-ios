@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PrimerStripeSDK-Swift.h</key>
 		<data>
-		IySaTecSkx1TdQgMJ2rF7hXSEN8=
+		KlrpPYRI3uJq7b2MjXMrbH4OKbU=
 		</data>
 		<key>Headers/PrimerStripeSDK.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		KLAAWTo0QcviZW99OA6y8+9z8k8=
+		3rZD4DK36sRN7XXJj8glCHpILu0=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		J+kBQ2MdFkbwTcFHF+p4HdT6Y7M=
+		lYNADcB2b4chvPdPwl+24/aeop0=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		J+kBQ2MdFkbwTcFHF+p4HdT6Y7M=
+		lYNADcB2b4chvPdPwl+24/aeop0=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		wWUlltO6wasexwz2H6emFCMJ248=
+		LomywHWq9sGcvVaBlfpxym5ZXSQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		KLAAWTo0QcviZW99OA6y8+9z8k8=
+		3rZD4DK36sRN7XXJj8glCHpILu0=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		uGfHs2xfEt3oa7Sg7x8Jt12PeXk=
+		+hgkffNWMH4YLLigwETpMw9cvqI=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uGfHs2xfEt3oa7Sg7x8Jt12PeXk=
+		+hgkffNWMH4YLLigwETpMw9cvqI=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dTjlnmd9La/IaeNYjHYZ7E8nF38=
+		d9P9s40K3Lwa+RzTZqjghE7h62w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eU2qny0TLClgpZsZwdCKl82nLDGO8YEQTCvfqAfBdjE=
+			ViJZ1IKmAg4xtHEkzjTmxvNsIcjhIwanAOX6+ISiZdg=
 			</data>
 		</dict>
 		<key>Headers/PrimerStripeSDK.h</key>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			++a4g9XeuLHZSc/yv8O6+kVSQEN7dCEMxdwsd+DiPLg=
+			twrq9GvhR9f/TjSFTAuKeIgz6j5VkYedhdUXhzBJkbQ=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dVB9aA/G18PVtHKdpP1REeStxMeBR8IHTXDyqcIdhQ8=
+			k2w7SLAT/ddW47TH4xxBfFyIF6z3izOlb74/pVViJfc=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dVB9aA/G18PVtHKdpP1REeStxMeBR8IHTXDyqcIdhQ8=
+			k2w7SLAT/ddW47TH4xxBfFyIF6z3izOlb74/pVViJfc=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jyAtGnzjGl1hhvKKC8WjpmH9h0S9rkbWO71u9+d8WcU=
+			SnYVHtD/bQ4j+bJfuCECzTctQEe0QQ3+Vnr/x8kXI2o=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			++a4g9XeuLHZSc/yv8O6+kVSQEN7dCEMxdwsd+DiPLg=
+			twrq9GvhR9f/TjSFTAuKeIgz6j5VkYedhdUXhzBJkbQ=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9OIMlHAdxHGT+hPx9frXXV0/ITOlY5VKlJ2CF8QpSEE=
+			FFjMMDtWFwHCW/vTDo11axPlbN2retU+9aOwfSqo538=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9OIMlHAdxHGT+hPx9frXXV0/ITOlY5VKlJ2CF8QpSEE=
+			FFjMMDtWFwHCW/vTDo11axPlbN2retU+9aOwfSqo538=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gnOv1fyMlrJ6enfVGy+eqpa5fa1BdEbtiI2E3tWRfac=
+			FeqC7KU1VRI0gBRUu2nHBNLZBJzL2V0BgaiXe+ethos=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

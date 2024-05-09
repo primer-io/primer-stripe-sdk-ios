@@ -26,12 +26,946 @@
       },
       {
         "kind": "Import",
+        "name": "Stripe",
+        "printedName": "Stripe",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrimerStripeCollectorViewControllerDelegate",
+        "printedName": "PrimerStripeCollectorViewControllerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "primerStripeCollected",
+            "printedName": "primerStripeCollected(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PrimerStripeStatus",
+                "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                "usr": "s:15PrimerStripeSDK0aB6StatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15PrimerStripeSDK0aB31CollectorViewControllerDelegateP06primerB9CollectedyyAA0aB6StatusOF",
+            "mangledName": "$s15PrimerStripeSDK0aB31CollectorViewControllerDelegateP06primerB9CollectedyyAA0aB6StatusOF",
+            "moduleName": "PrimerStripeSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : PrimerStripeSDK.PrimerStripeCollectorViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : PrimerStripeSDK.PrimerStripeCollectorViewControllerDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15PrimerStripeSDK0aB31CollectorViewControllerDelegateP",
+        "mangledName": "$s15PrimerStripeSDK0aB31CollectorViewControllerDelegateP",
+        "moduleName": "PrimerStripeSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrimerStripeCollectorViewController",
+        "printedName": "PrimerStripeCollectorViewController",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PrimerStripeSDK.PrimerStripeCollectorViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrimerStripeCollectorViewController",
+                    "printedName": "PrimerStripeSDK.PrimerStripeCollectorViewController",
+                    "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController(im)initWithCoder:",
+            "mangledName": "$s15PrimerStripeSDK0aB23CollectorViewControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "PrimerStripeSDK",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "getCollectorViewController",
+            "printedName": "getCollectorViewController(params:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PrimerStripeCollectorViewController",
+                "printedName": "PrimerStripeSDK.PrimerStripeCollectorViewController",
+                "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PrimerStripeParams",
+                "printedName": "PrimerStripeSDK.PrimerStripeParams",
+                "usr": "s:15PrimerStripeSDK0aB6ParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PrimerStripeCollectorViewControllerDelegate",
+                "printedName": "any PrimerStripeSDK.PrimerStripeCollectorViewControllerDelegate",
+                "usr": "s:15PrimerStripeSDK0aB31CollectorViewControllerDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15PrimerStripeSDK0aB23CollectorViewControllerC03getdeF06params8delegateAcA0aB6ParamsV_AA0abdeF8Delegate_ptFZ",
+            "mangledName": "$s15PrimerStripeSDK0aB23CollectorViewControllerC03getdeF06params8delegateAcA0aB6ParamsV_AA0abdeF8Delegate_ptFZ",
+            "moduleName": "PrimerStripeSDK",
+            "static": true,
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController(im)viewDidLoad",
+            "mangledName": "$s15PrimerStripeSDK0aB23CollectorViewControllerC11viewDidLoadyyF",
+            "moduleName": "PrimerStripeSDK",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PrimerStripeCollectorViewController",
+                "printedName": "PrimerStripeSDK.PrimerStripeCollectorViewController",
+                "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s15PrimerStripeSDK0aB23CollectorViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "PrimerStripeSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PrimerStripeSDK@objc(cs)PrimerStripeCollectorViewController",
+        "mangledName": "$s15PrimerStripeSDK0aB23CollectorViewControllerC",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "PrimerStripeSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Stripe",
+        "printedName": "Stripe",
+        "declKind": "Import",
+        "moduleName": "PrimerStripeSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrimerStripeErrorProtocol",
+        "printedName": "PrimerStripeErrorProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "errorId",
+            "printedName": "errorId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP7errorIdSSvp",
+            "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP7errorIdSSvp",
+            "moduleName": "PrimerStripeSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP7errorIdSSvg",
+                "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP7errorIdSSvg",
+                "moduleName": "PrimerStripeSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "sugared_genericSig": "<Self where Self : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userInfo",
+            "printedName": "userInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP8userInfoSDyS2SGvp",
+            "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP8userInfoSDyS2SGvp",
+            "moduleName": "PrimerStripeSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP8userInfoSDyS2SGvg",
+                "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP8userInfoSDyS2SGvg",
+                "moduleName": "PrimerStripeSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "sugared_genericSig": "<Self where Self : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "diagnosticsId",
+            "printedName": "diagnosticsId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP13diagnosticsIdSSvp",
+            "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP13diagnosticsIdSSvp",
+            "moduleName": "PrimerStripeSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP13diagnosticsIdSSvg",
+                "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP13diagnosticsIdSSvg",
+                "moduleName": "PrimerStripeSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "sugared_genericSig": "<Self where Self : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP16errorDescriptionSSvp",
+            "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP16errorDescriptionSSvp",
+            "moduleName": "PrimerStripeSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP16errorDescriptionSSvg",
+                "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP16errorDescriptionSSvg",
+                "moduleName": "PrimerStripeSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "sugared_genericSig": "<Self where Self : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "exposedError",
+            "printedName": "exposedError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSError",
+                    "printedName": "Foundation.NSError",
+                    "usr": "c:objc(cs)NSError"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP07exposedD0So7NSErrorCSgvp",
+            "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP07exposedD0So7NSErrorCSgvp",
+            "moduleName": "PrimerStripeSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSError",
+                        "printedName": "Foundation.NSError",
+                        "usr": "c:objc(cs)NSError"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP07exposedD0So7NSErrorCSgvg",
+                "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP07exposedD0So7NSErrorCSgvg",
+                "moduleName": "PrimerStripeSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "sugared_genericSig": "<Self where Self : PrimerStripeSDK.PrimerStripeErrorProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP",
+        "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrimerStripeError",
+        "printedName": "PrimerStripeError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "stripeSdkError",
+            "printedName": "stripeSdkError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PrimerStripeSDK.PrimerStripeError.Type) -> (Foundation.NSError) -> PrimerStripeSDK.PrimerStripeError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.NSError) -> PrimerStripeSDK.PrimerStripeError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeError",
+                        "printedName": "PrimerStripeSDK.PrimerStripeError",
+                        "usr": "s:15PrimerStripeSDK0aB5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: Foundation.NSError)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NSError",
+                            "printedName": "Foundation.NSError",
+                            "usr": "c:objc(cs)NSError"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PrimerStripeSDK.PrimerStripeError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeError",
+                        "printedName": "PrimerStripeSDK.PrimerStripeError",
+                        "usr": "s:15PrimerStripeSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO09stripeSdkD0yACSo7NSErrorC_tcACmF",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO09stripeSdkD0yACSo7NSErrorC_tcACmF",
+            "moduleName": "PrimerStripeSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "stripeInvalidPublishableKeyError",
+            "printedName": "stripeInvalidPublishableKeyError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PrimerStripeSDK.PrimerStripeError.Type) -> PrimerStripeSDK.PrimerStripeError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrimerStripeError",
+                    "printedName": "PrimerStripeSDK.PrimerStripeError",
+                    "usr": "s:15PrimerStripeSDK0aB5ErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PrimerStripeSDK.PrimerStripeError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeError",
+                        "printedName": "PrimerStripeSDK.PrimerStripeError",
+                        "usr": "s:15PrimerStripeSDK0aB5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO027stripeInvalidPublishableKeyD0yA2CmF",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO027stripeInvalidPublishableKeyD0yA2CmF",
+            "moduleName": "PrimerStripeSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "errorId",
+            "printedName": "errorId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO7errorIdSSvp",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO7errorIdSSvp",
+            "moduleName": "PrimerStripeSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB5ErrorO7errorIdSSvg",
+                "mangledName": "$s15PrimerStripeSDK0aB5ErrorO7errorIdSSvg",
+                "moduleName": "PrimerStripeSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "userInfo",
+            "printedName": "userInfo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO8userInfoSDyS2SGvp",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO8userInfoSDyS2SGvp",
+            "moduleName": "PrimerStripeSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB5ErrorO8userInfoSDyS2SGvg",
+                "mangledName": "$s15PrimerStripeSDK0aB5ErrorO8userInfoSDyS2SGvg",
+                "moduleName": "PrimerStripeSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "diagnosticsId",
+            "printedName": "diagnosticsId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO13diagnosticsIdSSvp",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO13diagnosticsIdSSvp",
+            "moduleName": "PrimerStripeSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB5ErrorO13diagnosticsIdSSvg",
+                "mangledName": "$s15PrimerStripeSDK0aB5ErrorO13diagnosticsIdSSvg",
+                "moduleName": "PrimerStripeSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO16errorDescriptionSSvp",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO16errorDescriptionSSvp",
+            "moduleName": "PrimerStripeSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB5ErrorO16errorDescriptionSSvg",
+                "mangledName": "$s15PrimerStripeSDK0aB5ErrorO16errorDescriptionSSvg",
+                "moduleName": "PrimerStripeSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "exposedError",
+            "printedName": "exposedError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSError",
+                    "printedName": "Foundation.NSError",
+                    "usr": "c:objc(cs)NSError"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO07exposedD0So7NSErrorCSgvp",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO07exposedD0So7NSErrorCSgvp",
+            "moduleName": "PrimerStripeSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSError?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSError",
+                        "printedName": "Foundation.NSError",
+                        "usr": "c:objc(cs)NSError"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15PrimerStripeSDK0aB5ErrorO07exposedD0So7NSErrorCSgvg",
+                "mangledName": "$s15PrimerStripeSDK0aB5ErrorO07exposedD0So7NSErrorCSgvg",
+                "moduleName": "PrimerStripeSDK",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15PrimerStripeSDK0aB5ErrorO",
+        "mangledName": "$s15PrimerStripeSDK0aB5ErrorO",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "PrimerStripeErrorProtocol",
+            "printedName": "PrimerStripeErrorProtocol",
+            "usr": "s:15PrimerStripeSDK0aB13ErrorProtocolP",
+            "mangledName": "$s15PrimerStripeSDK0aB13ErrorProtocolP"
+          }
         ]
       },
       {
@@ -43,31 +977,217 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrimerStripeParams",
+        "printedName": "PrimerStripeParams",
+        "declKind": "Struct",
+        "usr": "s:15PrimerStripeSDK0aB6ParamsV",
+        "mangledName": "$s15PrimerStripeSDK0aB6ParamsV",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrimerStripeStatus",
+        "printedName": "PrimerStripeStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "succeeded",
+            "printedName": "succeeded",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PrimerStripeSDK.PrimerStripeStatus.Type) -> (Swift.String) -> PrimerStripeSDK.PrimerStripeStatus",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> PrimerStripeSDK.PrimerStripeStatus",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeStatus",
+                        "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                        "usr": "s:15PrimerStripeSDK0aB6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(paymentMethodId: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PrimerStripeSDK.PrimerStripeStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeStatus",
+                        "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                        "usr": "s:15PrimerStripeSDK0aB6StatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15PrimerStripeSDK0aB6StatusO9succeededyACSS_tcACmF",
+            "mangledName": "$s15PrimerStripeSDK0aB6StatusO9succeededyACSS_tcACmF",
+            "moduleName": "PrimerStripeSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "failed",
+            "printedName": "failed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PrimerStripeSDK.PrimerStripeStatus.Type) -> (PrimerStripeSDK.PrimerStripeError) -> PrimerStripeSDK.PrimerStripeStatus",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrimerStripeSDK.PrimerStripeError) -> PrimerStripeSDK.PrimerStripeStatus",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeStatus",
+                        "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                        "usr": "s:15PrimerStripeSDK0aB6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: PrimerStripeSDK.PrimerStripeError)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PrimerStripeError",
+                            "printedName": "PrimerStripeSDK.PrimerStripeError",
+                            "usr": "s:15PrimerStripeSDK0aB5ErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PrimerStripeSDK.PrimerStripeStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeStatus",
+                        "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                        "usr": "s:15PrimerStripeSDK0aB6StatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15PrimerStripeSDK0aB6StatusO6failedyAcA0aB5ErrorO_tcACmF",
+            "mangledName": "$s15PrimerStripeSDK0aB6StatusO6failedyAcA0aB5ErrorO_tcACmF",
+            "moduleName": "PrimerStripeSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "canceled",
+            "printedName": "canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PrimerStripeSDK.PrimerStripeStatus.Type) -> PrimerStripeSDK.PrimerStripeStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrimerStripeStatus",
+                    "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                    "usr": "s:15PrimerStripeSDK0aB6StatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PrimerStripeSDK.PrimerStripeStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrimerStripeStatus",
+                        "printedName": "PrimerStripeSDK.PrimerStripeStatus",
+                        "usr": "s:15PrimerStripeSDK0aB6StatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15PrimerStripeSDK0aB6StatusO8canceledyA2CmF",
+            "mangledName": "$s15PrimerStripeSDK0aB6StatusO8canceledyA2CmF",
+            "moduleName": "PrimerStripeSDK"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15PrimerStripeSDK0aB6StatusO",
+        "mangledName": "$s15PrimerStripeSDK0aB6StatusO",
+        "moduleName": "PrimerStripeSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/niallquinn\/Code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Extensions\/Date+String.swift",
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Extensions\/Date+String.swift",
       "kind": "StringLiteral",
       "offset": 184,
       "length": 28,
       "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\""
     },
     {
-      "filePath": "\/Users\/niallquinn\/Code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
       "kind": "StringLiteral",
       "offset": 29,
       "length": 7,
       "value": "\"1.0.0\""
     },
     {
-      "filePath": "\/Users\/niallquinn\/Code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
       "kind": "StringLiteral",
       "offset": 60,
       "length": 9,
       "value": "\"23.27.0\""
+    },
+    {
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/ViewController\/PrimerStripeCollectorViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 35,
+      "value": "\"PrimerStripeSDK.PrimerStripeCollectorViewController\""
     }
   ]
 }

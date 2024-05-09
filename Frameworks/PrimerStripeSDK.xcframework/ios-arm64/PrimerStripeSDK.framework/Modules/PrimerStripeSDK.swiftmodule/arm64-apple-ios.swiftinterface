@@ -3,8 +3,51 @@
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PrimerStripeSDK
 import Foundation
 @_exported import PrimerStripeSDK
+import Stripe
 import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public protocol PrimerStripeCollectorViewControllerDelegate : AnyObject {
+  func primerStripeCollected(_ stripeStatus: PrimerStripeSDK.PrimerStripeStatus)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PrimerStripeCollectorViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public static func getCollectorViewController(params: PrimerStripeSDK.PrimerStripeParams, delegate: any PrimerStripeSDK.PrimerStripeCollectorViewControllerDelegate) -> PrimerStripeSDK.PrimerStripeCollectorViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @objc deinit
+}
+public protocol PrimerStripeErrorProtocol {
+  var errorId: Swift.String { get }
+  var userInfo: [Swift.String : Swift.String] { get }
+  var diagnosticsId: Swift.String { get }
+  var errorDescription: Swift.String { get }
+  var exposedError: Foundation.NSError? { get }
+}
+public enum PrimerStripeError : PrimerStripeSDK.PrimerStripeErrorProtocol {
+  case stripeSdkError(error: Foundation.NSError)
+  case stripeInvalidPublishableKeyError
+  public var errorId: Swift.String {
+    get
+  }
+  public var userInfo: [Swift.String : Swift.String] {
+    get
+  }
+  public var diagnosticsId: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String {
+    get
+  }
+  public var exposedError: Foundation.NSError? {
+    get
+  }
+}
+public struct PrimerStripeParams {
+}
+public enum PrimerStripeStatus {
+  case succeeded(paymentMethodId: Swift.String)
+  case failed(error: PrimerStripeSDK.PrimerStripeError)
+  case canceled
+}
