@@ -45,6 +45,12 @@ public enum PrimerStripeError : PrimerStripeSDK.PrimerStripeErrorProtocol {
   }
 }
 public struct PrimerStripeParams {
+  public var publishableKey: Swift.String
+  public var clientSecret: Swift.String
+  public var returnUrl: Swift.String
+  public var fullName: Swift.String
+  public var emailAddress: Swift.String
+  public init(publishableKey: Swift.String, clientSecret: Swift.String, returnUrl: Swift.String, fullName: Swift.String, emailAddress: Swift.String)
 }
 public enum PrimerStripeStatus {
   case succeeded(paymentMethodId: Swift.String)
