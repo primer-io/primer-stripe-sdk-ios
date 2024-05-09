@@ -26,20 +26,6 @@
       },
       {
         "kind": "Import",
-        "name": "Stripe",
-        "printedName": "Stripe",
-        "declKind": "Import",
-        "moduleName": "PrimerStripeSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "StripeFinancialConnections",
-        "printedName": "StripeFinancialConnections",
-        "declKind": "Import",
-        "moduleName": "PrimerStripeSDK"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",

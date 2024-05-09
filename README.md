@@ -12,13 +12,21 @@ PrimerStripeSDK is a wrapper of the Stripe iOS SDK that exposes functionality fo
 ## This repository consists of
 - PrimerStripeSDK
 - Depenedencies
-  - Stripe
+  - Stripe (core dependencies: StripeCore, Stripe3DS2, StripeApplePay, StripePayments, StripePaymentsUI, StripeUICore)
   - StripeFinancialConnections
 
 ## Building locally
 run `fastlane build_xcframeworks`
-Built frameworks can be found in the `build` folder.
+The built `PrimerStripeSDK.xcframework` can be found in the `build` folder, and is also copied to the `Frameworks` directory.
 
 ## Updating Dependencies
-- Replace `StripeSDK.xcframework` and `StripeFinancialConnections.xcframework` in the `Frameworks` directory with the new versions. Stripe releases all sub dependencies with each new release, so it is important to replace all the dependencies.
+- Replace the following frameworkd in the `Frameworks` directory with the new versions. Stripe releases all sub dependencies with each new release, so it is important to replace all the dependencies.
+  - `Stripe.xcframework`
+  - `StripeCore.xcframework`
+  - `Stripe3DS2.xcframework`
+  - `StripeApplePay.xcframework`
+  - `StripePayments.xcframework`
+  - `StripePaymentsUI.xcframework`
+  - `StripeUICore.xcframework`
+  - `StripeFinancialConnections.xcframework`
 - Run `fastlane build_xcframeworks`
