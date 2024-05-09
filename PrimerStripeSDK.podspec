@@ -16,5 +16,5 @@ Pod::Spec.new do |spec|
   spec.platform               = :ios, '13.0'
   spec.ios.deployment_target  = '13.0'
   spec.source                 = { :git => 'https://github.com/primer-io/primer-sdk-ios', :tag => spec.version.to_s }
-  spec.vendored_frameworks    = 'PrimerStripeSDK.xcframework', 'Stripe.xcframework', 'Stripe3DS2.xcframework', 'StripeApplePay.xcframework', 'StripeCore.xcframework', 'StripeFinancialConnections.xcframework', 'StripePayments.xcframework', 'StripePaymentsUI.xcframework', 'StripeUICore.xcframework'
+  spec.vendored_frameworks    = 'Frameworks/PrimerStripeSDK.xcframework', 'Frameworks/Stripe.xcframework', 'Frameworks/tripe3DS2.xcframework', 'Frameworks/tripeApplePay.xcframework', 'Frameworks/StripeCore.xcframework', 'Frameworks/StripeFinancialConnections.xcframework', 'Frameworks/StripePayments.xcframework', 'Frameworks/StripePaymentsUI.xcframework', 'Frameworks/StripeUICore.xcframework'
 end
