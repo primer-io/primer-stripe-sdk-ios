@@ -45,6 +45,11 @@ public class PrimerStripeCollectorViewController: UIViewController {
         super.viewDidLoad()
         
         initilizeStripeSDK()
+    }
+    
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         showCollector()
     }
     
