@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		up6f0VCwP+K4BjysDhC/Zl8hR0s=
+		G0dO72jXmk+XqoRsPEVBwJnl5NQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Im1/pcFSi6A8cyj6/05bA0C1Qmg=
+		kc6E/yIER2dNPKrwqJsroz9klmc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EJjlvXAMjEpXxKKGHzDtyVhbLsUz0ClUqFvRpgt0p7w=
+			eAfycOBtR1Vgu7QIhIZ5saMJbXESV89BVPk6hGzswDQ=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0/ygrFJt9Gban2HXZP6SDkBd5plcaIJgkj3f8TVuMr0=
+			fa6XlE8pZ0uB0587fWEwugsyBgMBH2eXIcMI1N9UBwM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

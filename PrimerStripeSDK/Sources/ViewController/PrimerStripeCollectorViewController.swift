@@ -68,6 +68,7 @@ public class PrimerStripeCollectorViewController: UIViewController {
                 if let error {
                     let stripeError = PrimerStripeError.stripeSdkError(error: error)
                     self.delegate?.primerStripeCollected(PrimerStripeStatus.failed(error: stripeError))
+                    self.dismissMainViewController()
                 }
                 return
             }
@@ -80,13 +81,16 @@ public class PrimerStripeCollectorViewController: UIViewController {
                 guard let paymentMethod = intent.paymentMethod,
                       let paymentMethodId = intent.paymentMethodId else {
                     self.delegate?.primerStripeCollected(PrimerStripeStatus.canceled)
+                    self.dismissMainViewController()
                     return
                 }
                 
                 self.delegate?.primerStripeCollected(PrimerStripeStatus.succeeded(paymentMethodId: paymentMethodId))
+                self.dismissMainViewController()
             case.requiresPaymentMethod:
                 // Call delegation method with canceled status
                 self.delegate?.primerStripeCollected(PrimerStripeStatus.canceled)
+                self.dismissMainViewController()
             default:
                 break
             }
@@ -98,5 +102,9 @@ public class PrimerStripeCollectorViewController: UIViewController {
 extension PrimerStripeCollectorViewController {
     private func initilizeStripeSDK() {
         StripeAPI.defaultPublishableKey = params.publishableKey
+    }
+    
+    private func dismissMainViewController() {
+        dismiss(animated: true)
     }
 }
