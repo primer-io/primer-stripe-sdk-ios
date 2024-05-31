@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PrimerStripeSDK-Swift.h</key>
 		<data>
-		KlrpPYRI3uJq7b2MjXMrbH4OKbU=
+		FXU4PFOonsxIg7wQffUsWokFVks=
 		</data>
 		<key>Headers/PrimerStripeSDK.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/NzMqGWaQoBJvURM1CqeLy9aoEM=
+		q7CTwB23Dpg4zvhuwk2psVlIneg=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		HCGQanDC2nQmbcZHWzG+XfyNEXY=
+		0ffSdnoql7e3CU3fjRrrjxdh3QQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		HUvP7WCy3mcJXUbCUhPTA+r60pI=
+		1kPRdZyA+p+WI18xPcKdE0wFpsY=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		HUvP7WCy3mcJXUbCUhPTA+r60pI=
+		1kPRdZyA+p+WI18xPcKdE0wFpsY=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AddU6AHxEj4+eHCzF3y4gAhqKcg=
+		up6f0VCwP+K4BjysDhC/Zl8hR0s=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		HCGQanDC2nQmbcZHWzG+XfyNEXY=
+		0ffSdnoql7e3CU3fjRrrjxdh3QQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/WcVn9b736VbUsqGNEAolPOVgVE=
+		0LoGlVESEDFp3Cs5ZPB8GLBeq0I=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/WcVn9b736VbUsqGNEAolPOVgVE=
+		0LoGlVESEDFp3Cs5ZPB8GLBeq0I=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		q1ZDotKJckhOID4lIYAb/IrehwY=
+		Im1/pcFSi6A8cyj6/05bA0C1Qmg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ViJZ1IKmAg4xtHEkzjTmxvNsIcjhIwanAOX6+ISiZdg=
+			CimAqr7876ichb6mWfU0E5heJZ7ONzOlJ9JuOWu73/U=
 			</data>
 		</dict>
 		<key>Headers/PrimerStripeSDK.h</key>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8DAPHOCiXAy30vm2ORJ0wfVDO+tGI/GcjBufvqaZjyo=
+			rRe7IQ6xUPNz7hmhIq2ET7Zxp3OC5gm8QlZrzXCoFVU=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jmcd42Tsp/7YhlycM3YbdNH8fdM5Ysq2AaI8WnVf7Q8=
+			+PLlTFMcQCKfoSZNJ37gnTVPsZHGDbAv89QBOUB3sa8=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jmcd42Tsp/7YhlycM3YbdNH8fdM5Ysq2AaI8WnVf7Q8=
+			+PLlTFMcQCKfoSZNJ37gnTVPsZHGDbAv89QBOUB3sa8=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EfWZarJrBBinVCcv+OyErPbtGqDxntwiFiOMHqV1j6o=
+			EJjlvXAMjEpXxKKGHzDtyVhbLsUz0ClUqFvRpgt0p7w=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8DAPHOCiXAy30vm2ORJ0wfVDO+tGI/GcjBufvqaZjyo=
+			rRe7IQ6xUPNz7hmhIq2ET7Zxp3OC5gm8QlZrzXCoFVU=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aBZtu0NBBtmZNM/k+Pd81L0+f7rwTcZxiWENLialSK0=
+			/0CY1Fzl6n4APrfWdVgkGqaekAqqRTpBIKzFDyIC3JY=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aBZtu0NBBtmZNM/k+Pd81L0+f7rwTcZxiWENLialSK0=
+			/0CY1Fzl6n4APrfWdVgkGqaekAqqRTpBIKzFDyIC3JY=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7WLIfoA1X8uZ/LswOYwWJHZlxpC6Fu2L0PeZZktA/ik=
+			0/ygrFJt9Gban2HXZP6SDkBd5plcaIJgkj3f8TVuMr0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

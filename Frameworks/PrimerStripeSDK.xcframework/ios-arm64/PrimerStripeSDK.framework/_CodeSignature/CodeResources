@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/PrimerStripeSDK-Swift.h</key>
 		<data>
-		idRK8e20q0i7cbNjJXOxEC9POIA=
+		CUMX/SturvDPbYwf8DPaneon9Bg=
 		</data>
 		<key>Headers/PrimerStripeSDK.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gEjuK73jDTbj/Hsv6qtvh7ENAUM=
+		HeH5SjJ1bHdHNWptUa7RklWualc=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		HCGQanDC2nQmbcZHWzG+XfyNEXY=
+		0ffSdnoql7e3CU3fjRrrjxdh3QQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		ckrGK67bYa3WOIgZSvg5/UXToCg=
+		f/zV9FB/X9qI7FHxPE83+2O++NQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ckrGK67bYa3WOIgZSvg5/UXToCg=
+		f/zV9FB/X9qI7FHxPE83+2O++NQ=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		f8rLyFEv51THUpjoSJxncea1Mo0=
+		hmqfcZKqzeCkdDITtP7MgpRtEXo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWj8T8kuWYNZ8f6eeGJvD6A3soCgquZA7mxy8DIGoNQ=
+			KcWMTJsn7u3Sz3SEIqI+lf3l3a6iiYgsuvqiHor0k2E=
 			</data>
 		</dict>
 		<key>Headers/PrimerStripeSDK.h</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8DAPHOCiXAy30vm2ORJ0wfVDO+tGI/GcjBufvqaZjyo=
+			rRe7IQ6xUPNz7hmhIq2ET7Zxp3OC5gm8QlZrzXCoFVU=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			opDoqtKIL9n+hAXdjOwyCg4SQM5HSLvQaVHh7ieijSQ=
+			Qbv/2Zd14j0oJHJ/fFPEeKZ7JsdYKsvzqrp6AyVIY5s=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			opDoqtKIL9n+hAXdjOwyCg4SQM5HSLvQaVHh7ieijSQ=
+			Qbv/2Zd14j0oJHJ/fFPEeKZ7JsdYKsvzqrp6AyVIY5s=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			38b/ODfsQz72Zt34osu2rGJPbq0pEiMWQu+40X7Qp2w=
+			rDLhAvCBkV4yzGNb9/o/MtPQaAqEuM5YKlx34UvBh1Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

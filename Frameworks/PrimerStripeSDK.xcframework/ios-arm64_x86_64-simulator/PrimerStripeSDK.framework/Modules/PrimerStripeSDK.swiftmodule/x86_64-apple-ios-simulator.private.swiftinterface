@@ -16,6 +16,7 @@ public protocol PrimerStripeCollectorViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) public static func getCollectorViewController(params: PrimerStripeSDK.PrimerStripeParams, delegate: any PrimerStripeSDK.PrimerStripeCollectorViewControllerDelegate) -> PrimerStripeSDK.PrimerStripeCollectorViewController
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @objc deinit
 }
 public protocol PrimerStripeErrorProtocol {
