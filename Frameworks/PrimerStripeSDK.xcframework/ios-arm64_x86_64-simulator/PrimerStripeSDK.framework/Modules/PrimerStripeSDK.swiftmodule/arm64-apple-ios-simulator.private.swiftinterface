@@ -28,7 +28,7 @@ public protocol PrimerStripeErrorProtocol {
 }
 public enum PrimerStripeError : PrimerStripeSDK.PrimerStripeErrorProtocol {
   case stripeSdkError(error: Foundation.NSError)
-  case stripeInvalidPublishableKeyError
+  case unknownSTPPaymentIntentStatusError
   public var errorId: Swift.String {
     get
   }

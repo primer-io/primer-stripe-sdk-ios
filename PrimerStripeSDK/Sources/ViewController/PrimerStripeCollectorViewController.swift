@@ -92,7 +92,9 @@ public class PrimerStripeCollectorViewController: UIViewController {
                 self.delegate?.primerStripeCollected(PrimerStripeStatus.canceled)
                 self.dismissMainViewController()
             default:
-                break
+                let paymentIntentStatusError = PrimerStripeError.unknownSTPPaymentIntentStatusError
+                self.delegate?.primerStripeCollected(PrimerStripeStatus.failed(error: paymentIntentStatusError))
+                self.dismissMainViewController()
             }
         }
     }

@@ -21,15 +21,15 @@ public protocol PrimerStripeErrorProtocol {
 public enum PrimerStripeError: PrimerStripeErrorProtocol {
     
     case stripeSdkError(error: NSError)
-    case stripeInvalidPublishableKeyError
+    case unknownSTPPaymentIntentStatusError
     
     // MARK: - errorId
     public var errorId: String {
         switch self {
         case .stripeSdkError:
             return "stripe-sdk-error"
-        case .stripeInvalidPublishableKeyError:
-            return "stripe-invalid-publishable-key"
+        case .unknownSTPPaymentIntentStatusError:
+            return "unknown-STPPaymentIntentStatus-error"
         }
     }
     
@@ -42,7 +42,7 @@ public enum PrimerStripeError: PrimerStripeErrorProtocol {
             tmpUserInfo["userInfo"] = stripeErrorUserInfo.debugDescription
             tmpUserInfo["diagnosticsId"] = self.diagnosticsId
             
-        case .stripeInvalidPublishableKeyError:
+        case .unknownSTPPaymentIntentStatusError:
             tmpUserInfo["diagnosticsId"] = self.diagnosticsId
         }
         return tmpUserInfo
@@ -60,8 +60,8 @@ public enum PrimerStripeError: PrimerStripeErrorProtocol {
             let unwrappedError = unwrapErrorDescription(error)
             return "[\(errorId)]: \(unwrappedError)"
             
-        case .stripeInvalidPublishableKeyError:
-            return "[\(errorId)]: Publishable key is invalid (diagnosticsId: \(diagnosticsId)"
+        case .unknownSTPPaymentIntentStatusError:
+            return "[\(errorId)]: Unknown STPPaymentIntentStatus (diagnosticsId: \(diagnosticsId)"
         }
     }
     
@@ -71,7 +71,7 @@ public enum PrimerStripeError: PrimerStripeErrorProtocol {
         case .stripeSdkError(let error):
             return error
             
-        case .stripeInvalidPublishableKeyError:
+        case .unknownSTPPaymentIntentStatusError:
             return nil
         }
     }

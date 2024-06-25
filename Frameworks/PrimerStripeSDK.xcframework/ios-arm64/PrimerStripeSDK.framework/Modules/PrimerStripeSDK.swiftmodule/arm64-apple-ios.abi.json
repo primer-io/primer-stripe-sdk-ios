@@ -697,8 +697,8 @@
           },
           {
             "kind": "Var",
-            "name": "stripeInvalidPublishableKeyError",
-            "printedName": "stripeInvalidPublishableKeyError",
+            "name": "unknownSTPPaymentIntentStatusError",
+            "printedName": "unknownSTPPaymentIntentStatusError",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -728,8 +728,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15PrimerStripeSDK0aB5ErrorO027stripeInvalidPublishableKeyD0yA2CmF",
-            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO027stripeInvalidPublishableKeyD0yA2CmF",
+            "usr": "s:15PrimerStripeSDK0aB5ErrorO029unknownSTPPaymentIntentStatusD0yA2CmF",
+            "mangledName": "$s15PrimerStripeSDK0aB5ErrorO029unknownSTPPaymentIntentStatusD0yA2CmF",
             "moduleName": "PrimerStripeSDK"
           },
           {
