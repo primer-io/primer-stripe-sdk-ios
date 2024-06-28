@@ -1,0 +1,60 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PrimerStripeSDK
+import Foundation
+@_exported import PrimerStripeSDK
+import Stripe
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol PrimerStripeCollectorViewControllerDelegate : AnyObject {
+  func primerStripeCollected(_ stripeStatus: PrimerStripeSDK.PrimerStripeStatus)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PrimerStripeCollectorViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public static func getCollectorViewController(params: PrimerStripeSDK.PrimerStripeParams, delegate: any PrimerStripeSDK.PrimerStripeCollectorViewControllerDelegate) -> PrimerStripeSDK.PrimerStripeCollectorViewController
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+public protocol PrimerStripeErrorProtocol {
+  var errorId: Swift.String { get }
+  var userInfo: [Swift.String : Swift.String] { get }
+  var diagnosticsId: Swift.String { get }
+  var errorDescription: Swift.String { get }
+  var exposedError: Foundation.NSError? { get }
+}
+public enum PrimerStripeError : PrimerStripeSDK.PrimerStripeErrorProtocol {
+  case stripeSdkError(error: Foundation.NSError)
+  case unknownSTPPaymentIntentStatusError
+  public var errorId: Swift.String {
+    get
+  }
+  public var userInfo: [Swift.String : Swift.String] {
+    get
+  }
+  public var diagnosticsId: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String {
+    get
+  }
+  public var exposedError: Foundation.NSError? {
+    get
+  }
+}
+public struct PrimerStripeParams {
+  public var publishableKey: Swift.String
+  public var clientSecret: Swift.String
+  public var returnUrl: Swift.String
+  public var fullName: Swift.String
+  public var emailAddress: Swift.String
+  public init(publishableKey: Swift.String, clientSecret: Swift.String, returnUrl: Swift.String, fullName: Swift.String, emailAddress: Swift.String)
+}
+public enum PrimerStripeStatus {
+  case succeeded(paymentMethodId: Swift.String)
+  case failed(error: PrimerStripeSDK.PrimerStripeError)
+  case canceled
+}
