@@ -38,3 +38,7 @@ fastlane/screenshots
 .idea/
 *.hmap
 *.xcscmblueprint
+
+# Sensitive files
+*.pem
+*.crt
