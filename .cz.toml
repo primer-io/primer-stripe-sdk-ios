@@ -1,0 +1,7 @@
+[tool.commitizen]
+version_scheme = "semver"
+version = "0.0.1"
+version_files = [
+  "PrimerStripeSDK/Sources/Version/Version.swift:let PrimerStripeSDKVersion",
+  "PrimerStripeSDK.podspec:s.version"
+]
