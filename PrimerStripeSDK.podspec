@@ -7,7 +7,7 @@
 
 Pod::Spec.new do |spec|
   spec.name                   = 'PrimerStripeSDK'
-  spec.version                = '0.0.1'
+  spec.version                = '1.0.0'
   spec.swift_version          = '5'
   spec.summary                = 'A wrapper around the Stripe SDK for Primer.'
   spec.homepage               = 'https://github.com/primer-io/primer-stripe-sdk-ios'
