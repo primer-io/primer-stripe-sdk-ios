@@ -15,6 +15,6 @@ Pod::Spec.new do |spec|
   spec.author                 = { 'Primer DX Team' => 'dx@primer.io' }
   spec.platform               = :ios, '13.0'
   spec.ios.deployment_target  = '13.0'
-  spec.source                 = { :git => 'https://github.com/primer-io/primer-sdk-ios.git', :tag => spec.version.to_s }
+  spec.source                 = { :git => 'https://github.com/primer-io/primer-stripe-sdk-ios.git', :tag => spec.version.to_s }
   spec.vendored_frameworks    = 'Frameworks/*.xcframework'
 end
