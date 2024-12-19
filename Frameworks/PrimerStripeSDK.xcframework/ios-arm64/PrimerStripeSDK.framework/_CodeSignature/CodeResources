@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		p0l4ldAhmS6U/X+VJZobffBOr2s=
+		l9qUcfN51b3Z7VTqV/bWCJ9SIcU=
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		lt3C33XRRCWhQowWd3RwFnjnlS4=
+		Jub2ptGojODHHjEOsh+ETRMrH8I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+GaMrIwEqRMhAyK38jhhDo38h6jrBd2ZWa87na+DSdA=
+			jpg/Zs4JUu/QmqM7kbGhbfqAOqPpLcTt0UXrJr20tuw=
 			</data>
 		</dict>
 		<key>Modules/PrimerStripeSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eSMzfWJq5plKcmOS0/7NDUF2vwXzfwZzuZW+D3I6gyo=
+			/ft0GiEs5yDY7DE8xlOgHNVsNMnfd5Wn2kfz7mdr8jA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
