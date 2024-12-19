@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name StripeFinancialConnections
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StripeFinancialConnections
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AuthenticationServices
 import CoreMedia
 import Foundation
@@ -35,10 +36,14 @@ extension StripeCore.StripeAPI {
     public let used: Swift.Bool
   }
 }
-@_spi(STP) extension StripeCore.StripeAPI.BankAccountToken : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.BankAccountToken : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.BankAccountToken, b: StripeCore.StripeAPI.BankAccountToken) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
-@_spi(STP) extension StripeCore.StripeAPI.BankAccountToken.BankAccount : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.BankAccountToken.BankAccount : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.BankAccountToken.BankAccount, b: StripeCore.StripeAPI.BankAccountToken.BankAccount) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
 extension StripeCore.StripeAPI {
@@ -176,19 +181,29 @@ extension StripeCore.StripeAPI {
     public let supportedPaymentMethodTypes: [StripeCore.StripeAPI.FinancialConnectionsAccount.SupportedPaymentMethodTypes]
   }
 }
-@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.FinancialConnectionsAccount, b: StripeCore.StripeAPI.FinancialConnectionsAccount) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
-@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.BalanceRefresh : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.BalanceRefresh : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.FinancialConnectionsAccount.BalanceRefresh, b: StripeCore.StripeAPI.FinancialConnectionsAccount.BalanceRefresh) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
-@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.CashBalance : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.CashBalance : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.FinancialConnectionsAccount.CashBalance, b: StripeCore.StripeAPI.FinancialConnectionsAccount.CashBalance) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
-@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.CreditBalance : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.CreditBalance : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.FinancialConnectionsAccount.CreditBalance, b: StripeCore.StripeAPI.FinancialConnectionsAccount.CreditBalance) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
-@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.Balance : Swift.Decodable {
+@_spi(STP) extension StripeCore.StripeAPI.FinancialConnectionsAccount.Balance : Swift.Codable, Swift.Equatable {
+  @_spi(STP) public static func == (a: StripeCore.StripeAPI.FinancialConnectionsAccount.Balance, b: StripeCore.StripeAPI.FinancialConnectionsAccount.Balance) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
 extension StripeCore.StripeAPI {
@@ -203,6 +218,7 @@ extension StripeCore.StripeAPI {
         @_spi(STP) public let id: Swift.String
         @_spi(STP) public let last4: Swift.String
         @_spi(STP) public let routingNumber: Swift.String?
+        @_spi(STP) public var instantlyVerified: Swift.Bool
         @_spi(STP) public init(from decoder: any Swift.Decoder) throws
       }
       @_spi(STP) case linkedAccount(StripeCore.StripeAPI.FinancialConnectionsAccount)
@@ -226,9 +242,18 @@ extension StripeCore.StripeAPI {
 }
 public struct FinancialConnectionsCustomManualEntryRequiredError : Swift.Error {
 }
+@_spi(STP) public enum HostControllerResult {
+  @_spi(STP) case completed(StripeFinancialConnections.HostControllerResult.Completed)
+  @_spi(STP) case failed(error: any Swift.Error)
+  @_spi(STP) case canceled
+  @_spi(STP) public enum Completed {
+    @_spi(STP) case financialConnections(StripeCore.StripeAPI.FinancialConnectionsSession)
+    @_spi(STP) case instantDebits(StripeCore.InstantDebitsLinkedBank)
+  }
+}
 @_spi(STP) public class FinancialConnectionsSDKImplementation : StripeCore.FinancialConnectionsSDKInterface {
   @_spi(STP) required public init()
-  @_spi(STP) public func presentFinancialConnectionsSheet(apiClient: StripeCore.STPAPIClient, clientSecret: Swift.String, returnURL: Swift.String?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeCore.FinancialConnectionsSDKResult) -> Swift.Void)
+  @_spi(STP) public func presentFinancialConnectionsSheet(apiClient: StripeCore.STPAPIClient, clientSecret: Swift.String, returnURL: Swift.String?, elementsSessionContext: StripeCore.ElementsSessionContext?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeCore.FinancialConnectionsSDKResult) -> Swift.Void)
   @_spi(STP) @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class FinancialConnectionsSheet {
@@ -249,10 +274,12 @@ public struct FinancialConnectionsCustomManualEntryRequiredError : Swift.Error {
     get
     set
   }
+  @_spi(STP) final public var elementsSessionContext: StripeCore.ElementsSessionContext?
   @_spi(STP) final public let analyticsClient: any StripeCore.STPAnalyticsClientProtocol
   convenience public init(financialConnectionsSessionClientSecret: Swift.String, returnURL: Swift.String? = nil)
   final public func presentForToken(from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeFinancialConnections.FinancialConnectionsSheet.TokenResult) -> Swift.Void)
   final public func present(from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeFinancialConnections.FinancialConnectionsSheet.Result) -> Swift.Void)
+  @_spi(STP) final public func present(from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeFinancialConnections.HostControllerResult) -> Swift.Void)
   @objc deinit
 }
 @_spi(STP) extension StripeFinancialConnections.FinancialConnectionsSheet : StripeCore.STPAnalyticsProtocol {

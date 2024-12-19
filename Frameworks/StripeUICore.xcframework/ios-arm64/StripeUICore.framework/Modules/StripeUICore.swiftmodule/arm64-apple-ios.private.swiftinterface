@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name StripeUICore
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StripeUICore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import DeveloperToolsSupport
 import Foundation
 import QuartzCore
@@ -13,7 +14,7 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @_spi(STP) extension QuartzCore.CALayer {
-  @_spi(STP) public func applyShadow(shadow: StripeUICore.ElementsUITheme.Shadow?)
+  @_spi(STP) public func applyShadow(shadow: StripeUICore.ElementsAppearance.Shadow?)
 }
 @_spi(STP) extension Foundation.Locale {
   @_spi(STP) public func sortedByTheirLocalizedNames<T>(_ regionCollection: [T], thisRegionFirst: Swift.Bool = false) -> [T] where T : StripeUICore.RegionCodeProvider
@@ -46,11 +47,15 @@ import _SwiftConcurrencyShims
   @_spi(STP) public var contrastingColor: UIKit.UIColor {
     @_spi(STP) get
   }
+  @_spi(STP) public func adjustedForContrast(with backgroundColor: UIKit.UIColor, minimumRatio: CoreFoundation.CGFloat = 4.5) -> UIKit.UIColor
   @_spi(STP) public var disabledColor: UIKit.UIColor {
     @_spi(STP) get
   }
   @_spi(STP) public func disabled(_ isDisabled: Swift.Bool = true) -> UIKit.UIColor
   @_spi(STP) public var rgba: (red: CoreFoundation.CGFloat, green: CoreFoundation.CGFloat, blue: CoreFoundation.CGFloat, alpha: CoreFoundation.CGFloat) {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var brightness: CoreFoundation.CGFloat {
     @_spi(STP) get
   }
   @_spi(STP) public var perceivedBrightness: CoreFoundation.CGFloat {
@@ -90,9 +95,10 @@ import _SwiftConcurrencyShims
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func setHiddenIfNecessary(_ shouldHide: Swift.Bool)
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func firstResponder() -> UIKit.UIView?
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func updateTrailingAnchor(constant: CoreFoundation.CGFloat)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public static func makeSpacerView(width: CoreFoundation.CGFloat? = nil, height: CoreFoundation.CGFloat? = nil) -> UIKit.UIView
 }
 @_spi(STP) extension UIKit.UIViewController {
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public func animateHeightChange(forceAnimation: Swift.Bool = false, duration: CoreFoundation.CGFloat = 0.5, _ animations: (() -> Swift.Void)? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public func animateHeightChange(forceAnimation: Swift.Bool = false, duration: CoreFoundation.CGFloat = 0.5, _ animations: (() -> Swift.Void)? = nil, postLayoutAnimations: (() -> Swift.Void)? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
   @_spi(STP) @_Concurrency.MainActor(unsafe) public var rootParent: UIKit.UIViewController {
     @_spi(STP) get
   }
@@ -260,7 +266,7 @@ import _SwiftConcurrencyShims
     @_spi(STP) @objc get
     @_spi(STP) @objc set
   }
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(configuration: StripeUICore.OneTimeCodeTextField.Configuration = Configuration(), theme: StripeUICore.ElementsUITheme = .default)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(configuration: StripeUICore.OneTimeCodeTextField.Configuration = Configuration(), theme: StripeUICore.ElementsAppearance = .default)
   @_spi(STP) @objc deinit
   @_spi(STP) @discardableResult
   @_Concurrency.MainActor(unsafe) @objc override final public func becomeFirstResponder() -> Swift.Bool
@@ -336,13 +342,13 @@ import _SwiftConcurrencyShims
     @_spi(STP) @objc get
     @_spi(STP) @objc set
   }
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public var theme: StripeUICore.ElementsUITheme {
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public var theme: StripeUICore.ElementsAppearance {
     @_spi(STP) get
     @_spi(STP) set
   }
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(description: Swift.String? = nil, theme: StripeUICore.ElementsUITheme = .default)
-  @_spi(STP) @_Concurrency.MainActor(unsafe) convenience public init(text: Swift.String, description: Swift.String? = nil, theme: StripeUICore.ElementsUITheme = .default)
-  @_spi(STP) @_Concurrency.MainActor(unsafe) convenience public init(attributedText: Foundation.NSAttributedString, description: Swift.String? = nil, theme: StripeUICore.ElementsUITheme = .default)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(description: Swift.String? = nil, theme: StripeUICore.ElementsAppearance = .default)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) convenience public init(text: Swift.String, description: Swift.String? = nil, theme: StripeUICore.ElementsAppearance = .default)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) convenience public init(attributedText: Foundation.NSAttributedString, description: Swift.String? = nil, theme: StripeUICore.ElementsAppearance = .default)
   @_spi(STP) @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @_spi(STP) @_Concurrency.MainActor(unsafe) @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func setText(_ text: Swift.String)
@@ -361,11 +367,19 @@ import _SwiftConcurrencyShims
     @_spi(STP) get
     @_spi(STP) set
   }
-  @_spi(STP) public init(theme: StripeUICore.ElementsUITheme, label: Swift.String, isSelectedByDefault: Swift.Bool, didToggle: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_spi(STP) public init(theme: StripeUICore.ElementsAppearance, label: Swift.String, isSelectedByDefault: Swift.Bool, didToggle: ((Swift.Bool) -> Swift.Void)? = nil)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.CheckboxElement : StripeUICore.Element {
+  @_spi(STP) final public var collectsUserInput: Swift.Bool {
+    @_spi(STP) get
+  }
   @_spi(STP) final public var view: UIKit.UIView {
+    @_spi(STP) get
+  }
+}
+@_spi(STP) extension StripeUICore.CheckboxElement {
+  @_spi(STP) final public var debugDescription: Swift.String {
     @_spi(STP) get
   }
 }
@@ -373,12 +387,23 @@ import _SwiftConcurrencyShims
   @_spi(STP) var elements: [any StripeUICore.Element] { get }
 }
 @_spi(STP) extension StripeUICore.ContainerElement {
+  @_spi(STP) public var collectsUserInput: Swift.Bool {
+    @_spi(STP) get
+  }
   @_spi(STP) public func beginEditing() -> Swift.Bool
   @_spi(STP) public var validationState: StripeUICore.ElementValidationState {
     @_spi(STP) get
   }
   @_spi(STP) public func didUpdate(element: any StripeUICore.Element)
   @_spi(STP) public func continueToNextField(element: any StripeUICore.Element)
+}
+@_spi(STP) extension StripeUICore.ContainerElement {
+  @_spi(STP) public var debugDescription: Swift.String {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var subElementDebugDescription: Swift.String {
+    @_spi(STP) get
+  }
 }
 @_spi(STP) public class DateFieldElement {
   @_spi(STP) public typealias DidUpdateSelectedDate = (Foundation.Date) -> Swift.Void
@@ -390,16 +415,19 @@ import _SwiftConcurrencyShims
     @_spi(STP) get
   }
   @_spi(STP) public var didUpdate: StripeUICore.DateFieldElement.DidUpdateSelectedDate?
-  @_spi(STP) public init(label: Swift.String? = nil, defaultDate: Foundation.Date? = nil, minimumDate: Foundation.Date? = nil, maximumDate: Foundation.Date? = nil, locale: Foundation.Locale = .current, timeZone: Foundation.TimeZone = .current, theme: StripeUICore.ElementsUITheme = .default, customDateFormatter: Foundation.DateFormatter? = nil, didUpdate: StripeUICore.DateFieldElement.DidUpdateSelectedDate? = nil)
+  @_spi(STP) public init(label: Swift.String? = nil, defaultDate: Foundation.Date? = nil, minimumDate: Foundation.Date? = nil, maximumDate: Foundation.Date? = nil, locale: Foundation.Locale = .current, timeZone: Foundation.TimeZone = .current, theme: StripeUICore.ElementsAppearance = .default, customDateFormatter: Foundation.DateFormatter? = nil, didUpdate: StripeUICore.DateFieldElement.DidUpdateSelectedDate? = nil)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.DateFieldElement : StripeUICore.Element {
+  @_spi(STP) public var collectsUserInput: Swift.Bool {
+    @_spi(STP) get
+  }
   @_spi(STP) public var view: UIKit.UIView {
     @_spi(STP) get
   }
   @_spi(STP) public func beginEditing() -> Swift.Bool
 }
-@_spi(STP) @objc(STP_Internal_DropdownFieldElement) public class DropdownFieldElement : ObjectiveC.NSObject {
+@_spi(STP) final public class DropdownFieldElement {
   @_spi(STP) public typealias DidPresent = () -> Swift.Void
   @_spi(STP) public typealias DidUpdateSelectedIndex = (Swift.Int) -> Swift.Void
   @_spi(STP) public typealias DidTapClose = () -> Swift.Void
@@ -412,51 +440,55 @@ import _SwiftConcurrencyShims
     @_spi(STP) public let rawData: Swift.String
     @_spi(STP) public let isPlaceholder: Swift.Bool
   }
-  @_spi(STP) weak public var delegate: (any StripeUICore.ElementDelegate)?
-  @_spi(STP) public var items: [StripeUICore.DropdownFieldElement.DropdownItem] {
+  @_spi(STP) weak final public var delegate: (any StripeUICore.ElementDelegate)?
+  @_spi(STP) final public var items: [StripeUICore.DropdownFieldElement.DropdownItem] {
     get
   }
-  @_spi(STP) public var nonPlacerholderItems: [StripeUICore.DropdownFieldElement.DropdownItem] {
+  @_spi(STP) final public var nonPlacerholderItems: [StripeUICore.DropdownFieldElement.DropdownItem] {
     @_spi(STP) get
   }
-  @_spi(STP) public var selectedItem: StripeUICore.DropdownFieldElement.DropdownItem {
+  @_spi(STP) final public var selectedItem: StripeUICore.DropdownFieldElement.DropdownItem {
     @_spi(STP) get
   }
-  @_spi(STP) public var selectedIndex: Swift.Int {
+  @_spi(STP) final public var selectedIndex: Swift.Int {
     @_spi(STP) get
     @_spi(STP) set
   }
-  @_spi(STP) public var didPresent: StripeUICore.DropdownFieldElement.DidPresent?
-  @_spi(STP) public var didUpdate: StripeUICore.DropdownFieldElement.DidUpdateSelectedIndex?
-  @_spi(STP) public var didTapClose: StripeUICore.DropdownFieldElement.DidTapClose?
-  @_spi(STP) final public let theme: StripeUICore.ElementsUITheme
+  @_spi(STP) final public var didPresent: StripeUICore.DropdownFieldElement.DidPresent?
+  @_spi(STP) final public var didUpdate: StripeUICore.DropdownFieldElement.DidUpdateSelectedIndex?
+  @_spi(STP) final public var didTapClose: StripeUICore.DropdownFieldElement.DidTapClose?
+  @_spi(STP) final public let theme: StripeUICore.ElementsAppearance
   @_spi(STP) final public let hasPadding: Swift.Bool
   @_spi(STP) final public let label: Swift.String?
-  @_spi(STP) public init(items: [StripeUICore.DropdownFieldElement.DropdownItem], defaultIndex: Swift.Int = 0, label: Swift.String?, theme: StripeUICore.ElementsUITheme = .default, hasPadding: Swift.Bool = true, disableDropdownWithSingleElement: Swift.Bool = false, isOptional: Swift.Bool = false, didPresent: StripeUICore.DropdownFieldElement.DidPresent? = nil, didUpdate: StripeUICore.DropdownFieldElement.DidUpdateSelectedIndex? = nil, didTapClose: StripeUICore.DropdownFieldElement.DidTapClose? = nil)
-  @_spi(STP) public func select(index: Swift.Int, shouldAutoAdvance: Swift.Bool = true)
-  @_spi(STP) public func update(items: [StripeUICore.DropdownFieldElement.DropdownItem])
+  @_spi(STP) public init(items: [StripeUICore.DropdownFieldElement.DropdownItem], defaultIndex: Swift.Int = 0, label: Swift.String?, theme: StripeUICore.ElementsAppearance = .default, hasPadding: Swift.Bool = true, disableDropdownWithSingleElement: Swift.Bool = false, isOptional: Swift.Bool = false, didPresent: StripeUICore.DropdownFieldElement.DidPresent? = nil, didUpdate: StripeUICore.DropdownFieldElement.DidUpdateSelectedIndex? = nil, didTapClose: StripeUICore.DropdownFieldElement.DidTapClose? = nil)
+  @_spi(STP) final public func select(index: Swift.Int, shouldAutoAdvance: Swift.Bool = true)
+  @_spi(STP) final public func update(items: [StripeUICore.DropdownFieldElement.DropdownItem])
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.DropdownFieldElement : StripeUICore.Element {
-  @_spi(STP) public var view: UIKit.UIView {
+  @_spi(STP) final public var collectsUserInput: Swift.Bool {
     @_spi(STP) get
   }
-  @_spi(STP) public func beginEditing() -> Swift.Bool
+  @_spi(STP) final public var view: UIKit.UIView {
+    @_spi(STP) get
+  }
+  @_spi(STP) final public func beginEditing() -> Swift.Bool
 }
-@_spi(STP) extension StripeUICore.DropdownFieldElement : UIKit.UIPickerViewDelegate {
-  @_spi(STP) @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
-  @_spi(STP) @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+@_spi(STP) extension StripeUICore.DropdownFieldElement {
+  @_spi(STP) final public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
 }
-@_spi(STP) extension StripeUICore.DropdownFieldElement : UIKit.UIPickerViewDataSource {
-  @_spi(STP) @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
-  @_spi(STP) @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+@_spi(STP) extension StripeUICore.DropdownFieldElement {
+  @_spi(STP) final public var debugDescription: Swift.String {
+    @_spi(STP) get
+  }
 }
-@_spi(STP) public protocol Element : AnyObject {
+@_spi(STP) public protocol Element : AnyObject, Swift.CustomDebugStringConvertible {
   @_spi(STP) var delegate: (any StripeUICore.ElementDelegate)? { get set }
   @_spi(STP) var view: UIKit.UIView { get }
   @_spi(STP) func beginEditing() -> Swift.Bool
   @_spi(STP) var validationState: StripeUICore.ElementValidationState { get }
   @_spi(STP) var subLabelText: Swift.String? { get }
+  @_spi(STP) var collectsUserInput: Swift.Bool { get }
 }
 @_spi(STP) extension StripeUICore.Element {
   @_spi(STP) public func beginEditing() -> Swift.Bool
@@ -474,9 +506,6 @@ import _SwiftConcurrencyShims
 @_spi(STP) public protocol PresentingViewControllerDelegate : StripeUICore.ElementDelegate {
   @_spi(STP) func presentViewController(viewController: UIKit.UIViewController, completion: (() -> Swift.Void)?)
 }
-@_spi(STP) extension StripeUICore.Element {
-  @_spi(STP) public func getAllSubElements() -> [any StripeUICore.Element]
-}
 @_spi(STP) @frozen public enum ElementValidationState {
   @_spi(STP) case valid
   @_spi(STP) case invalid(error: any StripeUICore.ElementValidationError, shouldDisplay: Swift.Bool)
@@ -486,6 +515,11 @@ import _SwiftConcurrencyShims
 }
 @_spi(STP) public protocol ElementValidationError : Swift.Error {
   @_spi(STP) var localizedDescription: Swift.String { get }
+}
+@_spi(STP) extension StripeUICore.Element {
+  @_spi(STP) public var debugDescription: Swift.String {
+    @_spi(STP) get
+  }
 }
 @_spi(STP) public enum ElementsUI {
   @_spi(STP) public static let contentViewInsets: UIKit.NSDirectionalEdgeInsets
@@ -498,23 +532,18 @@ import _SwiftConcurrencyShims
   @_spi(STP) public static let defaultCornerRadius: CoreFoundation.CGFloat
   @_spi(STP) public static let backgroundColor: UIKit.UIColor
   @_spi(STP) public static let disabledBackgroundColor: UIKit.UIColor
-  @_spi(STP) public static func makeErrorLabel(theme: StripeUICore.ElementsUITheme = .default) -> UIKit.UILabel
-  @_spi(STP) public static func makeNoticeTextField(theme: StripeUICore.ElementsUITheme = .default) -> UIKit.UITextView
-  @_spi(STP) public static func makeSectionTitleLabel(theme: StripeUICore.ElementsUITheme = .default) -> UIKit.UILabel
+  @_spi(STP) public static func makeErrorLabel(theme: StripeUICore.ElementsAppearance) -> UIKit.UILabel
+  @_spi(STP) public static func makeSmallFootnote(theme: StripeUICore.ElementsAppearance) -> UIKit.UITextView
+  @_spi(STP) public static func makeNoticeTextField(theme: StripeUICore.ElementsAppearance) -> UIKit.UITextView
+  @_spi(STP) public static func makeSectionTitleLabel(theme: StripeUICore.ElementsAppearance) -> UIKit.UILabel
 }
-@_spi(STP) public struct ElementsUITheme {
-  @_spi(STP) public static let `default`: StripeUICore.ElementsUITheme
-  @_spi(STP) public var fonts: StripeUICore.ElementsUITheme.Font
-  @_spi(STP) public var colors: StripeUICore.ElementsUITheme.Color
+@_spi(STP) public struct ElementsAppearance {
+  @_spi(STP) public static let `default`: StripeUICore.ElementsAppearance
+  @_spi(STP) public var fonts: StripeUICore.ElementsAppearance.Font
+  @_spi(STP) public var colors: StripeUICore.ElementsAppearance.Color
   @_spi(STP) public var borderWidth: CoreFoundation.CGFloat
   @_spi(STP) public var cornerRadius: CoreFoundation.CGFloat
-  @_spi(STP) public var shadow: StripeUICore.ElementsUITheme.Shadow?
-  @_spi(STP) public var isBright: Swift.Bool {
-    @_spi(STP) get
-  }
-  @_spi(STP) public var isDark: Swift.Bool {
-    @_spi(STP) get
-  }
+  @_spi(STP) public var shadow: StripeUICore.ElementsAppearance.Shadow?
   @_spi(STP) public struct Font {
     @_spi(STP) public init()
     @_spi(STP) public var subheadline: UIKit.UIFont
@@ -522,13 +551,14 @@ import _SwiftConcurrencyShims
     @_spi(STP) public var sectionHeader: UIKit.UIFont
     @_spi(STP) public var caption: UIKit.UIFont
     @_spi(STP) public var footnote: UIKit.UIFont
+    @_spi(STP) public var smallFootnote: UIKit.UIFont
     @_spi(STP) public var footnoteEmphasis: UIKit.UIFont
   }
   @_spi(STP) public struct Color {
     @_spi(STP) public init()
     @_spi(STP) public var primary: UIKit.UIColor
     @_spi(STP) public var parentBackground: UIKit.UIColor
-    @_spi(STP) public var background: UIKit.UIColor
+    @_spi(STP) public var componentBackground: UIKit.UIColor
     @_spi(STP) public var disabledBackground: UIKit.UIColor
     @_spi(STP) public var border: UIKit.UIColor
     @_spi(STP) public var divider: UIKit.UIColor
@@ -548,6 +578,7 @@ import _SwiftConcurrencyShims
 }
 @_spi(STP) extension StripeUICore.AddressSectionElement {
   @_spi(STP) @objc @_Concurrency.MainActor(unsafe) public class DummyAddressLine : ObjectiveC.NSObject, StripeUICore.Element, UIKit.UIGestureRecognizerDelegate {
+    @_spi(STP) @_Concurrency.MainActor(unsafe) final public let collectsUserInput: Swift.Bool
     @_spi(STP) @_Concurrency.MainActor(unsafe) public var delegate: (any StripeUICore.ElementDelegate)?
     @_spi(STP) @_Concurrency.MainActor(unsafe) public var view: UIKit.UIView {
       @_spi(STP) get
@@ -556,9 +587,9 @@ import _SwiftConcurrencyShims
     @_spi(STP) @_Concurrency.MainActor(unsafe) public var validationState: StripeUICore.ElementValidationState {
       @_spi(STP) get
     }
-    @_spi(STP) @_Concurrency.MainActor(unsafe) final public let theme: StripeUICore.ElementsUITheme
+    @_spi(STP) @_Concurrency.MainActor(unsafe) final public let theme: StripeUICore.ElementsAppearance
     @_spi(STP) @_Concurrency.MainActor(unsafe) public func beginEditing() -> Swift.Bool
-    @_spi(STP) @_Concurrency.MainActor(unsafe) public init(theme: StripeUICore.ElementsUITheme, didTap: @escaping () -> Swift.Void = {})
+    @_spi(STP) @_Concurrency.MainActor(unsafe) public init(theme: StripeUICore.ElementsAppearance, didTap: @escaping () -> Swift.Void = {})
     @_spi(STP) @objc deinit
   }
 }
@@ -637,7 +668,7 @@ import _SwiftConcurrencyShims
   }
   @_spi(STP) final public let countryCodes: [Swift.String]
   @_spi(STP) public var didUpdate: StripeUICore.AddressSectionElement.DidUpdateAddress?
-  @_spi(STP) public init(title: Swift.String? = nil, countries: [Swift.String]? = nil, locale: Foundation.Locale = .current, addressSpecProvider: StripeUICore.AddressSpecProvider = .shared, defaults: StripeUICore.AddressSectionElement.AddressDetails = .empty, collectionMode: StripeUICore.AddressSectionElement.CollectionMode = .all(), additionalFields: StripeUICore.AddressSectionElement.AdditionalFields = .init(), theme: StripeUICore.ElementsUITheme = .default, presentAutoComplete: @escaping () -> Swift.Void = { })
+  @_spi(STP) public init(title: Swift.String? = nil, countries: [Swift.String]? = nil, locale: Foundation.Locale = .current, addressSpecProvider: StripeUICore.AddressSpecProvider = .shared, defaults: StripeUICore.AddressSectionElement.AddressDetails = .empty, collectionMode: StripeUICore.AddressSectionElement.CollectionMode = .all(), additionalFields: StripeUICore.AddressSectionElement.AdditionalFields = .init(), theme: StripeUICore.ElementsAppearance = .default, presentAutoComplete: @escaping () -> Swift.Void = { })
   @_spi(STP) public func updateBillingSameAsShippingDefaultAddress(_ defaultAddress: StripeUICore.AddressSectionElement.AddressDetails.Address)
   @_spi(STP) @objc deinit
 }
@@ -648,13 +679,15 @@ import _SwiftConcurrencyShims
 @_spi(STP) extension StripeUICore.AddressSectionElement : StripeUICore.ElementDelegate {
   @_spi(STP) public func didUpdate(element: any StripeUICore.Element)
 }
+@_spi(STP) extension StripeUICore.AddressSectionElement.AddressDetails {
+  @_spi(STP) public init(billingAddress: StripeCore.BillingAddress, phone: Swift.String?)
+}
 @_spi(STP) @_hasMissingDesignatedInitializers public class AddressSpecProvider {
   @_spi(STP) public static var shared: StripeUICore.AddressSpecProvider
   @_spi(STP) public var countries: [Swift.String] {
     @_spi(STP) get
   }
   @_spi(STP) public func loadAddressSpecs(completion: (() -> Swift.Void)? = nil)
-  @_spi(STP) public func loadAddressSpecs() -> StripeCore.Promise<Swift.Void>
   @_spi(STP) @objc deinit
 }
 @_spi(STP) @_hasMissingDesignatedInitializers public class BSBNumberProvider {
@@ -664,7 +697,7 @@ import _SwiftConcurrencyShims
 }
 @_spi(STP) extension StripeUICore.DropdownFieldElement {
   @_spi(STP) public enum Address {
-    @_spi(STP) public static func makeCountry(label: Swift.String, countryCodes: [Swift.String], theme: StripeUICore.ElementsUITheme = .default, defaultCountry: Swift.String? = nil, locale: Foundation.Locale = Locale.current, disableDropdownWithSingleCountry: Swift.Bool = false) -> StripeUICore.DropdownFieldElement
+    @_spi(STP) public static func makeCountry(label: Swift.String, countryCodes: [Swift.String], theme: StripeUICore.ElementsAppearance = .default, defaultCountry: Swift.String? = nil, locale: Foundation.Locale = Locale.current, disableDropdownWithSingleCountry: Swift.Bool = false) -> StripeUICore.DropdownFieldElement
   }
 }
 @_spi(STP) public struct IDNumberTextFieldConfiguration : StripeUICore.TextFieldElementConfiguration {
@@ -680,7 +713,8 @@ import _SwiftConcurrencyShims
     }
   }
   @_spi(STP) public let label: Swift.String
-  @_spi(STP) public init(type: StripeUICore.IDNumberTextFieldConfiguration.IDNumberType?, label: Swift.String)
+  @_spi(STP) public let defaultValue: Swift.String?
+  @_spi(STP) public init(type: StripeUICore.IDNumberTextFieldConfiguration.IDNumberType?, label: Swift.String, defaultValue: Swift.String?)
   @_spi(STP) public var disallowedCharacters: Foundation.CharacterSet {
     @_spi(STP) get
   }
@@ -691,16 +725,16 @@ import _SwiftConcurrencyShims
 }
 @_spi(STP) extension StripeUICore.TextFieldElement {
   @_spi(STP) public enum Account {
-    @_spi(STP) public static func makeBSB(defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
-    @_spi(STP) public static func makeAUBECSAccountNumber(defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
-    @_spi(STP) public static func makeSortCode(defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
-    @_spi(STP) public static func makeBacsAccountNumber(defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
+    @_spi(STP) public static func makeBSB(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
+    @_spi(STP) public static func makeAUBECSAccountNumber(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
+    @_spi(STP) public static func makeSortCode(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
+    @_spi(STP) public static func makeBacsAccountNumber(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
   }
 }
 @_spi(STP) extension StripeUICore.TextFieldElement {
   @_spi(STP) public enum Address {
-    @_spi(STP) public static func makeLine1(defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme) -> StripeUICore.TextFieldElement
-    @_spi(STP) public static func makeAutoCompleteLine(defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme) -> StripeUICore.TextFieldElement
+    @_spi(STP) public static func makeLine1(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance) -> StripeUICore.TextFieldElement
+    @_spi(STP) public static func makeAutoCompleteLine(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance) -> StripeUICore.TextFieldElement
   }
 }
 @_spi(STP) extension StripeUICore.TextFieldElement {
@@ -716,34 +750,38 @@ import _SwiftConcurrencyShims
     @_spi(STP) public let defaultValue: Swift.String?
     @_spi(STP) public let label: Swift.String
     @_spi(STP) public let isOptional: Swift.Bool
-    @_spi(STP) public init(type: StripeUICore.TextFieldElement.NameConfiguration.NameType = .full, defaultValue: Swift.String?, label: Swift.String? = nil, isOptional: Swift.Bool = false)
+    @_spi(STP) public let isEditable: Swift.Bool
+    @_spi(STP) public init(type: StripeUICore.TextFieldElement.NameConfiguration.NameType = .full, defaultValue: Swift.String?, label: Swift.String? = nil, isOptional: Swift.Bool = false, isEditable: Swift.Bool = true)
     @_spi(STP) public func keyboardProperties(for text: Swift.String) -> StripeUICore.TextFieldElement.KeyboardProperties
   }
-  @_spi(STP) public static func makeName(label: Swift.String? = nil, defaultValue: Swift.String?, theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
+  @_spi(STP) public static func makeName(label: Swift.String? = nil, defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
   @_spi(STP) public struct EmailConfiguration : StripeUICore.TextFieldElementConfiguration {
     @_spi(STP) public let label: Swift.String
     @_spi(STP) public let defaultValue: Swift.String?
     @_spi(STP) public let isOptional: Swift.Bool
+    @_spi(STP) public let isEditable: Swift.Bool
     @_spi(STP) public let disallowedCharacters: Foundation.CharacterSet
+    @_spi(STP) public init(defaultValue: Swift.String? = nil, isOptional: Swift.Bool = false, isEditable: Swift.Bool = true)
     @_spi(STP) public func validate(text: Swift.String, isOptional: Swift.Bool) -> StripeUICore.TextFieldElement.ValidationState
     @_spi(STP) public func keyboardProperties(for text: Swift.String) -> StripeUICore.TextFieldElement.KeyboardProperties
   }
-  @_spi(STP) public static func makeEmail(defaultValue: Swift.String?, isOptional: Swift.Bool = false, theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
+  @_spi(STP) public static func makeEmail(defaultValue: Swift.String?, isOptional: Swift.Bool = false, theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
   @_spi(STP) public struct VPAConfiguration : StripeUICore.TextFieldElementConfiguration {
     @_spi(STP) public let label: Swift.String
     @_spi(STP) public let disallowedCharacters: Foundation.CharacterSet
     @_spi(STP) public func validate(text: Swift.String, isOptional: Swift.Bool) -> StripeUICore.TextFieldElement.ValidationState
     @_spi(STP) public func keyboardProperties(for text: Swift.String) -> StripeUICore.TextFieldElement.KeyboardProperties
   }
-  @_spi(STP) public static func makeVPA(theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
+  @_spi(STP) public static func makeVPA(theme: StripeUICore.ElementsAppearance = .default) -> StripeUICore.TextFieldElement
   @_spi(STP) public struct BlikCodeConfiguration : StripeUICore.TextFieldElementConfiguration {
     @_spi(STP) public let label: Swift.String
     @_spi(STP) public let disallowedCharacters: Foundation.CharacterSet
+    @_spi(STP) public let defaultValue: Swift.String?
     @_spi(STP) public func validate(text: Swift.String, isOptional: Swift.Bool) -> StripeUICore.TextFieldElement.ValidationState
     @_spi(STP) public func keyboardProperties(for text: Swift.String) -> StripeUICore.TextFieldElement.KeyboardProperties
     @_spi(STP) public func maxLength(for text: Swift.String) -> Swift.Int
   }
-  @_spi(STP) public static func makeBlikCode(theme: StripeUICore.ElementsUITheme = .default) -> StripeUICore.TextFieldElement
+  @_spi(STP) public static func makeBlikCode(defaultValue: Swift.String?, theme: StripeUICore.ElementsAppearance) -> StripeUICore.TextFieldElement
   @_spi(STP) public struct KonbiniPhoneNumberConfiguration : StripeUICore.TextFieldElementConfiguration {
     @_spi(STP) public let label: Swift.String
     @_spi(STP) public let disallowedCharacters: Foundation.CharacterSet
@@ -752,7 +790,7 @@ import _SwiftConcurrencyShims
     @_spi(STP) public func keyboardProperties(for text: Swift.String) -> StripeUICore.TextFieldElement.KeyboardProperties
     @_spi(STP) public func maxLength(for text: Swift.String) -> Swift.Int
   }
-  @_spi(STP) public static func makeKonbini(theme: StripeUICore.ElementsUITheme) -> StripeUICore.TextFieldElement
+  @_spi(STP) public static func makeKonbini(theme: StripeUICore.ElementsAppearance) -> StripeUICore.TextFieldElement
   @_spi(STP) public struct PhoneNumberConfiguration : StripeUICore.TextFieldElementConfiguration {
     @_spi(STP) public let label: Swift.String
     @_spi(STP) public let countryCodeProvider: () -> Swift.String
@@ -772,7 +810,7 @@ import _SwiftConcurrencyShims
   @_spi(STP) final public let elements: [any StripeUICore.Element]
   @_spi(STP) final public let customSpacing: [(any StripeUICore.Element, CoreFoundation.CGFloat)]
   @_spi(STP) final public let style: StripeUICore.FormElement.Style
-  @_spi(STP) final public let theme: StripeUICore.ElementsUITheme
+  @_spi(STP) final public let theme: StripeUICore.ElementsAppearance
   @_spi(STP) public enum Style {
     @_spi(STP) case plain
     @_spi(STP) case bordered
@@ -783,11 +821,11 @@ import _SwiftConcurrencyShims
     }
   }
   @_spi(STP) public struct ViewModel {
-    @_spi(STP) public init(elements: [UIKit.UIView], bordered: Swift.Bool, theme: StripeUICore.ElementsUITheme = .default, customSpacing: [(UIKit.UIView, CoreFoundation.CGFloat)] = [])
+    @_spi(STP) public init(elements: [UIKit.UIView], bordered: Swift.Bool, theme: StripeUICore.ElementsAppearance = .default, customSpacing: [(UIKit.UIView, CoreFoundation.CGFloat)] = [])
   }
-  @_spi(STP) convenience public init(elements: [(any StripeUICore.Element)?], theme: StripeUICore.ElementsUITheme = .default, customSpacing: [(any StripeUICore.Element, CoreFoundation.CGFloat)] = [])
-  @_spi(STP) public init(elements: [(any StripeUICore.Element)?], style: StripeUICore.FormElement.Style, theme: StripeUICore.ElementsUITheme = .default, customSpacing: [(any StripeUICore.Element, CoreFoundation.CGFloat)] = [])
-  @_spi(STP) public func setElements(_ elements: [any StripeUICore.Element], hidden: Swift.Bool, animated: Swift.Bool)
+  @_spi(STP) convenience public init(elements: [(any StripeUICore.Element)?], theme: StripeUICore.ElementsAppearance = .default, customSpacing: [(any StripeUICore.Element, CoreFoundation.CGFloat)] = [])
+  @_spi(STP) public init(elements: [(any StripeUICore.Element)?], style: StripeUICore.FormElement.Style, theme: StripeUICore.ElementsAppearance = .default, customSpacing: [(any StripeUICore.Element, CoreFoundation.CGFloat)] = [])
+  @_spi(STP) public func toggleElements(_ elements: [any StripeUICore.Element], hidden: Swift.Bool, animated: Swift.Bool)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.FormElement : StripeUICore.Element {
@@ -818,9 +856,10 @@ import _SwiftConcurrencyShims
   @_spi(STP) public var selectedCountryCode: Swift.String {
     @_spi(STP) get
   }
-  @_spi(STP) public init(allowedCountryCodes: [Swift.String]? = nil, defaultCountryCode: Swift.String? = nil, defaultPhoneNumber: Swift.String? = nil, isOptional: Swift.Bool = false, infoView: UIKit.UIView? = nil, locale: Foundation.Locale = .current, theme: StripeUICore.ElementsUITheme = .default)
+  @_spi(STP) public init(allowedCountryCodes: [Swift.String]? = nil, defaultCountryCode: Swift.String? = nil, defaultPhoneNumber: Swift.String? = nil, isOptional: Swift.Bool = false, infoView: UIKit.UIView? = nil, locale: Foundation.Locale = .current, theme: StripeUICore.ElementsAppearance = .default)
   @_spi(STP) public func setSelectedCountryCode(_ countryCode: Swift.String, shouldUpdateDefaultNumber: Swift.Bool = false)
   @_spi(STP) public func clearPhoneNumber()
+  @_spi(STP) final public let collectsUserInput: Swift.Bool
   @_spi(STP) public func beginEditing() -> Swift.Bool
   @_spi(STP) public func didUpdate(element: any StripeUICore.Element)
   @_spi(STP) @objc deinit
@@ -833,8 +872,8 @@ import _SwiftConcurrencyShims
       @_spi(STP) set
     }
     @_spi(STP) final public let elements: [any StripeUICore.Element]
-    @_spi(STP) final public let theme: StripeUICore.ElementsUITheme
-    @_spi(STP) public init(_ elements: [any StripeUICore.Element], theme: StripeUICore.ElementsUITheme = .default)
+    @_spi(STP) final public let theme: StripeUICore.ElementsAppearance
+    @_spi(STP) public init(_ elements: [any StripeUICore.Element], theme: StripeUICore.ElementsAppearance = .default)
     @_spi(STP) @objc deinit
   }
 }
@@ -844,8 +883,8 @@ import _SwiftConcurrencyShims
     @_spi(STP) get
     @_spi(STP) set
   }
-  @_spi(STP) public init(title: Swift.String? = nil, elements: [any StripeUICore.Element], theme: StripeUICore.ElementsUITheme = .default)
-  @_spi(STP) convenience public init(_ element: any StripeUICore.Element, theme: StripeUICore.ElementsUITheme = .default)
+  @_spi(STP) public init(title: Swift.String? = nil, elements: [any StripeUICore.Element], theme: StripeUICore.ElementsAppearance = .default)
+  @_spi(STP) convenience public init(_ element: any StripeUICore.Element, theme: StripeUICore.ElementsAppearance = .default)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.SectionElement : StripeUICore.Element {
@@ -868,7 +907,13 @@ import _SwiftConcurrencyShims
     @_spi(STP) @objc deinit
   }
 }
+@_spi(STP) extension StripeUICore.SectionElement {
+  @_spi(STP) final public var debugDescription: Swift.String {
+    @_spi(STP) get
+  }
+}
 @_spi(STP) public class StaticElement : StripeUICore.Element {
+  @_spi(STP) final public let collectsUserInput: Swift.Bool
   @_spi(STP) weak public var delegate: (any StripeUICore.ElementDelegate)?
   @_spi(STP) final public let view: UIKit.UIView
   @_spi(STP) public var isHidden: Swift.Bool {
@@ -916,11 +961,14 @@ import _SwiftConcurrencyShims
   @_spi(STP) public struct KeyboardProperties {
     @_spi(STP) public init(type: UIKit.UIKeyboardType, textContentType: UIKit.UITextContentType?, autocapitalization: UIKit.UITextAutocapitalizationType)
   }
-  @_spi(STP) required public init(configuration: any StripeUICore.TextFieldElementConfiguration, theme: StripeUICore.ElementsUITheme = .default)
+  @_spi(STP) required public init(configuration: any StripeUICore.TextFieldElementConfiguration, theme: StripeUICore.ElementsAppearance = .default)
   @_spi(STP) final public func setText(_ text: Swift.String)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.TextFieldElement : StripeUICore.Element {
+  @_spi(STP) final public var collectsUserInput: Swift.Bool {
+    @_spi(STP) get
+  }
   @_spi(STP) final public var view: UIKit.UIView {
     @_spi(STP) get
   }
@@ -929,6 +977,11 @@ import _SwiftConcurrencyShims
   @_spi(STP) @discardableResult
   final public func endEditing(_ force: Swift.Bool = false, continueToNextField: Swift.Bool = true) -> Swift.Bool
   @_spi(STP) final public var subLabelText: Swift.String? {
+    @_spi(STP) get
+  }
+}
+@_spi(STP) extension StripeUICore.TextFieldElement {
+  @_spi(STP) final public var debugDescription: Swift.String {
     @_spi(STP) get
   }
 }
@@ -945,8 +998,8 @@ import _SwiftConcurrencyShims
   @_spi(STP) func makeDisplayText(for text: Swift.String) -> Foundation.NSAttributedString
   @_spi(STP) func keyboardProperties(for text: Swift.String) -> StripeUICore.TextFieldElement.KeyboardProperties
   @_spi(STP) func maxLength(for text: Swift.String) -> Swift.Int
-  @_spi(STP) func accessoryView(for text: Swift.String, theme: StripeUICore.ElementsUITheme) -> UIKit.UIView?
-  @_spi(STP) func makeElement(theme: StripeUICore.ElementsUITheme) -> StripeUICore.TextFieldElement
+  @_spi(STP) func accessoryView(for text: Swift.String, theme: StripeUICore.ElementsAppearance) -> UIKit.UIView?
+  @_spi(STP) func makeElement(theme: StripeUICore.ElementsAppearance) -> StripeUICore.TextFieldElement
 }
 @_spi(STP) extension StripeUICore.TextFieldElementConfiguration {
   @_spi(STP) public var accessibilityLabel: Swift.String {
@@ -972,8 +1025,8 @@ import _SwiftConcurrencyShims
   @_spi(STP) public func validate(text: Swift.String, isOptional: Swift.Bool) -> StripeUICore.TextFieldElement.ValidationState
   @_spi(STP) public func subLabel(text: Swift.String) -> Swift.String?
   @_spi(STP) public func maxLength(for text: Swift.String) -> Swift.Int
-  @_spi(STP) public func accessoryView(for text: Swift.String, theme: StripeUICore.ElementsUITheme) -> UIKit.UIView?
-  @_spi(STP) public func makeElement(theme: StripeUICore.ElementsUITheme) -> StripeUICore.TextFieldElement
+  @_spi(STP) public func accessoryView(for text: Swift.String, theme: StripeUICore.ElementsAppearance) -> UIKit.UIView?
+  @_spi(STP) public func makeElement(theme: StripeUICore.ElementsAppearance) -> StripeUICore.TextFieldElement
 }
 @_spi(STP) public protocol TextOrDropdownElement : StripeUICore.Element {
   @_spi(STP) var rawData: Swift.String { get }
@@ -986,10 +1039,10 @@ import _SwiftConcurrencyShims
   @_spi(STP) final public func setRawData(_ rawData: Swift.String)
 }
 @_spi(STP) extension StripeUICore.DropdownFieldElement : StripeUICore.TextOrDropdownElement {
-  @_spi(STP) public var rawData: Swift.String {
+  @_spi(STP) final public var rawData: Swift.String {
     @_spi(STP) get
   }
-  @_spi(STP) public func setRawData(_ rawData: Swift.String)
+  @_spi(STP) final public func setRawData(_ rawData: Swift.String)
 }
 @_spi(STP) public func sendEventToSubviews(_ event: StripeUICore.STPEvent, from view: UIKit.UIView)
 @_spi(STP) @frozen public enum STPEvent {
@@ -1142,9 +1195,6 @@ public typealias CompatibleColor = UIKit.UIColor
   @_spi(STP) public static var billing_same_as_shipping: Swift.String {
     @_spi(STP) get
   }
-  @_spi(STP) public static var phone: Swift.String {
-    @_spi(STP) get
-  }
   @_spi(STP) public static var phoneNumber: Swift.String {
     @_spi(STP) get
   }
@@ -1238,7 +1288,7 @@ public typealias CompatibleColor = UIKit.UIColor
   @_spi(STP) public static var incompleteAccountNumber: Swift.String {
     @_spi(STP) get
   }
-  @_spi(STP) public static var removeBankAccountEndingIn: Swift.String {
+  @_spi(STP) public static var bank_account_xxxx: Swift.String {
     @_spi(STP) get
   }
   @_spi(STP) public static var removeBankAccount: Swift.String {
@@ -1269,6 +1319,9 @@ public typealias CompatibleColor = UIKit.UIColor
     @_spi(STP) get
   }
   @_spi(STP) public static var useRotorToAccessLinks: Swift.String {
+    @_spi(STP) get
+  }
+  @_spi(STP) public static var edit: Swift.String {
     @_spi(STP) get
   }
   @_spi(STP) public static var upi_id: Swift.String {
@@ -1414,7 +1467,7 @@ public typealias CompatibleColor = UIKit.UIColor
 }
 @_spi(STP) @_hasMissingDesignatedInitializers @objc(STP_Internal_DoneButtonToolbar) @_Concurrency.MainActor(unsafe) final public class DoneButtonToolbar : UIKit.UIToolbar {
   @_spi(STP) @_Concurrency.MainActor(unsafe) weak final public var doneButtonToolbarDelegate: (any StripeUICore.DoneButtonToolbarDelegate)?
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(delegate: (any StripeUICore.DoneButtonToolbarDelegate)?, showCancelButton: Swift.Bool = false, theme: StripeUICore.ElementsUITheme = .default)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(delegate: (any StripeUICore.DoneButtonToolbarDelegate)?, showCancelButton: Swift.Bool = false, theme: StripeUICore.ElementsAppearance = .default)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) @_hasMissingDesignatedInitializers @objc(STP_Internal_DynamicHeightContainerView) @_Concurrency.MainActor(unsafe) public class DynamicHeightContainerView : UIKit.UIView {
@@ -1426,7 +1479,7 @@ public typealias CompatibleColor = UIKit.UIColor
       @_spi(STP) get
     }
   }
-  @_spi(STP) @_Concurrency.MainActor(unsafe) required public init(pinnedDirection optionalPinnedDirection: StripeUICore.DynamicHeightContainerView.PinnedDirection? = nil)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) required public init(pinnedDirection: StripeUICore.DynamicHeightContainerView.PinnedDirection = .bottom)
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func addPinnedSubview(_ view: UIKit.UIView)
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func updateHeight()
   @_spi(STP) @objc deinit
