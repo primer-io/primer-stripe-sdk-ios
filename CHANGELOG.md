@@ -1,5 +1,3 @@
 ## 1.0.0 (2024-08-02)
 
-Initial Release
-
-## 0.0.1 (2024-04-30)
+Initial Release. This release includes the necessary Stripe dependencies to support ACH via Stripe on Primer
