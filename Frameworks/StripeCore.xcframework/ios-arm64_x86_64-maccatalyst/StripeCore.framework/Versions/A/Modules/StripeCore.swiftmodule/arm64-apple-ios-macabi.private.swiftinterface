@@ -1,8 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name StripeCore
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StripeCore
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import CoreTelephony
+import CryptoKit
+import DeviceCheck
 import Foundation
 import PassKit
 @_exported import StripeCore
@@ -12,6 +15,24 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_spi(STP) public protocol StripeAttestBackend {
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) func getChallenge(appId: Swift.String, deviceId: Swift.String, keyId: Swift.String) async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) func attest(appId: Swift.String, deviceId: Swift.String, keyId: Swift.String, attestation: Foundation.Data) async throws
+  #endif
+}
+@_spi(STP) public class StripeAPIAttestationBackend : StripeCore.StripeAttestBackend {
+  @_spi(STP) public init(apiClient: StripeCore.STPAPIClient)
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) public func attest(appId: Swift.String, deviceId: Swift.String, keyId: Swift.String, attestation: Foundation.Data) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) public func getChallenge(appId: Swift.String, deviceId: Swift.String, keyId: Swift.String) async throws -> Swift.String
+  #endif
+  @_spi(STP) @objc deinit
+}
 @_spi(STP) public struct EmptyResponse : StripeCore.UnknownFieldsDecodable {
   @_spi(STP) public var _allResponseFieldsStorage: StripeCore.NonEncodableParameters?
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
@@ -36,6 +57,16 @@ import _SwiftConcurrencyShims
   @_spi(STP) public var _allResponseFieldsStorage: StripeCore.NonEncodableParameters?
   @_spi(STP) public static func == (a: StripeCore.StripeFile, b: StripeCore.StripeFile) -> Swift.Bool
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
+}
+@_spi(STP) public struct FinancialConnectionsLinkedBank : Swift.Equatable {
+  @_spi(STP) public let sessionId: Swift.String
+  @_spi(STP) public let accountId: Swift.String
+  @_spi(STP) public let displayName: Swift.String?
+  @_spi(STP) public let bankName: Swift.String?
+  @_spi(STP) public let last4: Swift.String?
+  @_spi(STP) public let instantlyVerified: Swift.Bool
+  @_spi(STP) public init(sessionId: Swift.String, accountId: Swift.String, displayName: Swift.String?, bankName: Swift.String?, last4: Swift.String?, instantlyVerified: Swift.Bool)
+  @_spi(STP) public static func == (a: StripeCore.FinancialConnectionsLinkedBank, b: StripeCore.FinancialConnectionsLinkedBank) -> Swift.Bool
 }
 extension StripeCore.STPAPIClient {
   @_spi(STP) public typealias FileAndUploadMetrics = (file: StripeCore.StripeFile, metrics: StripeCore.STPAPIClient.ImageUploadMetrics)
@@ -62,6 +93,7 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) public static var stp_isoRegionCodes: [Swift.String] {
     @_spi(STP) get
   }
+  @_spi(STP) public func toLanguageTag() -> Swift.String
 }
 @_inheritsConvenienceInitializers @objc public class STPAPIClient : ObjectiveC.NSObject {
   @objc public static let STPSDKVersion: Swift.String
@@ -69,6 +101,9 @@ extension StripeCore.STPAPIClient {
   @objc public var publishableKey: Swift.String? {
     @objc get
     @objc set
+  }
+  @_spi(STP) public var sanitizedPublishableKey: Swift.String? {
+    get
   }
   @_spi(STP) public var _stored_configuration: ObjectiveC.NSObject?
   @objc public var stripeAccount: Swift.String?
@@ -86,19 +121,21 @@ extension StripeCore.STPAPIClient {
   @objc override dynamic public init()
   @objc(initWithPublishableKey:) convenience public init(publishableKey: Swift.String)
   @_spi(STP) public func configuredRequest(for url: Foundation.URL, using ephemeralKeySecret: Swift.String? = nil, additionalHeaders: [Swift.String : Swift.String] = [:]) -> Foundation.URLRequest
+  @_spi(STP) public class func validateKey(_ publishableKey: Swift.String?)
   @_spi(STP) public func authorizationHeader(using substituteAuthorizationBearer: Swift.String? = nil) -> [Swift.String : Swift.String]
   @_spi(STP) public var isTestmode: Swift.Bool {
     get
   }
+  @_spi(STP) public func makeCopy() -> StripeCore.STPAPIClient
   @objc deinit
 }
 extension StripeCore.STPAPIClient {
-  @_spi(STP) public func get<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
-  @_spi(STP) public func get<T>(url: Foundation.URL, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
-  @_spi(STP) public func get<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil) -> StripeCore.Promise<T> where T : Swift.Decodable
-  @_spi(STP) public func post<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
-  @_spi(STP) public func post<T>(url: Foundation.URL, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
-  @_spi(STP) public func post<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil) -> StripeCore.Promise<T> where T : Swift.Decodable
+  @_spi(STP) public func get<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, consumerPublishableKey: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
+  @_spi(STP) public func get<T>(url: Foundation.URL, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, consumerPublishableKey: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
+  @_spi(STP) public func get<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, consumerPublishableKey: Swift.String? = nil) -> StripeCore.Promise<T> where T : Swift.Decodable
+  @_spi(STP) public func post<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, consumerPublishableKey: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
+  @_spi(STP) public func post<T>(url: Foundation.URL, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, consumerPublishableKey: Swift.String? = nil, completion: @escaping (Swift.Result<T, any Swift.Error>) -> Swift.Void) where T : Swift.Decodable
+  @_spi(STP) public func post<T>(resource: Swift.String, parameters: [Swift.String : Any], ephemeralKeySecret: Swift.String? = nil, consumerPublishableKey: Swift.String? = nil) -> StripeCore.Promise<T> where T : Swift.Decodable
   @_spi(STP) public func post<I, O>(resource: Swift.String, object: I, ephemeralKeySecret: Swift.String? = nil) -> StripeCore.Promise<O> where I : Swift.Encodable, O : Swift.Decodable
   @_spi(STP) public func post<I, O>(resource: Swift.String, object: I, ephemeralKeySecret: Swift.String? = nil, completion: @escaping (Swift.Result<O, any Swift.Error>) -> Swift.Void) where I : Swift.Encodable, O : Swift.Decodable
   @_spi(STP) public func post<I, O>(url: Foundation.URL, object: I, ephemeralKeySecret: Swift.String? = nil, completion: @escaping (Swift.Result<O, any Swift.Error>) -> Swift.Void) where I : Swift.Encodable, O : Swift.Decodable
@@ -148,10 +185,74 @@ extension StripeCore.STPAPIClient {
 @_spi(STP) public struct StripeAPIConfiguration {
   @_spi(STP) public static let sharedUrlSessionConfiguration: Foundation.URLSessionConfiguration
 }
+public struct FinancialConnectionsEvent {
+  public enum Name : Swift.String {
+    case open
+    case manualEntryInitiated
+    case consentAcquired
+    case searchInitiated
+    case institutionSelected
+    case institutionAuthorized
+    case accountsSelected
+    case success
+    case error
+    case cancel
+    case flowLaunchedInBrowser
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct Metadata {
+    public let dictionary: [Swift.String : Any]
+    public var manualEntry: Swift.Bool? {
+      get
+    }
+    public var institutionName: Swift.String? {
+      get
+    }
+    public var errorCode: StripeCore.FinancialConnectionsEvent.ErrorCode? {
+      get
+    }
+    @_spi(STP) public init(institutionName: Swift.String? = nil, manualEntry: Swift.Bool? = nil, errorCode: StripeCore.FinancialConnectionsEvent.ErrorCode? = nil)
+  }
+  public enum ErrorCode : Swift.String {
+    case accountNumbersUnavailable
+    case accountsUnavailable
+    case noDebitableAccount
+    case authorizationFailed
+    case institutionUnavailablePlanned
+    case institutionUnavailableUnplanned
+    case institutionTimeout
+    case unexpectedError
+    case sessionExpired
+    case failedBotDetection
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let name: StripeCore.FinancialConnectionsEvent.Name
+  public let metadata: StripeCore.FinancialConnectionsEvent.Metadata
+  @_spi(STP) public init(name: StripeCore.FinancialConnectionsEvent.Name, metadata: StripeCore.FinancialConnectionsEvent.Metadata = Metadata())
+}
 @_spi(STP) public enum StripeError : Swift.Error {
   @_spi(STP) case apiError(StripeCore.StripeAPIError)
   @_spi(STP) case invalidRequest
   @_spi(STP) public var localizedDescription: Swift.String {
+    @_spi(STP) get
+  }
+}
+@_spi(STP) extension StripeCore.StripeError : StripeCore.AnalyticLoggableError {
+  @_spi(STP) public var additionalNonPIIErrorDetails: [Swift.String : Any] {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var analyticsErrorCode: Swift.String {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var analyticsErrorType: Swift.String {
     @_spi(STP) get
   }
 }
@@ -169,13 +270,14 @@ extension StripeCore.STPAPIClient {
     @_spi(STP) get
   }
 }
-@_spi(STP) public struct StripeAPIError : StripeCore.UnknownFieldsDecodable {
+@_spi(STP) public struct StripeAPIError : StripeCore.UnknownFieldsDecodable, Swift.Encodable, Swift.Equatable {
   @_spi(STP) public var type: StripeCore.StripeAPIError.ErrorType
   @_spi(STP) public var code: Swift.String?
   @_spi(STP) public var docUrl: Foundation.URL?
   @_spi(STP) public var message: Swift.String?
   @_spi(STP) public var param: Swift.String?
   @_spi(STP) public var statusCode: Swift.Int?
+  @_spi(STP) public var requestID: Swift.String?
   @_spi(STP) public enum ErrorType : Swift.String, StripeCore.SafeEnumCodable {
     @_spi(STP) case apiError
     @_spi(STP) case cardError
@@ -189,6 +291,8 @@ extension StripeCore.STPAPIClient {
     }
   }
   @_spi(STP) public var _allResponseFieldsStorage: StripeCore.NonEncodableParameters?
+  @_spi(STP) public static func == (a: StripeCore.StripeAPIError, b: StripeCore.StripeAPIError) -> Swift.Bool
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
   @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(STP) public struct StripeAPIErrorResponse : StripeCore.UnknownFieldsDecodable {
@@ -240,6 +344,7 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case _3DS2AuthenticationAttempt
   @_spi(STP) case _3DS2FrictionlessFlow
   @_spi(STP) case urlRedirectNextAction
+  @_spi(STP) case urlRedirectNextActionCompleted
   @_spi(STP) case _3DS2ChallengeFlowPresented
   @_spi(STP) case _3DS2ChallengeFlowTimedOut
   @_spi(STP) case _3DS2ChallengeFlowUserCanceled
@@ -262,6 +367,9 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case financialConnectionsSheetPresented
   @_spi(STP) case financialConnectionsSheetClosed
   @_spi(STP) case financialConnectionsSheetFailed
+  @_spi(STP) case financialConnectionsSheetFlowDetermined
+  @_spi(STP) case financialConnectionsSheetInitialSynchronizeStarted
+  @_spi(STP) case financialConnectionsSheetInitialSynchronizeCompleted
   @_spi(STP) case mcInitCustomCustomer
   @_spi(STP) case mcInitCompleteCustomer
   @_spi(STP) case mcInitCustomApplePay
@@ -270,14 +378,11 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case mcInitCompleteCustomerApplePay
   @_spi(STP) case mcInitCustomDefault
   @_spi(STP) case mcInitCompleteDefault
+  @_spi(STP) case mcInitEmbedded
   @_spi(STP) case mcShowCustomNewPM
   @_spi(STP) case mcShowCustomSavedPM
-  @_spi(STP) case mcShowCustomApplePay
-  @_spi(STP) case mcShowCustomLink
   @_spi(STP) case mcShowCompleteNewPM
   @_spi(STP) case mcShowCompleteSavedPM
-  @_spi(STP) case mcShowCompleteApplePay
-  @_spi(STP) case mcShowCompleteLink
   @_spi(STP) case mcPaymentCustomNewPMSuccess
   @_spi(STP) case mcPaymentCustomSavedPMSuccess
   @_spi(STP) case mcPaymentCustomApplePaySuccess
@@ -294,6 +399,8 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case mcPaymentCompleteSavedPMFailure
   @_spi(STP) case mcPaymentCompleteApplePayFailure
   @_spi(STP) case mcPaymentCompleteLinkFailure
+  @_spi(STP) case mcPaymentEmbeddedSuccess
+  @_spi(STP) case mcPaymentEmbeddedFailure
   @_spi(STP) case mcOptionSelectCustomNewPM
   @_spi(STP) case mcOptionSelectCustomSavedPM
   @_spi(STP) case mcOptionSelectCustomApplePay
@@ -302,6 +409,10 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case mcOptionSelectCompleteSavedPM
   @_spi(STP) case mcOptionSelectCompleteApplePay
   @_spi(STP) case mcOptionSelectCompleteLink
+  @_spi(STP) case mcOptionSelectEmbeddedSavedPM
+  @_spi(STP) case mcOptionRemoveCustomSavedPM
+  @_spi(STP) case mcOptionRemoveCompleteSavedPM
+  @_spi(STP) case mcOptionRemoveEmbeddedSavedPM
   @_spi(STP) case linkSignupCheckboxChecked
   @_spi(STP) case linkSignupFlowPresented
   @_spi(STP) case linkSignupStart
@@ -317,14 +428,20 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case linkPopupSkipped
   @_spi(STP) case linkPopupError
   @_spi(STP) case linkPopupLogout
+  @_spi(STP) case link2FAStart
+  @_spi(STP) case link2FAStartFailure
+  @_spi(STP) case link2FAComplete
+  @_spi(STP) case link2FACancel
+  @_spi(STP) case link2FAFailure
   @_spi(STP) case linkAccountLookupComplete
   @_spi(STP) case linkAccountLookupFailure
   @_spi(STP) case luxeSerializeFailure
-  @_spi(STP) case luxeUnknownActionsFailure
   @_spi(STP) case luxeSpecSerializeFailure
   @_spi(STP) case luxeImageSelectorIconDownloaded
   @_spi(STP) case luxeImageSelectorIconFromBundle
   @_spi(STP) case luxeImageSelectorIconNotFound
+  @_spi(STP) case customerSheetInitWithCustomerAdapter
+  @_spi(STP) case customerSheetInitWithCustomerSession
   @_spi(STP) case customerSheetLoadStarted
   @_spi(STP) case customerSheetLoadSucceeded
   @_spi(STP) case customerSheetLoadFailed
@@ -355,7 +472,9 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case paymentSheetConfirmButtonTapped
   @_spi(STP) case paymentSheetFormShown
   @_spi(STP) case paymentSheetFormInteracted
+  @_spi(STP) case paymentSheetFormCompleted
   @_spi(STP) case paymentSheetCardNumberCompleted
+  @_spi(STP) case paymentSheetDeferredIntentPaymentMethodMismatch
   @_spi(STP) case paymentSheetElementsSessionLoadFailed
   @_spi(STP) case paymentSheetElementsSessionCustomerDeserializeFailed
   @_spi(STP) case paymentSheetElementsSessionEPMLoadFailed
@@ -366,6 +485,7 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case paymentSheetUpdateCardBrand
   @_spi(STP) case paymentSheetUpdateCardBrandFailed
   @_spi(STP) case paymentSheetClosesEditScreen
+  @_spi(STP) case paymentSheetDisallowedCardBrand
   @_spi(STP) case customerSheetDisplayCardBrandDropdownIndicator
   @_spi(STP) case customerSheetOpenCardBrandDropdown
   @_spi(STP) case customerSheetCloseCardBrandDropDown
@@ -400,6 +520,17 @@ extension StripeCore.STPAPIClient {
   @_spi(STP) case unexpectedFlowControllerViewControllerError
   @_spi(STP) case unexpectedPaymentHandlerError
   @_spi(STP) case stripePaymentSheetDownloadManagerError
+  @_spi(STP) case refreshPaymentIntentStarted
+  @_spi(STP) case refreshSetupIntentStarted
+  @_spi(STP) case refreshPaymentIntentSuccess
+  @_spi(STP) case refreshSetupIntentSuccess
+  @_spi(STP) case refreshPaymentIntentFailed
+  @_spi(STP) case refreshSetupIntentFailed
+  @_spi(STP) case fraudDetectionApiFailure
+  @_spi(STP) case attestationFailed
+  @_spi(STP) case attestationSucceeded
+  @_spi(STP) case assertionFailed
+  @_spi(STP) case assertionSucceeded
   @_spi(STP) public init?(rawValue: Swift.String)
   @_spi(STP) public typealias RawValue = Swift.String
   @_spi(STP) public var rawValue: Swift.String {
@@ -410,7 +541,9 @@ extension StripeCore.STPAPIClient {
     print("⚠️ STPAssertionFailure: \(message()) in \(file) on line \(line)")
 }
 @_spi(STP) @inlinable public func stpAssert(_ condition: @autoclosure () -> Swift.Bool, _ message: @autoclosure () -> Swift.String = String(), file: Swift.StaticString = #file, line: Swift.UInt = #line) {
-    print("⚠️ STPAssertionFailure: \(message()) in \(file) on line \(line)")
+    if !condition() {
+        print("⚠️ STPAssertionFailure: \(message()) in \(file) on line \(line)")
+    }
 }
 @_spi(STP) public protocol STPAnalyticsProtocol {
   @_spi(STP) static var stp_analyticsIdentifier: Swift.String { get }
@@ -447,8 +580,8 @@ extension StripeCore.STPAPIClient {
   }
 }
 extension Swift.Dictionary {
-  public mutating func mergeAssertingOnOverwrites(_ other: [Key : Value])
-  public func mergingAssertingOnOverwrites<S>(_ other: S) -> [Key : Value] where S : Swift.Sequence, S.Element == (Key, Value)
+  @_spi(STP) public mutating func mergeAssertingOnOverwrites(_ other: [Key : Value])
+  @_spi(STP) public func mergingAssertingOnOverwrites<S>(_ other: S) -> [Key : Value] where S : Swift.Sequence, S.Element == (Key, Value)
 }
 @_spi(STP) extension Swift.Dictionary {
   @_spi(STP) public subscript(jsonDict key: Key) -> [Swift.String : Any]? {
@@ -470,6 +603,57 @@ extension Swift.Array where Element == Swift.String {
 extension Swift.Array where Element : Swift.Equatable {
   @discardableResult
   public mutating func remove(_ element: Element) -> Element?
+}
+@_spi(STP) public struct ElementsSessionContext {
+  @_spi(STP) @frozen public enum IntentID {
+    @_spi(STP) case payment(Swift.String)
+    @_spi(STP) case setup(Swift.String)
+    @_spi(STP) case deferred(Swift.String)
+    @_spi(STP) public var id: Swift.String {
+      @_spi(STP) get
+    }
+  }
+  @_spi(STP) public struct PrefillDetails {
+    @_spi(STP) public let email: Swift.String?
+    @_spi(STP) public let formattedPhoneNumber: Swift.String?
+    @_spi(STP) public let unformattedPhoneNumber: Swift.String?
+    @_spi(STP) public let countryCode: Swift.String?
+    @_spi(STP) public init(email: Swift.String?, formattedPhoneNumber: Swift.String?, unformattedPhoneNumber: Swift.String?, countryCode: Swift.String?)
+  }
+  @_spi(STP) public let amount: Swift.Int?
+  @_spi(STP) public let currency: Swift.String?
+  @_spi(STP) public let prefillDetails: StripeCore.ElementsSessionContext.PrefillDetails?
+  @_spi(STP) public let intentId: StripeCore.ElementsSessionContext.IntentID?
+  @_spi(STP) public let linkMode: StripeCore.LinkMode?
+  @_spi(STP) public let billingDetails: StripeCore.ElementsSessionContext.BillingDetails?
+  @_spi(STP) public let eligibleForIncentive: Swift.Bool
+  @_spi(STP) public var billingAddress: StripeCore.BillingAddress? {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var incentiveEligibilitySession: StripeCore.ElementsSessionContext.IntentID? {
+    @_spi(STP) get
+  }
+  @_spi(STP) public init(amount: Swift.Int?, currency: Swift.String?, prefillDetails: StripeCore.ElementsSessionContext.PrefillDetails?, intentId: StripeCore.ElementsSessionContext.IntentID?, linkMode: StripeCore.LinkMode?, billingDetails: StripeCore.ElementsSessionContext.BillingDetails?, eligibleForIncentive: Swift.Bool)
+}
+@_spi(STP) extension StripeCore.ElementsSessionContext {
+  @_spi(STP) public struct BillingDetails : Swift.Encodable {
+    @_spi(STP) public struct Address : Swift.Encodable {
+      @_spi(STP) public let city: Swift.String?
+      @_spi(STP) public let country: Swift.String?
+      @_spi(STP) public let line1: Swift.String?
+      @_spi(STP) public let line2: Swift.String?
+      @_spi(STP) public let postalCode: Swift.String?
+      @_spi(STP) public let state: Swift.String?
+      @_spi(STP) public init?(city: Swift.String?, country: Swift.String?, line1: Swift.String?, line2: Swift.String?, postalCode: Swift.String?, state: Swift.String?)
+      @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
+    }
+    @_spi(STP) public let name: Swift.String?
+    @_spi(STP) public let email: Swift.String?
+    @_spi(STP) public let phone: Swift.String?
+    @_spi(STP) public let address: StripeCore.ElementsSessionContext.BillingDetails.Address?
+    @_spi(STP) public init(name: Swift.String?, email: Swift.String?, phone: Swift.String?, address: StripeCore.ElementsSessionContext.BillingDetails.Address?)
+    @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
+  }
 }
 extension Foundation.Bundle {
   @_spi(STP) public class func stp_applicationName() -> Swift.String?
@@ -532,12 +716,45 @@ extension Foundation.URLRequest {
   @_spi(STP) public mutating func stp_setFormPayload(_ formPayload: [Swift.String : Any])
   @_spi(STP) public mutating func stp_setMultipartForm(_ data: Foundation.Data?, boundary: Swift.String?)
 }
+@_spi(STP) @_hasMissingDesignatedInitializers public class StripeAttest {
+  @_spi(STP) convenience public init(apiClient: StripeCore.STPAPIClient = .shared)
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) public func assert() async throws -> StripeCore.StripeAttest.Assertion
+  #endif
+  @_spi(STP) public struct Assertion {
+    @_spi(STP) public var assertionData: Foundation.Data
+    @_spi(STP) public var deviceID: Swift.String
+    @_spi(STP) public var appID: Swift.String
+    @_spi(STP) public var keyID: Swift.String
+    @_spi(STP) public var requestFields: [Swift.String : Swift.String] {
+      @_spi(STP) get
+    }
+  }
+  @_spi(STP) public enum AttestationError : Swift.Error {
+    @_spi(STP) case attestationNotSupported
+    @_spi(STP) case noDeviceID
+    @_spi(STP) case noAppID
+    @_spi(STP) case secondAssertionFailureAfterRetryingAttestation
+    @_spi(STP) case attestationRateLimitExceeded
+    @_spi(STP) case invalidChallengeData
+    @_spi(STP) public static func == (a: StripeCore.StripeAttest.AttestationError, b: StripeCore.StripeAttest.AttestationError) -> Swift.Bool
+    @_spi(STP) public func hash(into hasher: inout Swift.Hasher)
+    @_spi(STP) public var hashValue: Swift.Int {
+      @_spi(STP) get
+    }
+  }
+  @_spi(STP) public func resetKey()
+  @_spi(STP) @objc deinit
+}
 @_spi(STP) extension Swift.String {
   @_spi(STP) public func stp_stringByRemovingCharacters(from characterSet: Foundation.CharacterSet) -> Swift.String
   @_spi(STP) public var isSecretKey: Swift.Bool {
     @_spi(STP) get
   }
   @_spi(STP) public var nonEmpty: Swift.String? {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var sanitizedKey: Swift.String {
     @_spi(STP) get
   }
 }
@@ -625,80 +842,15 @@ extension StripeCore.NonEncodableParameters : Swift.CustomStringConvertible, Swi
   @_spi(STP) public func encodeJSONDictionary<T>(_ value: T, includingUnknownFields: Swift.Bool = true) throws -> [Swift.String : Any] where T : Swift.Encodable
   @_spi(STP) @objc deinit
 }
-@_spi(STP) @frozen public enum FinancialConnectionsSDKResult {
-  @_spi(STP) case completed(linkedBank: any StripeCore.LinkedBank)
-  @_spi(STP) case cancelled
-  @_spi(STP) case failed(error: any Swift.Error)
-}
 @_spi(STP) public protocol FinancialConnectionsSDKInterface {
   @_spi(STP) init()
-  @_spi(STP) func presentFinancialConnectionsSheet(apiClient: StripeCore.STPAPIClient, clientSecret: Swift.String, returnURL: Swift.String?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeCore.FinancialConnectionsSDKResult) -> Swift.Void)
-}
-@_spi(STP) public protocol LinkedBank {
-  @_spi(STP) var sessionId: Swift.String { get }
-  @_spi(STP) var accountId: Swift.String { get }
-  @_spi(STP) var displayName: Swift.String? { get }
-  @_spi(STP) var bankName: Swift.String? { get }
-  @_spi(STP) var last4: Swift.String? { get }
-  @_spi(STP) var instantlyVerified: Swift.Bool { get }
-}
-public struct FinancialConnectionsEvent {
-  public enum Name : Swift.String {
-    case open
-    case manualEntryInitiated
-    case consentAcquired
-    case searchInitiated
-    case institutionSelected
-    case institutionAuthorized
-    case accountsSelected
-    case success
-    case error
-    case cancel
-    case flowLaunchedInBrowser
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public struct Metadata {
-    public let dictionary: [Swift.String : Any]
-    public var manualEntry: Swift.Bool? {
-      get
-    }
-    public var institutionName: Swift.String? {
-      get
-    }
-    public var errorCode: StripeCore.FinancialConnectionsEvent.ErrorCode? {
-      get
-    }
-    @_spi(STP) public init(institutionName: Swift.String? = nil, manualEntry: Swift.Bool? = nil, errorCode: StripeCore.FinancialConnectionsEvent.ErrorCode? = nil)
-  }
-  public enum ErrorCode : Swift.String {
-    case accountNumbersUnavailable
-    case accountsUnavailable
-    case noDebitableAccount
-    case authorizationFailed
-    case institutionUnavailablePlanned
-    case institutionUnavailableUnplanned
-    case institutionTimeout
-    case unexpectedError
-    case sessionExpired
-    case failedBotDetection
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public let name: StripeCore.FinancialConnectionsEvent.Name
-  public let metadata: StripeCore.FinancialConnectionsEvent.Metadata
-  @_spi(STP) public init(name: StripeCore.FinancialConnectionsEvent.Name, metadata: StripeCore.FinancialConnectionsEvent.Metadata = Metadata())
+  @_spi(STP) func presentFinancialConnectionsSheet(apiClient: StripeCore.STPAPIClient, clientSecret: Swift.String, returnURL: Swift.String?, elementsSessionContext: StripeCore.ElementsSessionContext?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, from presentingViewController: UIKit.UIViewController, completion: @escaping (StripeCore.FinancialConnectionsSDKResult) -> Swift.Void)
 }
 @_spi(STP) @_hasMissingDesignatedInitializers public class Future<Value> {
   @_spi(STP) public typealias Result = Swift.Result<Value, any Swift.Error>
-  @_spi(STP) public func observe(on queue: Dispatch.DispatchQueue? = nil, using callback: @escaping (StripeCore.Future<Value>.Result) -> Swift.Void)
-  @_spi(STP) public func chained<T>(on queue: Dispatch.DispatchQueue? = nil, using closure: @escaping (Value) throws -> StripeCore.Future<T>) -> StripeCore.Future<T>
+  @_spi(STP) public func observe(on queue: Dispatch.DispatchQueue = .main, using callback: @escaping (StripeCore.Future<Value>.Result) -> Swift.Void)
+  @_spi(STP) public func chained<T>(on queue: Dispatch.DispatchQueue = .main, using closure: @escaping (Value) throws -> StripeCore.Future<T>) -> StripeCore.Future<T>
+  @_spi(STP) public func transformed<T>(on queue: Dispatch.DispatchQueue = .main, with closure: @escaping (Value) throws -> T) -> StripeCore.Future<T>
   @_spi(STP) @objc deinit
 }
 @_spi(STP) @_inheritsConvenienceInitializers public class Promise<Value> : StripeCore.Future<Value> {
@@ -734,6 +886,51 @@ public struct FinancialConnectionsEvent {
     @_spi(STP) get
   }
   @_spi(STP) @objc deinit
+}
+@_spi(STP) extension Swift.KeyedEncodingContainer {
+  @_spi(STP) public mutating func encodeIfNotEmpty(_ value: Swift.String?, forKey key: K) throws
+}
+@_spi(STP) public protocol AppAttestService {
+  @_spi(STP) var isSupported: Swift.Bool { get }
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) func generateKey() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) func generateAssertion(_ keyId: Swift.String, clientDataHash: Foundation.Data) async throws -> Foundation.Data
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) func attestKey(_ keyId: Swift.String, clientDataHash: Foundation.Data) async throws -> Foundation.Data
+  #endif
+}
+@_spi(STP) @_hasMissingDesignatedInitializers public class AppleAppAttestService : StripeCore.AppAttestService {
+  @_spi(STP) public static var shared: StripeCore.AppleAppAttestService
+  @_spi(STP) public var isSupported: Swift.Bool {
+    @_spi(STP) get
+  }
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) public func generateKey() async throws -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) public func generateAssertion(_ keyId: Swift.String, clientDataHash: Foundation.Data) async throws -> Foundation.Data
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_spi(STP) public func attestKey(_ keyId: Swift.String, clientDataHash: Foundation.Data) async throws -> Foundation.Data
+  #endif
+  @_spi(STP) @objc deinit
+}
+@_spi(STP) extension Swift.Result {
+  @_spi(STP) public var success: Swift.Bool {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var error: (any Swift.Error)? {
+    @_spi(STP) get
+  }
+}
+@_spi(STP) public struct LinkBankPaymentMethod : StripeCore.UnknownFieldsDecodable, Swift.Equatable {
+  @_spi(STP) public var _allResponseFieldsStorage: StripeCore.NonEncodableParameters?
+  @_spi(STP) public var id: Swift.String
+  @_spi(STP) public static func == (a: StripeCore.LinkBankPaymentMethod, b: StripeCore.LinkBankPaymentMethod) -> Swift.Bool
+  @_spi(STP) public init(from decoder: any Swift.Decoder) throws
 }
 @_spi(STP) public func stpDispatchToMainThreadIfNecessary(_ block: @escaping () -> Swift.Void)
 @objc public enum STPErrorCode : Swift.Int {
@@ -844,6 +1041,28 @@ public enum STPCardErrorCode : Swift.String {
   }
   @_spi(STP) public init(event: StripeCore.STPAnalyticEvent, error: any Swift.Error, additionalNonPIIParams: [Swift.String : Any] = [:])
 }
+@_spi(STP) @frozen public enum FinancialConnectionsSDKResult {
+  @_spi(STP) case completed(StripeCore.FinancialConnectionsSDKResult.Completed)
+  @_spi(STP) case cancelled
+  @_spi(STP) case failed(error: any Swift.Error)
+  @_spi(STP) public enum Completed {
+    @_spi(STP) case financialConnections(StripeCore.FinancialConnectionsLinkedBank)
+    @_spi(STP) case instantDebits(StripeCore.InstantDebitsLinkedBank)
+  }
+}
+@_spi(STP) public struct BillingAddress : Swift.Codable {
+  @_spi(STP) public let name: Swift.String?
+  @_spi(STP) public let line1: Swift.String?
+  @_spi(STP) public let line2: Swift.String?
+  @_spi(STP) public let city: Swift.String?
+  @_spi(STP) public let state: Swift.String?
+  @_spi(STP) public let postalCode: Swift.String?
+  @_spi(STP) public let countryCode: Swift.String?
+  @_spi(STP) public init(name: Swift.String? = nil, line1: Swift.String? = nil, line2: Swift.String? = nil, city: Swift.String? = nil, state: Swift.String? = nil, postalCode: Swift.String? = nil, countryCode: Swift.String? = nil)
+  @_spi(STP) public init(from billingDetails: StripeCore.ElementsSessionContext.BillingDetails?)
+  @_spi(STP) public func encode(to encoder: any Swift.Encoder) throws
+  @_spi(STP) public init(from decoder: any Swift.Decoder) throws
+}
 @_spi(STP) @_hasMissingDesignatedInitializers final public class URLEncoder {
   @_spi(STP) final public class func string(byURLEncoding string: Swift.String) -> Swift.String
   @_spi(STP) final public class func convertToCamelCase(snakeCase input: Swift.String) -> Swift.String
@@ -853,6 +1072,14 @@ public enum STPCardErrorCode : Swift.String {
 }
 extension Foundation.URLSession {
   @_spi(STP) public func stp_performDataTask(with request: Foundation.URLRequest, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void, retryCount: Swift.Int = StripeAPI.maxRetries)
+}
+@_spi(STP) public struct InstantDebitsLinkedBank : Swift.Equatable {
+  @_spi(STP) public let paymentMethod: StripeCore.LinkBankPaymentMethod
+  @_spi(STP) public let bankName: Swift.String?
+  @_spi(STP) public let last4: Swift.String?
+  @_spi(STP) public let linkMode: StripeCore.LinkMode?
+  @_spi(STP) public init(paymentMethod: StripeCore.LinkBankPaymentMethod, bankName: Swift.String?, last4: Swift.String?, linkMode: StripeCore.LinkMode?)
+  @_spi(STP) public static func == (a: StripeCore.InstantDebitsLinkedBank, b: StripeCore.InstantDebitsLinkedBank) -> Swift.Bool
 }
 @_spi(STP) @_hasMissingDesignatedInitializers final public class STPLocalizationUtils {
   @_spi(STP) final public class func localizedStripeString(forKey key: Swift.String, bundleLocator: any StripeCore.BundleLocatorProtocol.Type) -> Swift.String
@@ -879,6 +1106,51 @@ extension Foundation.URLSession {
     @_spi(STP) public static func scanCardExpectedPrivacyLinkText() -> Foundation.NSAttributedString?
   }
 }
+@_spi(MobilePaymentElementAnalyticEventBeta) extension Foundation.NSNotification.Name {
+  @_spi(MobilePaymentElementAnalyticEventBeta) public static let mobilePaymentElement: Foundation.Notification.Name
+}
+@_spi(MobilePaymentElementAnalyticEventBeta) public struct MobilePaymentElementAnalyticEvent {
+  @_spi(MobilePaymentElementAnalyticEventBeta) public let name: StripeCore.MobilePaymentElementAnalyticEvent.Name
+  @_spi(MobilePaymentElementAnalyticEventBeta) public enum Name : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) case presentedSheet
+    @_spi(MobilePaymentElementAnalyticEventBeta) case selectedPaymentMethodType(StripeCore.MobilePaymentElementAnalyticEvent.SelectedPaymentMethodType)
+    @_spi(MobilePaymentElementAnalyticEventBeta) case displayedPaymentMethodForm(StripeCore.MobilePaymentElementAnalyticEvent.DisplayedPaymentMethodForm)
+    @_spi(MobilePaymentElementAnalyticEventBeta) case startedInteractionWithPaymentMethodForm(StripeCore.MobilePaymentElementAnalyticEvent.StartedInteractionWithPaymentMethodForm)
+    @_spi(MobilePaymentElementAnalyticEventBeta) case completedPaymentMethodForm(StripeCore.MobilePaymentElementAnalyticEvent.CompletedPaymentMethodForm)
+    @_spi(MobilePaymentElementAnalyticEventBeta) case tappedConfirmButton(StripeCore.MobilePaymentElementAnalyticEvent.TappedConfirmButton)
+    @_spi(MobilePaymentElementAnalyticEventBeta) case selectedSavedPaymentMethod(StripeCore.MobilePaymentElementAnalyticEvent.SelectedSavedPaymentMethod)
+    @_spi(MobilePaymentElementAnalyticEventBeta) case removedSavedPaymentMethod(StripeCore.MobilePaymentElementAnalyticEvent.RemovedSavedPaymentMethod)
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.Name, b: StripeCore.MobilePaymentElementAnalyticEvent.Name) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct SelectedPaymentMethodType : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.SelectedPaymentMethodType, b: StripeCore.MobilePaymentElementAnalyticEvent.SelectedPaymentMethodType) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct DisplayedPaymentMethodForm : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.DisplayedPaymentMethodForm, b: StripeCore.MobilePaymentElementAnalyticEvent.DisplayedPaymentMethodForm) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct StartedInteractionWithPaymentMethodForm : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.StartedInteractionWithPaymentMethodForm, b: StripeCore.MobilePaymentElementAnalyticEvent.StartedInteractionWithPaymentMethodForm) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct CompletedPaymentMethodForm : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.CompletedPaymentMethodForm, b: StripeCore.MobilePaymentElementAnalyticEvent.CompletedPaymentMethodForm) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct TappedConfirmButton : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.TappedConfirmButton, b: StripeCore.MobilePaymentElementAnalyticEvent.TappedConfirmButton) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct SelectedSavedPaymentMethod : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.SelectedSavedPaymentMethod, b: StripeCore.MobilePaymentElementAnalyticEvent.SelectedSavedPaymentMethod) -> Swift.Bool
+  }
+  @_spi(MobilePaymentElementAnalyticEventBeta) public struct RemovedSavedPaymentMethod : Swift.Equatable {
+    @_spi(MobilePaymentElementAnalyticEventBeta) public let paymentMethodType: Swift.String
+    @_spi(MobilePaymentElementAnalyticEventBeta) public static func == (a: StripeCore.MobilePaymentElementAnalyticEvent.RemovedSavedPaymentMethod, b: StripeCore.MobilePaymentElementAnalyticEvent.RemovedSavedPaymentMethod) -> Swift.Bool
+  }
+}
 @_spi(STP) @_hasMissingDesignatedInitializers final public class FraudDetectionData : Swift.Codable {
   @_spi(STP) public static let shared: StripeCore.FraudDetectionData
   @_spi(STP) final public var muid: Swift.String?
@@ -890,6 +1162,22 @@ extension Foundation.URLSession {
 }
 @_spi(STP) extension StripeCore.FraudDetectionData : Swift.Equatable {
   @_spi(STP) public static func == (lhs: StripeCore.FraudDetectionData, rhs: StripeCore.FraudDetectionData) -> Swift.Bool
+}
+@_spi(STP) public enum LinkMode : Swift.String {
+  @_spi(STP) case linkPaymentMethod
+  @_spi(STP) case passthrough
+  @_spi(STP) case linkCardBrand
+  @_spi(STP) public var isPantherPayment: Swift.Bool {
+    @_spi(STP) get
+  }
+  @_spi(STP) public var expectedPaymentMethodType: Swift.String {
+    @_spi(STP) get
+  }
+  @_spi(STP) public init?(rawValue: Swift.String)
+  @_spi(STP) public typealias RawValue = Swift.String
+  @_spi(STP) public var rawValue: Swift.String {
+    @_spi(STP) get
+  }
 }
 @_spi(STP) @objc final public class STPTelemetryClient : ObjectiveC.NSObject {
   @_spi(STP) public static var shared: StripeCore.STPTelemetryClient
@@ -911,10 +1199,8 @@ extension Foundation.URLSession {
 }
 @_spi(STP) @_hasMissingDesignatedInitializers public class AnalyticsHelper {
   @_spi(STP) public enum TimeMeasurement {
-    @_spi(STP) case checkout
     @_spi(STP) case linkSignup
     @_spi(STP) case linkPopup
-    @_spi(STP) case formShown
     @_spi(STP) public static func == (a: StripeCore.AnalyticsHelper.TimeMeasurement, b: StripeCore.AnalyticsHelper.TimeMeasurement) -> Swift.Bool
     @_spi(STP) public func hash(into hasher: inout Swift.Hasher)
     @_spi(STP) public var hashValue: Swift.Int {
@@ -925,15 +1211,23 @@ extension Foundation.URLSession {
   @_spi(STP) public var sessionID: Swift.String? {
     get
   }
-  @_spi(STP) public var didSendPaymentSheetFormInteractedEventAfterFormShown: Swift.Bool
   @_spi(STP) public func generateSessionID()
   @_spi(STP) public func startTimeMeasurement(_ measurement: StripeCore.AnalyticsHelper.TimeMeasurement)
   @_spi(STP) public func getDuration(for measurement: StripeCore.AnalyticsHelper.TimeMeasurement) -> Foundation.TimeInterval?
   @_spi(STP) @objc deinit
 }
+extension Foundation.Date {
+  @_spi(STP) public func roundedTimeIntervalSince(_ date: Foundation.Date) -> Foundation.TimeInterval
+}
 @_spi(STP) extension StripeCore.StripeFile.Purpose : Swift.Hashable {}
 @_spi(STP) extension StripeCore.StripeFile.Purpose : Swift.RawRepresentable {}
 @_spi(STP) extension StripeCore.StripeFile.Purpose : Swift.Sendable {}
+extension StripeCore.FinancialConnectionsEvent.Name : Swift.Equatable {}
+extension StripeCore.FinancialConnectionsEvent.Name : Swift.Hashable {}
+extension StripeCore.FinancialConnectionsEvent.Name : Swift.RawRepresentable {}
+extension StripeCore.FinancialConnectionsEvent.ErrorCode : Swift.Equatable {}
+extension StripeCore.FinancialConnectionsEvent.ErrorCode : Swift.Hashable {}
+extension StripeCore.FinancialConnectionsEvent.ErrorCode : Swift.RawRepresentable {}
 @_spi(STP) extension StripeCore.StripeAPIError.ErrorType : Swift.Equatable {}
 @_spi(STP) extension StripeCore.StripeAPIError.ErrorType : Swift.Hashable {}
 @_spi(STP) extension StripeCore.StripeAPIError.ErrorType : Swift.RawRepresentable {}
@@ -943,20 +1237,20 @@ extension Foundation.URLSession {
 extension StripeCore.STPErrorCode : Swift.Equatable {}
 extension StripeCore.STPErrorCode : Swift.Hashable {}
 extension StripeCore.STPErrorCode : Swift.RawRepresentable {}
+@_spi(STP) extension StripeCore.ElementsSessionContext.IntentID : Swift.Sendable {}
+@_spi(STP) extension StripeCore.StripeAttest.AttestationError : Swift.Equatable {}
+@_spi(STP) extension StripeCore.StripeAttest.AttestationError : Swift.Hashable {}
 @_spi(STP) extension StripeCore.UnknownFieldsCodableFloats : Swift.Equatable {}
 @_spi(STP) extension StripeCore.UnknownFieldsCodableFloats : Swift.Hashable {}
 @_spi(STP) extension StripeCore.UnknownFieldsCodableFloats : Swift.RawRepresentable {}
-extension StripeCore.FinancialConnectionsEvent.Name : Swift.Equatable {}
-extension StripeCore.FinancialConnectionsEvent.Name : Swift.Hashable {}
-extension StripeCore.FinancialConnectionsEvent.Name : Swift.RawRepresentable {}
-extension StripeCore.FinancialConnectionsEvent.ErrorCode : Swift.Equatable {}
-extension StripeCore.FinancialConnectionsEvent.ErrorCode : Swift.Hashable {}
-extension StripeCore.FinancialConnectionsEvent.ErrorCode : Swift.RawRepresentable {}
 extension StripeCore.STPCardErrorCode : Swift.Equatable {}
 extension StripeCore.STPCardErrorCode : Swift.Hashable {}
 extension StripeCore.STPCardErrorCode : Swift.RawRepresentable {}
 @_spi(STP) extension StripeCore.STPTextValidationState : Swift.Equatable {}
 @_spi(STP) extension StripeCore.STPTextValidationState : Swift.Hashable {}
 @_spi(STP) extension StripeCore.STPTextValidationState : Swift.RawRepresentable {}
+@_spi(STP) extension StripeCore.LinkMode : Swift.Equatable {}
+@_spi(STP) extension StripeCore.LinkMode : Swift.Hashable {}
+@_spi(STP) extension StripeCore.LinkMode : Swift.RawRepresentable {}
 @_spi(STP) extension StripeCore.AnalyticsHelper.TimeMeasurement : Swift.Equatable {}
 @_spi(STP) extension StripeCore.AnalyticsHelper.TimeMeasurement : Swift.Hashable {}

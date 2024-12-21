@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name StripePaymentsUI
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StripePaymentsUI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import DeveloperToolsSupport
 import Foundation
 import SafariServices
@@ -44,7 +45,6 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
   @_spi(STP) public typealias BundleLocator = StripePaymentsUI.StripePaymentsUIBundleLocator
 }
 @_spi(STP) @objc @_inheritsConvenienceInitializers public class STPPhoneNumberValidator : ObjectiveC.NSObject {
-  @_spi(STP) public class func stringIsValidPhoneNumber(_ string: Swift.String, forCountryCode nillableCode: Swift.String?) -> Swift.Bool
   @_spi(STP) @objc override dynamic public init()
   @_spi(STP) @objc deinit
 }
@@ -67,7 +67,6 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
   @_spi(STP) public typealias STPPromiseErrorBlock = (any Swift.Error) -> Swift.Void
   @_spi(STP) public typealias STPPromiseValueBlock = (T) -> Swift.Void
   @_spi(STP) public typealias STPPromiseCompletionBlock = (T?, (any Swift.Error)?) -> Swift.Void
-  @_spi(STP) public typealias STPPromiseMapBlock = (T) -> Any?
   @_spi(STP) public typealias STPPromiseFlatMapBlock = (T) -> StripePaymentsUI.STPPromise<T>
   @_spi(STP) public var completed: Swift.Bool {
     @_spi(STP) get
@@ -79,8 +78,6 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
   public func onSuccess(_ callback: @escaping StripePaymentsUI.STPPromise<T>.STPPromiseValueBlock) -> Self
   @_spi(STP) @discardableResult
   public func onFailure(_ callback: @escaping StripePaymentsUI.STPPromise<T>.STPPromiseErrorBlock) -> Self
-  @_spi(STP) @discardableResult
-  public func map(_ callback: @escaping StripePaymentsUI.STPPromise<T>.STPPromiseMapBlock) -> StripePaymentsUI.STPPromise<T>
   @_spi(STP) @objc override dynamic public init()
   @_spi(STP) @objc deinit
 }
@@ -115,9 +112,6 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
   @_spi(STP) public static var shipping_address: Swift.String {
     @_spi(STP) get
   }
-  @_spi(STP) public static var billing_address: Swift.String {
-    @_spi(STP) get
-  }
   @_spi(STP) public static var billing_address_lowercase: Swift.String {
     @_spi(STP) get
   }
@@ -128,9 +122,6 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
     @_spi(STP) get
   }
   @_spi(STP) public static var cvc_section_title: Swift.String {
-    @_spi(STP) get
-  }
-  @_spi(STP) public static var cvv: Swift.String {
     @_spi(STP) get
   }
   @_spi(STP) public static var cvc: Swift.String {
@@ -148,6 +139,9 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
   @_spi(STP) public static var your_cards_expiration_date_is_invalid: Swift.String {
     @_spi(STP) get
   }
+  @_spi(STP) public static var your_card_has_expired: Swift.String {
+    @_spi(STP) get
+  }
   @_spi(STP) public static var your_cards_expiration_date_is_incomplete: Swift.String {
     @_spi(STP) get
   }
@@ -155,6 +149,12 @@ extension StripePaymentsUI.STPCardFormViewStyle : Swift.CustomStringConvertible 
     @_spi(STP) get
   }
   @_spi(STP) public static var your_cards_expiration_year_is_invalid: Swift.String {
+    @_spi(STP) get
+  }
+  @_spi(STP) public static var brand_not_allowed: Swift.String {
+    @_spi(STP) get
+  }
+  @_spi(STP) public static var generic_brand_not_allowed: Swift.String {
     @_spi(STP) get
   }
 }
@@ -172,15 +172,12 @@ extension Foundation.NSAttributedString {
     get
   }
 }
-extension StripePayments.STPCardBrand : Swift.Comparable {
-  public static func < (lhs: StripePayments.STPCardBrand, rhs: StripePayments.STPCardBrand) -> Swift.Bool
-}
 extension UIKit.UIButton {
   @_spi(STP) @_Concurrency.MainActor(unsafe) public func setContentSpacing(_ spacing: CoreFoundation.CGFloat, withEdgeInsets edgeInsets: UIKit.NSDirectionalEdgeInsets)
 }
 @_spi(STP) extension StripeUICore.DropdownFieldElement {
-  @_spi(STP) public static func makeCardBrandDropdown(cardBrands: Swift.Set<StripePayments.STPCardBrand> = Set<STPCardBrand>(), theme: StripeUICore.ElementsUITheme = .default, includePlaceholder: Swift.Bool = true, maxWidth: CoreFoundation.CGFloat? = nil, hasPadding: Swift.Bool = true, didPresent: StripeUICore.DropdownFieldElement.DidPresent? = nil, didTapClose: StripeUICore.DropdownFieldElement.DidTapClose? = nil) -> StripeUICore.DropdownFieldElement
-  @_spi(STP) public static func items(from cardBrands: Swift.Set<StripePayments.STPCardBrand>, theme: StripeUICore.ElementsUITheme, includePlaceholder: Swift.Bool = true, maxWidth: CoreFoundation.CGFloat? = nil) -> [StripeUICore.DropdownFieldElement.DropdownItem]
+  @_spi(STP) public static func makeCardBrandDropdown(cardBrands: Swift.Set<StripePayments.STPCardBrand> = Set<STPCardBrand>(), theme: StripeUICore.ElementsAppearance = .default, includePlaceholder: Swift.Bool = true, maxWidth: CoreFoundation.CGFloat? = nil, hasPadding: Swift.Bool = true, didPresent: StripeUICore.DropdownFieldElement.DidPresent? = nil, didTapClose: StripeUICore.DropdownFieldElement.DidTapClose? = nil) -> StripeUICore.DropdownFieldElement
+  @_spi(STP) public static func items(from cardBrands: Swift.Set<StripePayments.STPCardBrand>, theme: StripeUICore.ElementsAppearance, includePlaceholder: Swift.Bool = true, maxWidth: CoreFoundation.CGFloat? = nil) -> [StripeUICore.DropdownFieldElement.DropdownItem]
 }
 @_spi(STP) @_hasMissingDesignatedInitializers @objc(STP_Internal_CardBrandView) @_Concurrency.MainActor(unsafe) final public class CardBrandView : UIKit.UIView {
   @_spi(STP) @_Concurrency.MainActor(unsafe) public static let targetIconSize: CoreFoundation.CGSize
@@ -188,12 +185,13 @@ extension UIKit.UIButton {
     @_spi(STP) @objc get
   }
   @_spi(STP) @_Concurrency.MainActor(unsafe) final public func size(for targetSize: CoreFoundation.CGSize) -> CoreFoundation.CGSize
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(showCVC: Swift.Bool = false)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public init(showCVC: Swift.Bool = false, centerHorizontally: Swift.Bool = false)
+  @_spi(STP) @_Concurrency.MainActor(unsafe) final public func setCardBrand(_ brand: StripePayments.STPCardBrand)
   @_spi(STP) @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @_spi(STP) @objc deinit
 }
 @_spi(STP) extension StripeUICore.DynamicImageView {
-  @_spi(STP) @_Concurrency.MainActor(unsafe) public static func makeUnknownCardImageView(theme: StripeUICore.ElementsUITheme) -> StripeUICore.DynamicImageView
+  @_spi(STP) @_Concurrency.MainActor(unsafe) public static func makeUnknownCardImageView(theme: StripeUICore.ElementsAppearance) -> StripeUICore.DynamicImageView
 }
 @_spi(STP) @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class STPCardCVCInputTextField : StripePaymentsUI.STPInputTextField {
   @_spi(STP) @_Concurrency.MainActor(unsafe) public var cardBrand: StripePayments.STPCardBrand {
@@ -515,6 +513,10 @@ extension StripePaymentsUI.STPCardFormView {
   @objc(preferredNetworks) @_Concurrency.MainActor(unsafe) open func preferredNetworks_objc() -> [Foundation.NSNumber]?
   @available(swift, obsoleted: 1.0)
   @objc(setPreferredNetworks:) @_Concurrency.MainActor(unsafe) open func setPreferredNetworks_objc(preferredNetworks: [Foundation.NSNumber]?)
+  @_Concurrency.MainActor(unsafe) public var onBehalfOf: Swift.String? {
+    get
+    set
+  }
   @objc deinit
 }
 @_spi(STP) extension StripePaymentsUI.STPCardFormView : StripeCore.STPAnalyticsProtocol {
@@ -851,6 +853,10 @@ extension StripePaymentsUI.STPPaymentCardTextField {
   @objc(preferredNetworks) @_Concurrency.MainActor(unsafe) open func preferredNetworks_objc() -> [Foundation.NSNumber]?
   @available(swift, obsoleted: 1.0)
   @objc(setPreferredNetworks:) @_Concurrency.MainActor(unsafe) open func setPreferredNetworks_objc(preferredNetworks: [Foundation.NSNumber]?)
+  @_Concurrency.MainActor(unsafe) public var onBehalfOf: Swift.String? {
+    get
+    set
+  }
   @objc deinit
 }
 @objc public protocol STPPaymentCardTextFieldDelegate : ObjectiveC.NSObjectProtocol {
