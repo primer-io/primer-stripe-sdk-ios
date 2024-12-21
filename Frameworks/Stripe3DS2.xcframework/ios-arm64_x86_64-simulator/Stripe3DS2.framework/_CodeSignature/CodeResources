@@ -6,15 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		OX5Dmu0koMUy92OoUmOcdeMEA6E=
+		Hl1VvzqxDZlGHCMbrzIkVi4EOGQ=
 		</data>
 		<key>Headers/STDSAlreadyInitializedException.h</key>
 		<data>
 		KFb71y1hI4w1R3xDhuELOgcQr5s=
-		</data>
-		<key>Headers/STDSAnalyticsDelegate.h</key>
-		<data>
-		zJfkAhA0GrLoitaE3Ay1+/34n0Q=
 		</data>
 		<key>Headers/STDSAuthenticationRequestParameters.h</key>
 		<data>
@@ -82,7 +78,7 @@
 		</data>
 		<key>Headers/STDSNavigationBarCustomization.h</key>
 		<data>
-		Skq+8qaHfA7weox7Qu/aR+Xj0gE=
+		NHI+fpX5+j15h5b73L5jupMSP0U=
 		</data>
 		<key>Headers/STDSNotInitializedException.h</key>
 		<data>
@@ -118,7 +114,7 @@
 		</data>
 		<key>Headers/STDSThreeDS2Service.h</key>
 		<data>
-		E3C5p7zlHWGdHuNlvS+Ahk9P684=
+		GX/yIi9v61s5ZPUw7sFK7yncoKU=
 		</data>
 		<key>Headers/STDSThreeDSProtocolVersion.h</key>
 		<data>
@@ -138,11 +134,11 @@
 		</data>
 		<key>Headers/Stripe3DS2.h</key>
 		<data>
-		gsfe+42N4VU21p/O3YVnp+JdQZo=
+		uPM3wsEA5JxH+2A5C9C2hkmiJf8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZHmk7Bj1uEe0lN+U/D31/6+HC9g=
+		A+6G0E+B8x9NqZhQu3gNhHaGVwM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -556,7 +552,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RI9ijuPPmGsuUyzSnSz+PaZ6+01cCvnbRlP6ig3Jk0w=
+			Ow9W5exV6olBFRWpl7DFD0XUK0MvarHdFCA+m4kVFPY=
 			</data>
 		</dict>
 		<key>Headers/STDSAlreadyInitializedException.h</key>
@@ -564,13 +560,6 @@
 			<key>hash2</key>
 			<data>
 			LnTjgl00L+nkczuj6z+pQv9uVDryqut42BEtQ/seK2k=
-			</data>
-		</dict>
-		<key>Headers/STDSAnalyticsDelegate.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8Aungk2tasbY5iWxX9iq+onKh0vstCrC12BxZiQ+bFU=
 			</data>
 		</dict>
 		<key>Headers/STDSAuthenticationRequestParameters.h</key>
@@ -689,7 +678,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tjBDduVxVDNc2vs6iOlbfz0oPkDjOIGX63mOfPtN8c0=
+			eUjdHILvFoE41/Nx5FA1LlJOFjF0xrOhXsJl9gOpSUc=
 			</data>
 		</dict>
 		<key>Headers/STDSNotInitializedException.h</key>
@@ -752,7 +741,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q5RQAGNs0EQBgpQCYqhQiruf5xPoT7dtO7zBrVUZWJ4=
+			dGDum2PqbuZ0sUTjBnVYNBBAjhu64SUvPytKeTdo5K4=
 			</data>
 		</dict>
 		<key>Headers/STDSThreeDSProtocolVersion.h</key>
@@ -787,7 +776,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fjPiUTO006NKdDIFF6HSMVydueINI/YPmgIuzbw0kSY=
+			Ye/nqG5YQEKe3z27lGW7hxb/cs1xRdk01+Ae8lZG9QA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

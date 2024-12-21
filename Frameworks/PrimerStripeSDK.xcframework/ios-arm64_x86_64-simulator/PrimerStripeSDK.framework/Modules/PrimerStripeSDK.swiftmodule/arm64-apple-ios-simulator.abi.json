@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "PrimerStripeSDK",
-    "printedName": "PrimerStripeSDK",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
     "children": [
       {
         "kind": "Import",
@@ -72,22 +72,6 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
         ]
       },
       {
@@ -130,7 +114,6 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "Preconcurrency",
               "Custom",
               "Required",
               "AccessControl"
@@ -167,7 +150,6 @@
             "moduleName": "PrimerStripeSDK",
             "static": true,
             "declAttributes": [
-              "Preconcurrency",
               "Custom",
               "Final",
               "AccessControl",
@@ -195,7 +177,6 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl",
@@ -229,7 +210,6 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "Preconcurrency",
               "Custom",
               "Override",
               "AccessControl"
@@ -286,7 +266,6 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
-              "Preconcurrency",
               "Custom",
               "Override"
             ],
@@ -298,7 +277,6 @@
         "mangledName": "$s15PrimerStripeSDK0aB23CollectorViewControllerC",
         "moduleName": "PrimerStripeSDK",
         "declAttributes": [
-          "Preconcurrency",
           "Custom",
           "AccessControl",
           "ObjC"
@@ -311,20 +289,6 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -667,22 +631,6 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
         ]
       },
       {
@@ -1043,20 +991,6 @@
           "RawDocComment"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
           {
             "kind": "Conformance",
             "name": "PrimerStripeErrorProtocol",
@@ -1565,22 +1499,6 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -1747,22 +1665,6 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       }
     ],
@@ -1770,25 +1672,32 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/niallquinn\/code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Extensions\/Date+String.swift",
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Extensions\/Date+String.swift",
       "kind": "StringLiteral",
       "offset": 184,
       "length": 28,
       "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\""
     },
     {
-      "filePath": "\/Users\/niallquinn\/code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
       "kind": "StringLiteral",
       "offset": 29,
       "length": 7,
       "value": "\"1.0.0\""
     },
     {
-      "filePath": "\/Users\/niallquinn\/code\/ios\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/Version\/Version.swift",
       "kind": "StringLiteral",
       "offset": 60,
-      "length": 8,
-      "value": "\"24.2.0\""
+      "length": 9,
+      "value": "\"23.27.0\""
+    },
+    {
+      "filePath": "\/Users\/stefanvrancianu\/Desktop\/Primer\/primer-stripe-sdk-ios\/PrimerStripeSDK\/Sources\/ViewController\/PrimerStripeCollectorViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 35,
+      "value": "\"PrimerStripeSDK.PrimerStripeCollectorViewController\""
     }
   ]
 }

@@ -78,7 +78,7 @@ public class PrimerStripeCollectorViewController: UIViewController {
                 // Here we check again for payment method
                 // If is nil, we call delegation method with canceled status
                 // If not, we proceed with success status
-                guard let _ = intent.paymentMethod,
+                guard let paymentMethod = intent.paymentMethod,
                       let paymentMethodId = intent.paymentMethodId else {
                     self.delegate?.primerStripeCollected(PrimerStripeStatus.canceled)
                     self.dismissMainViewController()

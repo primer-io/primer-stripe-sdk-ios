@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/StripeApplePay-Swift.h</key>
 		<data>
-		XbctsqINqmf8tzBNKD+23ZKMwMs=
+		LMhL1XVCED/hyIbyeV5N8vlVV7Q=
 		</data>
 		<key>Headers/StripeApplePay.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Tp/5pkdDz3ii7KpWEte0GK/q/lE=
+		r4iYkfxlmpNtU20yTEozg1bU1M8=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DqkiOL2H9/d5fHFW/GNF+4zZc2c=
+		xBUpV3JOcDS7OsFdxNTWopCtZEU=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ppoutDHTo+AiZGrSc4UGAfj1tM8=
+		HFGDideVMT0NNLEpxOxcyV/oIms=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		LtG6CnU+iqxGE9tVXt+3PCX3SUM=
+		wmvov8psvxRgiyb3viePkuVJRac=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Wk1zQ508IWObI5n4qSFlanxzxY0=
+		bYyDxybf0jhnmHtaqHPYAwTp0tU=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WNljcwLcQ2A3UgQyO/NoNzEXV1g=
+		8Z+J52DkZEURoX3REo1SOBEQ6Y8=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DqkiOL2H9/d5fHFW/GNF+4zZc2c=
+		xBUpV3JOcDS7OsFdxNTWopCtZEU=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		CF+gECmQVkCwGFUkdOCIb4Hz4+w=
+		F4qJfdPChNtzKm7GHxiPtcqpyD8=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		7zRNNuJMOs/aV5QeanE0XCazKEE=
+		4XWCJqjDMxIwjLKI8yO9ROW0hjI=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		7NfGMN6Uv1MzQsuru/e676GaE3E=
+		/rqssa+hcizgJcb1PT4CmQ/LuXk=
 		</data>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QKI2c4Gbx32oPESdTGisOWoU9kQ=
+		hKm5XKlQ1JKY4sCeCb8ZXubeSFA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DUl2mVK6g3MRX4xUwuH/ZuUZ0k4wiMfVhldlzRBNfGM=
+			wpNbcciKizIP8xbeG3AbCnPZFzRRt1TVbV9Up8rX3wk=
 			</data>
 		</dict>
 		<key>Headers/StripeApplePay.h</key>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/kOWG2NcKcEB0+mB2AuHbNYESuo7fgJuBKh5D3IXU8M=
+			EWvckrOJ2kGFhpJe7hSdrhTHLlhgnMfzYo4kygVPmt0=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pd1wzaxonVSXAn4jmjvsFkCQEQz0mFIbNrhgU3JKCAY=
+			xNtnhAH8vcu/bLIk1v78kNEyaet2dpaFCpiBQ4mDrUo=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cP72hEBDMkEYZCY2/AMl7GAiz9kRj0I3+48Vafie8Xc=
+			ewz8Uce3LOPBM2/jycRg28yuElucYPSOvJo0C17ogjs=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aigFzNP46yUuxfGrsvZCp+s3wcoUwx+gI6t5NF9uOMk=
+			IgcTppzVrIUvBFo6BvzAz0Y8seWXYHOd2VO2vImRHa8=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6U84hblg+vP/QedWCRvpdLYR/QPLlw1ZD7wLZrheByc=
+			Mp9aOLYKVm6Ia/SggGB1z6gPDMzggf6d44SyaTLhJPg=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/kOWG2NcKcEB0+mB2AuHbNYESuo7fgJuBKh5D3IXU8M=
+			EWvckrOJ2kGFhpJe7hSdrhTHLlhgnMfzYo4kygVPmt0=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cKkCY7W7zAmnv1hgJOe/oRhUoUKg7Molo39E48yDy9Q=
+			dPWF3QnCbIK8IVH85IQJ1SuIN3HGBUKidnk8gtD3Tcw=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p5sF4SHiTgo+JFWBtDm2cL0i8GI0BjYzhOKA32AjA2o=
+			3E85swoWJXzC/TvcWQQpkeeyDSwzB0PivUdXLktXuX0=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LFtYnY7VtoxG6EZqCILLgsm1oNUhnHjSzyyA2fNtLpg=
+			PqnV6NE0fiTDiQSVmlDB4RDsUSpYmGCkxrMrLHhUTGA=
 			</data>
 		</dict>
 		<key>Modules/StripeApplePay.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qKo3ITpjKBW9PmYhDKixxje2Bjc2GzmpUAzNX+VStPs=
+			r2kveZFbdAZ/KOJJTDIuYRFmAxmRzKX/QDE4QMFcrF0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

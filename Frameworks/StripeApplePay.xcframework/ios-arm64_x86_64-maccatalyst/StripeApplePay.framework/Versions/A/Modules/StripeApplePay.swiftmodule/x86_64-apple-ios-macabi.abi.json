@@ -61,7 +61,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?"
+                "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?"
               }
             ],
             "declKind": "Var",
@@ -89,12 +89,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?",
+                    "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "_stpinternal_STPApplePayContextDelegateBase",
-                        "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                        "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                         "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
                       }
                     ],
@@ -124,12 +124,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?",
+                    "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "_stpinternal_STPApplePayContextDelegateBase",
-                        "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                        "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                         "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
                       }
                     ],
@@ -471,7 +471,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.String?, Swift.Error?) -> ()",
+                "printedName": "(Swift.String?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -481,7 +481,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Swift.String?, Swift.Error?)",
+                    "printedName": "(Swift.String?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -500,12 +500,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -538,7 +538,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String?, Swift.Error?) -> ()",
+                    "printedName": "(Swift.String?, (any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -548,7 +548,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(Swift.String?, Swift.Error?)",
+                        "printedName": "(Swift.String?, (any Swift.Error)?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -567,12 +567,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Optional",
-                            "printedName": "Swift.Error?",
+                            "printedName": "(any Swift.Error)?",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "Error",
-                                "printedName": "Swift.Error",
+                                "printedName": "any Swift.Error",
                                 "usr": "s:s5ErrorP"
                               }
                             ],
@@ -606,7 +606,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.String?, Swift.Error?) -> ()",
+                    "printedName": "(Swift.String?, (any Swift.Error)?) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -616,7 +616,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(Swift.String?, Swift.Error?)",
+                        "printedName": "(Swift.String?, (any Swift.Error)?)",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -635,12 +635,12 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Optional",
-                            "printedName": "Swift.Error?",
+                            "printedName": "(any Swift.Error)?",
                             "children": [
                               {
                                 "kind": "TypeNominal",
                                 "name": "Error",
-                                "printedName": "Swift.Error",
+                                "printedName": "any Swift.Error",
                                 "usr": "s:s5ErrorP"
                               }
                             ],
@@ -698,7 +698,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "_stpinternal_STPApplePayContextDelegateBase",
-                "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                 "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
               },
               {
@@ -722,7 +722,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.String?, Swift.Error?) -> ()",
+                "printedName": "(Swift.String?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -732,7 +732,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Swift.String?, Swift.Error?)",
+                    "printedName": "(Swift.String?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -751,12 +751,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -892,7 +892,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "WeakStorage",
-                "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?"
+                "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?"
               }
             ],
             "declKind": "Var",
@@ -920,12 +920,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?",
+                    "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "_stpinternal_STPApplePayContextDelegateBase",
-                        "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                        "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                         "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
                       }
                     ],
@@ -955,12 +955,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?",
+                    "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "_stpinternal_STPApplePayContextDelegateBase",
-                        "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                        "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                         "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
                       }
                     ],
@@ -1204,12 +1204,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -1239,12 +1239,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -1274,12 +1274,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.Error?",
+                    "printedName": "(any Swift.Error)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Error",
-                        "printedName": "Swift.Error",
+                        "printedName": "any Swift.Error",
                         "usr": "s:s5ErrorP"
                       }
                     ],
@@ -1333,7 +1333,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "_stpinternal_STPApplePayContextDelegateBase",
-                "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                 "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
               },
               {
@@ -1351,12 +1351,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -1630,64 +1630,6 @@
           {
             "kind": "Function",
             "name": "applePayContext",
-            "printedName": "applePayContext(_:didChangeCouponCode:handler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "STPApplePayContext",
-                "printedName": "StripeApplePay.STPApplePayContext",
-                "usr": "c:@M@StripeApplePay@objc(cs)STPApplePayContext"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PassKit.PKPaymentRequestCouponCodeUpdate) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PKPaymentRequestCouponCodeUpdate",
-                    "printedName": "PassKit.PKPaymentRequestCouponCodeUpdate",
-                    "usr": "c:objc(cs)PKPaymentRequestCouponCodeUpdate"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase(im)applePayContext:didChangeCouponCode:handler:",
-            "mangledName": "$s14StripeApplePay021_stpinternal_STPAppleC19ContextDelegateBaseP05applecF0_19didChangeCouponCode7handleryAA0ecF0C_SSySo016PKPaymentRequestlM6UpdateCctF",
-            "moduleName": "StripeApplePay",
-            "genericSig": "<τ_0_0 where τ_0_0 : StripeApplePay._stpinternal_STPApplePayContextDelegateBase>",
-            "sugared_genericSig": "<Self where Self : StripeApplePay._stpinternal_STPApplePayContextDelegateBase>",
-            "protocolReq": true,
-            "intro_iOS": "15.0",
-            "declAttributes": [
-              "Optional",
-              "ObjC",
-              "Available",
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "applePayContext",
             "printedName": "applePayContext(_:willCompleteWithResult:handler:)",
             "children": [
               {
@@ -1790,7 +1732,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.String?, Swift.Error?) -> ()",
+                "printedName": "(Swift.String?, (any Swift.Error)?) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1800,7 +1742,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Swift.String?, Swift.Error?)",
+                    "printedName": "(Swift.String?, (any Swift.Error)?)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1819,12 +1761,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Optional",
-                        "printedName": "Swift.Error?",
+                        "printedName": "(any Swift.Error)?",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -1873,12 +1815,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -2008,12 +1950,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase?",
+                "printedName": "(any StripeApplePay._stpinternal_STPApplePayContextDelegateBase)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "_stpinternal_STPApplePayContextDelegateBase",
-                    "printedName": "StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
+                    "printedName": "any StripeApplePay._stpinternal_STPApplePayContextDelegateBase",
                     "usr": "c:@M@StripeApplePay@objc(pl)_stpinternal_STPApplePayContextDelegateBase"
                   }
                 ],
@@ -3118,62 +3060,6 @@
               "ObjC",
               "Custom",
               "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "paymentAuthorizationController",
-            "printedName": "paymentAuthorizationController(_:didChangeCouponCode:handler:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "PKPaymentAuthorizationController",
-                "printedName": "PassKit.PKPaymentAuthorizationController",
-                "usr": "c:objc(cs)PKPaymentAuthorizationController"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PassKit.PKPaymentRequestCouponCodeUpdate) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PKPaymentRequestCouponCodeUpdate",
-                    "printedName": "PassKit.PKPaymentRequestCouponCodeUpdate",
-                    "usr": "c:objc(cs)PKPaymentRequestCouponCodeUpdate"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@StripeApplePay@objc(cs)STPApplePayContext(im)paymentAuthorizationController:didChangeCouponCode:handler:",
-            "mangledName": "$s14StripeApplePay08STPAppleC7ContextC30paymentAuthorizationController_19didChangeCouponCode7handlerySo09PKPaymentgH0C_SSySo0n7RequestkL6UpdateCctF",
-            "moduleName": "StripeApplePay",
-            "intro_iOS": "15.0",
-            "objc_name": "paymentAuthorizationController:didChangeCouponCode:handler:",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl",
-              "Available",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -4341,12 +4227,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -4355,12 +4241,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.Error?",
+                "printedName": "(any Swift.Error)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Error",
-                    "printedName": "Swift.Error",
+                    "printedName": "any Swift.Error",
                     "usr": "s:s5ErrorP"
                   }
                 ],
@@ -4662,8 +4548,8 @@
         "children": [
           {
             "kind": "Function",
-            "name": "stp_applepay_isSimulated",
-            "printedName": "stp_applepay_isSimulated()",
+            "name": "stp_isSimulated",
+            "printedName": "stp_isSimulated()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4673,8 +4559,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:So9PKPaymentC14StripeApplePayE24stp_applepay_isSimulatedSbyF",
-            "mangledName": "$sSo9PKPaymentC14StripeApplePayE24stp_applepay_isSimulatedSbyF",
+            "usr": "s:So9PKPaymentC14StripeApplePayE15stp_isSimulatedSbyF",
+            "mangledName": "$sSo9PKPaymentC14StripeApplePayE15stp_isSimulatedSbyF",
             "moduleName": "StripeApplePay",
             "declAttributes": [
               "AccessControl",
@@ -4689,8 +4575,8 @@
           },
           {
             "kind": "Function",
-            "name": "stp_applepay_testTransactionIdentifier",
-            "printedName": "stp_applepay_testTransactionIdentifier()",
+            "name": "stp_testTransactionIdentifier",
+            "printedName": "stp_testTransactionIdentifier()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4700,8 +4586,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:So9PKPaymentC14StripeApplePayE38stp_applepay_testTransactionIdentifierSSyFZ",
-            "mangledName": "$sSo9PKPaymentC14StripeApplePayE38stp_applepay_testTransactionIdentifierSSyFZ",
+            "usr": "s:So9PKPaymentC14StripeApplePayE29stp_testTransactionIdentifierSSyFZ",
+            "mangledName": "$sSo9PKPaymentC14StripeApplePayE29stp_testTransactionIdentifierSSyFZ",
             "moduleName": "StripeApplePay",
             "static": true,
             "declAttributes": [
@@ -5812,7 +5698,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Decoder",
-                        "printedName": "Swift.Decoder",
+                        "printedName": "any Swift.Decoder",
                         "usr": "s:s7DecoderP"
                       }
                     ],
@@ -5837,7 +5723,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Encoder",
-                        "printedName": "Swift.Encoder",
+                        "printedName": "any Swift.Encoder",
                         "usr": "s:s7EncoderP"
                       }
                     ],
@@ -6463,7 +6349,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Decoder",
-                    "printedName": "Swift.Decoder",
+                    "printedName": "any Swift.Decoder",
                     "usr": "s:s7DecoderP"
                   }
                 ],
@@ -6488,7 +6374,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Encoder",
-                    "printedName": "Swift.Encoder",
+                    "printedName": "any Swift.Encoder",
                     "usr": "s:s7EncoderP"
                   }
                 ],
@@ -8923,7 +8809,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Decoder",
-                    "printedName": "Swift.Decoder",
+                    "printedName": "any Swift.Decoder",
                     "usr": "s:s7DecoderP"
                   }
                 ],
@@ -8964,7 +8850,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<StripeCore.StripeAPI.PaymentIntent, Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<StripeCore.StripeAPI.PaymentIntent, any Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -8974,7 +8860,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<StripeCore.StripeAPI.PaymentIntent, Swift.Error>",
+                        "printedName": "Swift.Result<StripeCore.StripeAPI.PaymentIntent, any Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -8985,7 +8871,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -9036,7 +8922,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<StripeCore.StripeAPI.PaymentIntent, Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<StripeCore.StripeAPI.PaymentIntent, any Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -9046,7 +8932,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<StripeCore.StripeAPI.PaymentIntent, Swift.Error>",
+                        "printedName": "Swift.Result<StripeCore.StripeAPI.PaymentIntent, any Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -9057,7 +8943,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -10908,7 +10794,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Encoder",
-                    "printedName": "Swift.Encoder",
+                    "printedName": "any Swift.Encoder",
                     "usr": "s:s7EncoderP"
                   }
                 ],
@@ -13444,7 +13330,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Decoder",
-                            "printedName": "Swift.Decoder",
+                            "printedName": "any Swift.Decoder",
                             "usr": "s:s7DecoderP"
                           }
                         ],
@@ -13656,7 +13542,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Decoder",
-                            "printedName": "Swift.Decoder",
+                            "printedName": "any Swift.Decoder",
                             "usr": "s:s7DecoderP"
                           }
                         ],
@@ -14844,7 +14730,7 @@
                               {
                                 "kind": "TypeNominal",
                                 "name": "Decoder",
-                                "printedName": "Swift.Decoder",
+                                "printedName": "any Swift.Decoder",
                                 "usr": "s:s7DecoderP"
                               }
                             ],
@@ -15258,7 +15144,7 @@
                               {
                                 "kind": "TypeNominal",
                                 "name": "Decoder",
-                                "printedName": "Swift.Decoder",
+                                "printedName": "any Swift.Decoder",
                                 "usr": "s:s7DecoderP"
                               }
                             ],
@@ -15310,7 +15196,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Decoder",
-                            "printedName": "Swift.Decoder",
+                            "printedName": "any Swift.Decoder",
                             "usr": "s:s7DecoderP"
                           }
                         ],
@@ -15361,7 +15247,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Decoder",
-                        "printedName": "Swift.Decoder",
+                        "printedName": "any Swift.Decoder",
                         "usr": "s:s7DecoderP"
                       }
                     ],
@@ -15523,7 +15409,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Decoder",
-                    "printedName": "Swift.Decoder",
+                    "printedName": "any Swift.Decoder",
                     "usr": "s:s7DecoderP"
                   }
                 ],
@@ -15561,7 +15447,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<StripeCore.StripeAPI.PaymentMethod, Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<StripeCore.StripeAPI.PaymentMethod, any Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -15571,7 +15457,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<StripeCore.StripeAPI.PaymentMethod, Swift.Error>",
+                        "printedName": "Swift.Result<StripeCore.StripeAPI.PaymentMethod, any Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -15582,7 +15468,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -16935,7 +16821,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Encoder",
-                        "printedName": "Swift.Encoder",
+                        "printedName": "any Swift.Encoder",
                         "usr": "s:s7EncoderP"
                       }
                     ],
@@ -17291,7 +17177,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Encoder",
-                    "printedName": "Swift.Encoder",
+                    "printedName": "any Swift.Encoder",
                     "usr": "s:s7EncoderP"
                   }
                 ],
@@ -18123,7 +18009,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Decoder",
-                    "printedName": "Swift.Decoder",
+                    "printedName": "any Swift.Decoder",
                     "usr": "s:s7DecoderP"
                   }
                 ],
@@ -18164,7 +18050,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<StripeCore.StripeAPI.SetupIntent, Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<StripeCore.StripeAPI.SetupIntent, any Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -18174,7 +18060,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<StripeCore.StripeAPI.SetupIntent, Swift.Error>",
+                        "printedName": "Swift.Result<StripeCore.StripeAPI.SetupIntent, any Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18185,7 +18071,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -18236,7 +18122,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<StripeCore.StripeAPI.SetupIntent, Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<StripeCore.StripeAPI.SetupIntent, any Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -18246,7 +18132,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<StripeCore.StripeAPI.SetupIntent, Swift.Error>",
+                        "printedName": "Swift.Result<StripeCore.StripeAPI.SetupIntent, any Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -18257,7 +18143,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -19140,7 +19026,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Encoder",
-                    "printedName": "Swift.Encoder",
+                    "printedName": "any Swift.Encoder",
                     "usr": "s:s7EncoderP"
                   }
                 ],
@@ -21238,7 +21124,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Decoder",
-                        "printedName": "Swift.Decoder",
+                        "printedName": "any Swift.Decoder",
                         "usr": "s:s7DecoderP"
                       }
                     ],
@@ -21301,7 +21187,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Encoder",
-                        "printedName": "Swift.Encoder",
+                        "printedName": "any Swift.Encoder",
                         "usr": "s:s7EncoderP"
                       }
                     ],
@@ -21387,7 +21273,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Decoder",
-                    "printedName": "Swift.Decoder",
+                    "printedName": "any Swift.Decoder",
                     "usr": "s:s7DecoderP"
                   }
                 ],
@@ -21450,7 +21336,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Encoder",
-                    "printedName": "Swift.Encoder",
+                    "printedName": "any Swift.Encoder",
                     "usr": "s:s7EncoderP"
                   }
                 ],
@@ -21715,7 +21601,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Decoder",
-                    "printedName": "Swift.Decoder",
+                    "printedName": "any Swift.Decoder",
                     "usr": "s:s7DecoderP"
                   }
                 ],
@@ -21756,7 +21642,7 @@
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(Swift.Result<StripeCore.StripeAPI.Token, Swift.Error>) -> ()",
+                    "printedName": "(Swift.Result<StripeCore.StripeAPI.Token, any Swift.Error>) -> ()",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -21766,7 +21652,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Result",
-                        "printedName": "Swift.Result<StripeCore.StripeAPI.Token, Swift.Error>",
+                        "printedName": "Swift.Result<StripeCore.StripeAPI.Token, any Swift.Error>",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -21777,7 +21663,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Error",
-                            "printedName": "Swift.Error",
+                            "printedName": "any Swift.Error",
                             "usr": "s:s5ErrorP"
                           }
                         ],
@@ -21904,1313 +21790,578 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext+LegacySupport.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext+LegacySupport.swift",
       "kind": "StringLiteral",
       "offset": 285,
       "length": 57,
       "value": "\"StripeApplePay._stpinternal_ApplePayContextDidCreatePaymentMethodStorage\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext+LegacySupport.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext+LegacySupport.swift",
       "kind": "StringLiteral",
       "offset": 1272,
       "length": 46,
       "value": "\"StripeApplePay._stpinternal_ApplePayContextDidCompleteStorage\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "StringLiteral",
-      "offset": 7182,
+      "offset": 6747,
       "length": 36,
       "value": "\"COMPLETE_WITHOUT_CONFIRMING_INTENT\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 8582,
-      "length": 60,
-      "value": "\"You must set `merchantIdentifier` on your payment request.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "BooleanLiteral",
-      "offset": 11386,
+      "offset": 14013,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 11409,
-      "length": 119,
-      "value": "\"This method should only be called once; create a new instance of STPApplePayContext every time you present Apple Pay.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "BooleanLiteral",
-      "offset": 11601,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14448,
+      "offset": 14056,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14491,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 15402,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 20544,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 21379,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 22047,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 22644,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 23823,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 26392,
-      "length": 21,
-      "value": "\"Invalid final state\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 29111,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 30625,
-      "length": 67,
-      "value": "\"The SetupIntent is in an unexpected state: \""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 30691,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "BooleanLiteral",
-      "offset": 32387,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 34623,
-      "length": 241,
-      "value": "\"The PaymentIntent is in an unexpected state. If you pass confirmation_method = manual when creating the PaymentIntent, also pass confirm = true.  If server-side confirmation fails, double check you are passing the error back to the client.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 35199,
-      "length": 71,
-      "value": "\"applePayContext:didCreatePaymentMethod:paymentInformation:completion:\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 35807,
-      "length": 32,
-      "value": "\"STPApplePayContextLegacyHelper\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 36394,
-      "length": 105,
-      "value": "\"An STPApplePayContext's delegate must conform to ApplePayContextDelegate or STPApplePayContextDelegate.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 36929,
-      "length": 46,
-      "value": "\"applePayContext:didCompleteWithStatus:error:\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 37048,
-      "length": 32,
-      "value": "\"STPApplePayContextLegacyHelper\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 37513,
-      "length": 105,
-      "value": "\"An STPApplePayContext's delegate must conform to ApplePayContextDelegate or STPApplePayContextDelegate.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 38308,
+      "offset": 36383,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "StringLiteral",
-      "offset": 6449,
+      "offset": 6014,
       "length": 18,
       "value": "\"StripeApplePay.STPApplePayContext\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 39033,
-      "length": 20,
-      "value": "\"STPApplePayContext\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
-      "kind": "StringLiteral",
-      "offset": 39209,
-      "length": 23,
-      "value": "\"ModernApplePayContext\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39295,
+      "offset": 37370,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39354,
+      "offset": 37429,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39371,
+      "offset": 37446,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39386,
+      "offset": 37461,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39354,
+      "offset": 37429,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39371,
+      "offset": 37446,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39386,
+      "offset": 37461,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39354,
+      "offset": 37429,
       "length": 7,
       "value": "1"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39371,
+      "offset": 37446,
       "length": 5,
       "value": "2"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39386,
+      "offset": 37461,
       "length": 7,
       "value": "3"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/ApplePayContext\/STPApplePayContext.swift",
       "kind": "IntegerLiteral",
-      "offset": 39896,
+      "offset": 37971,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "Dictionary",
-      "offset": 311,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 387,
-      "length": 6,
-      "value": "\"name\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 428,
-      "length": 15,
-      "value": "\"address_line1\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 479,
-      "length": 14,
-      "value": "\"address_city\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 528,
-      "length": 15,
-      "value": "\"address_state\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 579,
-      "length": 13,
-      "value": "\"address_zip\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKContact+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 633,
-      "length": 17,
-      "value": "\"address_country\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 364,
-      "length": 22,
-      "value": "\"Simulated Identifier\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 646,
-      "length": 3,
-      "value": "\"~\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 657,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 770,
-      "length": 18,
-      "value": "\"4242424242424242\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 919,
-      "length": 3,
-      "value": "\"0\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "IntegerLiteral",
-      "offset": 992,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 1040,
-      "length": 5,
-      "value": "\"USD\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 1072,
-      "length": 15,
-      "value": "\"ApplePayStubs\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/Extensions\/PKPayment+Stripe.swift",
-      "kind": "StringLiteral",
-      "offset": 1138,
-      "length": 3,
-      "value": "\"~\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 341,
       "length": 6,
       "value": "\"Visa\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 18,
       "value": "\"American Express\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 475,
       "length": 12,
       "value": "\"MasterCard\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 538,
       "length": 10,
       "value": "\"Discover\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 589,
       "length": 5,
       "value": "\"JCB\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 650,
       "length": 13,
       "value": "\"Diners Club\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 714,
       "length": 10,
       "value": "\"UnionPay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 787,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 341,
       "length": 6,
       "value": "\"Visa\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 402,
       "length": 18,
       "value": "\"American Express\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 475,
       "length": 12,
       "value": "\"MasterCard\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 538,
       "length": 10,
       "value": "\"Discover\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 589,
       "length": 5,
       "value": "\"JCB\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 650,
       "length": 13,
       "value": "\"Diners Club\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 714,
       "length": 10,
       "value": "\"UnionPay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/CardBrand.swift",
       "kind": "StringLiteral",
       "offset": 787,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 2443,
       "length": 25,
       "value": "\"requires_payment_method\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 2883,
       "length": 17,
       "value": "\"requires_source\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 2998,
       "length": 23,
       "value": "\"requires_confirmation\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 3210,
       "length": 17,
       "value": "\"requires_action\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 3718,
       "length": 24,
       "value": "\"requires_source_action\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 4027,
       "length": 18,
       "value": "\"requires_capture\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 2443,
       "length": 25,
       "value": "\"requires_payment_method\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 2883,
       "length": 17,
       "value": "\"requires_source\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 2998,
       "length": 23,
       "value": "\"requires_confirmation\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 3210,
       "length": 17,
       "value": "\"requires_action\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 3718,
       "length": 24,
       "value": "\"requires_source_action\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
       "kind": "StringLiteral",
       "offset": 4027,
       "length": 18,
       "value": "\"requires_capture\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
-      "kind": "StringLiteral",
-      "offset": 5962,
-      "length": 10,
-      "value": "\"_secret_\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6005,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6021,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
-      "kind": "StringLiteral",
-      "offset": 6034,
-      "length": 5,
-      "value": "\"pi_\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6073,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntentParams.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntentParams.swift",
       "kind": "StringLiteral",
       "offset": 4483,
       "length": 25,
       "value": "\"^pi_[^_]+_secret_[^_]+$\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntentParams.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntentParams.swift",
       "kind": "Array",
       "offset": 4527,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntentParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4806,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentIntentParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4855,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "BooleanLiteral",
       "offset": 814,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "BooleanLiteral",
       "offset": 5217,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6273,
       "length": 23,
       "value": "\"amex_express_checkout\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6367,
       "length": 11,
       "value": "\"apple_pay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6451,
       "length": 12,
       "value": "\"google_pay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6537,
       "length": 12,
       "value": "\"masterpass\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6624,
       "length": 13,
       "value": "\"samsung_pay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6716,
       "length": 15,
       "value": "\"visa_checkout\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6820,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6273,
       "length": 23,
       "value": "\"amex_express_checkout\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6367,
       "length": 11,
       "value": "\"apple_pay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6451,
       "length": 12,
       "value": "\"google_pay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6537,
       "length": 12,
       "value": "\"masterpass\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6624,
       "length": 13,
       "value": "\"samsung_pay\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6716,
       "length": 15,
       "value": "\"visa_checkout\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethod.swift",
       "kind": "StringLiteral",
       "offset": 6820,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2206,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2212,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2300,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2305,
-      "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "StringLiteral",
-      "offset": 2867,
-      "length": 21,
-      "value": "\"Card \""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "StringLiteral",
-      "offset": 2884,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/PaymentMethodParams.swift",
-      "kind": "StringLiteral",
-      "offset": 2887,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
       "kind": "StringLiteral",
       "offset": 749,
       "length": 25,
       "value": "\"requires_payment_method\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
       "kind": "StringLiteral",
       "offset": 870,
       "length": 23,
       "value": "\"requires_confirmation\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
       "kind": "StringLiteral",
       "offset": 1104,
       "length": 17,
       "value": "\"requires_action\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
       "kind": "StringLiteral",
       "offset": 749,
       "length": 25,
       "value": "\"requires_payment_method\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
       "kind": "StringLiteral",
       "offset": 870,
       "length": 23,
       "value": "\"requires_confirmation\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
       "kind": "StringLiteral",
       "offset": 1104,
       "length": 17,
       "value": "\"requires_action\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
-      "kind": "StringLiteral",
-      "offset": 2113,
-      "length": 10,
-      "value": "\"_secret_\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2156,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2172,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
-      "kind": "StringLiteral",
-      "offset": 2185,
-      "length": 7,
-      "value": "\"seti_\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntent.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2226,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntentParams.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntentParams.swift",
       "kind": "StringLiteral",
       "offset": 2590,
       "length": 27,
       "value": "\"^seti_[^_]+_secret_[^_]+$\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntentParams.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntentParams.swift",
       "kind": "Array",
       "offset": 2640,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntentParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2927,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/SetupIntentParams.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2980,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
       "kind": "StringLiteral",
       "offset": 1238,
       "length": 14,
       "value": "\"bank_account\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
       "kind": "StringLiteral",
       "offset": 1361,
       "length": 5,
       "value": "\"pii\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
       "kind": "StringLiteral",
       "offset": 1434,
       "length": 12,
       "value": "\"cvc_update\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
       "kind": "StringLiteral",
       "offset": 1238,
       "length": 14,
       "value": "\"bank_account\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
       "kind": "StringLiteral",
       "offset": 1361,
       "length": 5,
       "value": "\"pii\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
       "kind": "StringLiteral",
       "offset": 1434,
       "length": 12,
       "value": "\"cvc_update\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
-      "kind": "StringLiteral",
-      "offset": 2582,
-      "length": 21,
-      "value": "\"tokenization_method\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Models\/Token.swift",
-      "kind": "StringLiteral",
-      "offset": 2620,
-      "length": 11,
-      "value": "\"apple_pay\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1350,
-      "length": 67,
-      "value": "\"`secret` format does not match expected client secret formatting.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1638,
-      "length": 27,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1650,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1664,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1710,
-      "length": 15,
-      "value": "\"client_secret\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 2836,
-      "length": 93,
-      "value": "\"`paymentIntentParams.clientSecret` format does not match expected client secret formatting.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3166,
-      "length": 35,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3178,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3192,
-      "length": 1,
-      "value": "\"\/confirm\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentIntent+API.swift",
       "kind": "StringLiteral",
       "offset": 3867,
       "length": 17,
       "value": "\"payment_intents\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentMethod+API.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/PaymentMethod+API.swift",
       "kind": "StringLiteral",
       "offset": 2567,
       "length": 17,
       "value": "\"payment_methods\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1323,
-      "length": 67,
-      "value": "\"`secret` format does not match expected client secret formatting.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1609,
-      "length": 27,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1621,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1635,
-      "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 1681,
-      "length": 15,
-      "value": "\"client_secret\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 2821,
-      "length": 98,
-      "value": "\"`setupIntentConfirmParams.clientSecret` format does not match expected client secret formatting.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3154,
-      "length": 35,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3166,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3180,
-      "length": 1,
-      "value": "\"\/confirm\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/SetupIntent+API.swift",
       "kind": "StringLiteral",
       "offset": 3853,
       "length": 15,
       "value": "\"setup_intents\""
     },
     {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
+      "filePath": "\/Users\/niallquinn\/Code\/competition\/stripe\/stripe-ios\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
       "kind": "StringLiteral",
       "offset": 2321,
       "length": 8,
       "value": "\"tokens\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "Dictionary",
-      "offset": 2547,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 2567,
-      "length": 10,
-      "value": "\"pk_token\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 2669,
-      "length": 6,
-      "value": "\"card\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2774,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2780,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 2837,
-      "length": 9,
-      "value": "\"pk_live\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2851,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 2871,
-      "length": 110,
-      "value": "\"The pk_token is empty. Using Apple Pay with an iOS Simulator while not in Stripe Test Mode will always fail.\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3149,
-      "length": 26,
-      "value": "\"pk_token_instrument_name\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3521,
-      "length": 26,
-      "value": "\"pk_token_payment_network\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3682,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/API\/Token+API.swift",
-      "kind": "StringLiteral",
-      "offset": 3861,
-      "length": 25,
-      "value": "\"pk_token_transaction_id\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+Payments.swift",
-      "kind": "StringLiteral",
-      "offset": 551,
-      "length": 19,
-      "value": "\"apple_pay_enabled\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+Payments.swift",
-      "kind": "StringLiteral",
-      "offset": 641,
-      "length": 10,
-      "value": "\"ocr_type\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+Payments.swift",
-      "kind": "StringLiteral",
-      "offset": 703,
-      "length": 9,
-      "value": "\"pay_var\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 500,
-      "length": 13,
-      "value": "\"source_type\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 536,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 801,
-      "length": 12,
-      "value": "\"token_type\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 828,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 1141,
-      "length": 13,
-      "value": "\"source_type\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 1177,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 1491,
-      "length": 13,
-      "value": "\"source_type\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Analytics\/STPAnalyticsClient+PaymentsAPI.swift",
-      "kind": "StringLiteral",
-      "offset": 1527,
-      "length": 9,
-      "value": "\"unknown\""
-    },
-    {
-      "filePath": "\/Volumes\/workspace\/repository\/StripeApplePay\/StripeApplePay\/Source\/PaymentsCore\/Categories\/STPAPIClient+PaymentsCore.swift",
-      "kind": "StringLiteral",
-      "offset": 402,
-      "length": 20,
-      "value": "\"payment_user_agent\""
     }
   ]
 }

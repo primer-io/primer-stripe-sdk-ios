@@ -1,13 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StripePayments
-// swift-module-flags-ignorable: -enable-bare-slash-regex
-import AuthenticationServices
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name StripePayments
 import Contacts
-import CryptoKit
 import Foundation
-import JavaScriptCore
-import ObjectiveC
 import PassKit
 import SafariServices
 import Stripe3DS2
@@ -16,11 +11,9 @@ import Stripe3DS2
 import Swift
 import SwiftUI
 import UIKit
-import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-import ObjectiveC.runtime
 extension StripeCore.StripeAPI {
   @available(*, deprecated, message: "Use `paymentRequestWithMerchantIdentifier:country:currency:` instead.")
   @objc(paymentRequestWithMerchantIdentifier:) dynamic public class func paymentRequest(withMerchantIdentifier merchantIdentifier: Swift.String) -> PassKit.PKPaymentRequest
@@ -75,7 +68,6 @@ public func handleURLCallback(with url: Foundation.URL) -> Swift.Bool
 }
 @objc @_hasMissingDesignatedInitializers public class STPCollectBankAccountParams : ObjectiveC.NSObject {
   @objc(collectUSBankAccountParamsWithName:email:) public class func collectUSBankAccountParams(with name: Swift.String, email: Swift.String?) -> StripePayments.STPCollectBankAccountParams
-  @_spi(STP) @objc(collectInstantDebitsParamsWithEmail:) public class func collectInstantDebitsParams(email: Swift.String?) -> StripePayments.STPCollectBankAccountParams
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class STPConfirmAlipayOptions : ObjectiveC.NSObject {
@@ -108,16 +100,6 @@ extension StripePayments.STPConfirmAlipayOptions : StripePayments.STPFormEncodab
 extension StripePayments.STPConfirmBLIKOptions : StripePayments.STPFormEncodable {
   @objc dynamic public class func propertyNamesToFormFieldNamesMapping() -> [Swift.String : Swift.String]
   @objc dynamic public class func rootObjectName() -> Swift.String?
-}
-@objc @_hasMissingDesignatedInitializers public class STPPaymentMethodSatispay : ObjectiveC.NSObject {
-  @objc public var allResponseFields: [Swift.AnyHashable : Any] {
-    get
-  }
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
-  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class STPConfirmCardOptions : ObjectiveC.NSObject {
   @objc public var cvc: Swift.String?
@@ -227,9 +209,6 @@ extension StripePayments.STPConfirmWeChatPayOptions : StripePayments.STPFormEnco
   @objc final public let allResponseFields: [Swift.AnyHashable : Any]
   @objc final public let paymentMethod: StripePayments.STPPaymentMethod?
   @_spi(STP) final public let paymentMethodOptions: StripePayments.STPPaymentMethodOptions?
-  @_spi(STP) public var isSetupFutureUsageSet: Swift.Bool {
-    get
-  }
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
@@ -581,25 +560,7 @@ extension StripePayments.STPPaymentIntentShippingDetailsParams : Foundation.NSCo
   @objc public var alma: StripePayments.STPPaymentMethodAlma? {
     get
   }
-  @objc public var sunbit: StripePayments.STPPaymentMethodSunbit? {
-    get
-  }
-  @objc public var billie: StripePayments.STPPaymentMethodBillie? {
-    get
-  }
-  @objc public var satispay: StripePayments.STPPaymentMethodSatispay? {
-    get
-  }
-  @objc public var crypto: StripePayments.STPPaymentMethodCrypto? {
-    get
-  }
   @objc public var multibanco: StripePayments.STPPaymentMethodMultibanco? {
-    get
-  }
-  @objc public var mobilePay: StripePayments.STPPaymentMethodMobilePay? {
-    get
-  }
-  @objc public var allowRedisplay: StripePayments.STPPaymentMethodAllowRedisplay {
     get
   }
   @objc public var customerId: Swift.String? {
@@ -617,8 +578,7 @@ extension StripePayments.STPPaymentIntentShippingDetailsParams : Foundation.NSCo
   }
   @_spi(STP) public class func string(from type: StripePayments.STPPaymentMethodType) -> Swift.String?
   @_spi(STP) public class func type(from string: Swift.String) -> StripePayments.STPPaymentMethodType
-  @_spi(STP) public class func allowRedisplay(from string: Swift.String) -> StripePayments.STPPaymentMethodAllowRedisplay
-  @_spi(STP) @objc required public init(stripeId: Swift.String, type: StripePayments.STPPaymentMethodType, allowRedisplay: StripePayments.STPPaymentMethodAllowRedisplay = .unspecified)
+  @_spi(STP) @objc required public init(stripeId: Swift.String, type: StripePayments.STPPaymentMethodType)
   @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @objc deinit
 }
@@ -663,9 +623,6 @@ extension StripePayments.STPPaymentIntentShippingDetailsParams : Foundation.NSCo
   @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @objc deinit
 }
-extension StripePayments.STPPaymentMethodBillingDetails {
-  @_spi(STP) convenience public init?(billingAddress: StripeCore.BillingAddress?, email: Swift.String?)
-}
 @objc public enum STPPaymentMethodType : Swift.Int {
   case card
   case alipay
@@ -691,6 +648,7 @@ extension StripePayments.STPPaymentMethodBillingDetails {
   case boleto
   case link
   case klarna
+  case linkInstantDebit
   case affirm
   case USBankAccount
   case cashApp
@@ -699,10 +657,6 @@ extension StripePayments.STPPaymentMethodBillingDetails {
   case revolutPay
   case amazonPay
   case alma
-  case sunbit
-  case billie
-  case satispay
-  case crypto
   case mobilePay
   case konbini
   case promptPay
@@ -767,10 +721,6 @@ extension StripePayments.STPPaymentMethodType : Swift.CaseIterable {
   @objc public var mobilePay: StripePayments.STPPaymentMethodMobilePayParams?
   @objc public var amazonPay: StripePayments.STPPaymentMethodAmazonPayParams?
   @objc public var alma: StripePayments.STPPaymentMethodAlmaParams?
-  @objc public var sunbit: StripePayments.STPPaymentMethodSunbitParams?
-  @objc public var billie: StripePayments.STPPaymentMethodBillieParams?
-  @objc public var satispay: StripePayments.STPPaymentMethodSatispayParams?
-  @objc public var crypto: StripePayments.STPPaymentMethodCryptoParams?
   @objc public var multibanco: StripePayments.STPPaymentMethodMultibancoParams?
   @objc public var metadata: [Swift.String : Swift.String]?
   @objc convenience public init(card: StripePayments.STPPaymentMethodCardParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, allowRedisplay: StripePayments.STPPaymentMethodAllowRedisplay = .unspecified, metadata: [Swift.String : Swift.String]?)
@@ -802,10 +752,6 @@ extension StripePayments.STPPaymentMethodType : Swift.CaseIterable {
   @objc convenience public init(mobilePay: StripePayments.STPPaymentMethodMobilePayParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
   @objc convenience public init(amazonPay: StripePayments.STPPaymentMethodAmazonPayParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
   @objc convenience public init(alma: StripePayments.STPPaymentMethodAlmaParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
-  @objc convenience public init(sunbit: StripePayments.STPPaymentMethodSunbitParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
-  @objc convenience public init(billie: StripePayments.STPPaymentMethodBillieParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
-  @objc convenience public init(satispay: StripePayments.STPPaymentMethodSatispayParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
-  @objc convenience public init(crypto: StripePayments.STPPaymentMethodCryptoParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
   @objc convenience public init(multibanco: StripePayments.STPPaymentMethodMultibancoParams, billingDetails: StripePayments.STPPaymentMethodBillingDetails?, metadata: [Swift.String : Swift.String]?)
   @objc convenience public init?(singleUsePaymentMethod paymentMethod: StripePayments.STPPaymentMethod)
   @objc public class func rootObjectName() -> Swift.String?
@@ -839,15 +785,10 @@ extension StripePayments.STPPaymentMethodType : Swift.CaseIterable {
 extension StripePayments.STPPaymentMethodParams {
   @_spi(STP) convenience public init(type: StripePayments.STPPaymentMethodType)
 }
-@objc @_hasMissingDesignatedInitializers public class STPPaymentMethodSunbit : ObjectiveC.NSObject {
-  @objc public var allResponseFields: [Swift.AnyHashable : Any] {
-    get
-  }
-  @objc override dynamic public var description: Swift.String {
+extension StripePayments.STPPaymentMethodParams {
+  @objc dynamic public var label: Swift.String {
     @objc get
   }
-  @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
-  @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class STPPaymentMethodAUBECSDebit : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
   @objc public var allResponseFields: [Swift.AnyHashable : Any] {
@@ -981,16 +922,6 @@ extension StripePayments.STPPaymentMethodParams {
     @objc get
   }
   @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers public class STPPaymentMethodMobilePay : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
-  @objc public var allResponseFields: [Swift.AnyHashable : Any] {
-    get
-  }
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc public static func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class STPPaymentMethodBancontactParams : ObjectiveC.NSObject, StripePayments.STPFormEncodable {
@@ -1216,13 +1147,6 @@ extension StripePayments.STPPaymentMethodParams {
   @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class STPPaymentMethodSunbitParams : ObjectiveC.NSObject, StripePayments.STPFormEncodable {
-  @objc public var additionalAPIParameters: [Swift.AnyHashable : Any]
-  @objc public class func rootObjectName() -> Swift.String?
-  @objc public class func propertyNamesToFormFieldNamesMapping() -> [Swift.String : Swift.String]
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class STPPaymentMethodCardWalletVisaCheckout : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
   @objc public var email: Swift.String? {
     get
@@ -1328,16 +1252,6 @@ extension StripePayments.STPPaymentMethodParams {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class STPPaymentMethodBillie : ObjectiveC.NSObject {
-  @objc public var allResponseFields: [Swift.AnyHashable : Any] {
-    get
-  }
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
-  @objc deinit
-}
 @objc @_hasMissingDesignatedInitializers public class STPPaymentMethodGrabPay : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
   @objc public var allResponseFields: [Swift.AnyHashable : Any] {
     get
@@ -1396,16 +1310,6 @@ extension StripePayments.STPPaymentMethodParams {
   @objc public class func rootObjectName() -> Swift.String?
   @objc public class func propertyNamesToFormFieldNamesMapping() -> [Swift.String : Swift.String]
   @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers public class STPPaymentMethodCrypto : ObjectiveC.NSObject {
-  @objc public var allResponseFields: [Swift.AnyHashable : Any] {
-    get
-  }
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class STPPaymentMethodNetBanking : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
@@ -1771,9 +1675,6 @@ extension StripePayments.STPCardBrand : Swift.CaseIterable, Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-extension StripePayments.STPCardBrand : Swift.Comparable {
-  public static func < (lhs: StripePayments.STPCardBrand, rhs: StripePayments.STPCardBrand) -> Swift.Bool
-}
 @objc @_hasMissingDesignatedInitializers public class STPPaymentMethodMultibanco : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
   @objc public var allResponseFields: [Swift.AnyHashable : Any] {
     get
@@ -1898,12 +1799,6 @@ extension StripePayments.STPDateOfBirth : StripePayments.STPFormEncodable {
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
-    get
-  }
-}
-extension StripePayments.STPPaymentMethodAllowRedisplay : Swift.CaseIterable {
-  public typealias AllCases = [StripePayments.STPPaymentMethodAllowRedisplay]
-  public static var allCases: [StripePayments.STPPaymentMethodAllowRedisplay] {
     get
   }
 }
@@ -2258,13 +2153,6 @@ extension StripePayments.STPIssuingCardPin : StripePayments.STPAPIResponseDecoda
 @objc extension StripePayments.STPSetupIntentLastSetupError {
   @objc public static let CodeAuthenticationFailure: Swift.String
 }
-@objc @_inheritsConvenienceInitializers public class STPPaymentMethodBillieParams : ObjectiveC.NSObject, StripePayments.STPFormEncodable {
-  @objc public var additionalAPIParameters: [Swift.AnyHashable : Any]
-  @objc public class func rootObjectName() -> Swift.String?
-  @objc public class func propertyNamesToFormFieldNamesMapping() -> [Swift.String : Swift.String]
-  @objc override dynamic public init()
-  @objc deinit
-}
 @_spi(STP) @objc(STP_Internal_LinkSettings) final public class LinkSettings : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
   @_spi(STP) @frozen public enum FundingSource : Swift.String {
     @_spi(STP) case card
@@ -2288,12 +2176,10 @@ extension StripePayments.STPIssuingCardPin : StripePayments.STPAPIResponseDecoda
   @_spi(STP) final public let popupWebviewOption: StripePayments.LinkSettings.PopupWebviewOption?
   @_spi(STP) final public let passthroughModeEnabled: Swift.Bool?
   @_spi(STP) final public let disableSignup: Swift.Bool?
-  @_spi(STP) final public let suppress2FAModal: Swift.Bool?
-  @_spi(STP) final public let linkMode: StripeCore.LinkMode?
+  @_spi(STP) final public let useRebrand: Swift.Bool?
   @_spi(STP) final public let linkFlags: [Swift.String : Swift.Bool]?
-  @_spi(STP) final public let linkConsumerIncentive: StripePayments.LinkConsumerIncentive?
   @_spi(STP) @objc final public let allResponseFields: [Swift.AnyHashable : Any]
-  @_spi(STP) public init(fundingSources: Swift.Set<StripePayments.LinkSettings.FundingSource>, popupWebviewOption: StripePayments.LinkSettings.PopupWebviewOption?, passthroughModeEnabled: Swift.Bool?, disableSignup: Swift.Bool?, suppress2FAModal: Swift.Bool?, linkMode: StripeCore.LinkMode?, linkFlags: [Swift.String : Swift.Bool]?, linkConsumerIncentive: StripePayments.LinkConsumerIncentive?, allResponseFields: [Swift.AnyHashable : Any])
+  @_spi(STP) public init(fundingSources: Swift.Set<StripePayments.LinkSettings.FundingSource>, popupWebviewOption: StripePayments.LinkSettings.PopupWebviewOption?, passthroughModeEnabled: Swift.Bool?, disableSignup: Swift.Bool?, linkFlags: [Swift.String : Swift.Bool]?, useRebrand: Swift.Bool?, allResponseFields: [Swift.AnyHashable : Any])
   @_spi(STP) @objc public static func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @_spi(STP) @objc deinit
 }
@@ -2433,12 +2319,6 @@ extension StripePayments.STPIntentActionPromptPayDisplayQrCode : StripePayments.
 @objc @_hasMissingDesignatedInitializers public class STPIntentActionRedirectToURL : ObjectiveC.NSObject {
   @objc final public let url: Foundation.URL
   @objc final public let returnURL: Foundation.URL?
-  @_spi(STP) public var followRedirects: Swift.Bool {
-    get
-  }
-  @_spi(STP) public var useWebAuthSession: Swift.Bool {
-    get
-  }
   @objc final public let allResponseFields: [Swift.AnyHashable : Any]
   @objc override dynamic public var description: Swift.String {
     @objc get
@@ -3238,18 +3118,6 @@ extension StripePayments.STPSourceParams {
   @objc public class func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
   @objc deinit
 }
-@_spi(STP) @objc @_hasMissingDesignatedInitializers final public class LinkConsumerIncentive : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
-  @_spi(STP) final public let incentiveParams: StripePayments.LinkConsumerIncentive.IncentiveParams
-  @_spi(STP) final public let incentiveDisplayText: Swift.String?
-  @_spi(STP) @objc final public var allResponseFields: [Swift.AnyHashable : Any] {
-    get
-  }
-  @_spi(STP) @objc public static func decodedObject(fromAPIResponse response: [Swift.AnyHashable : Any]?) -> Self?
-  @_spi(STP) public struct IncentiveParams {
-    @_spi(STP) public let paymentMethod: Swift.String
-  }
-  @_spi(STP) @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class STPSourceWeChatPayDetails : ObjectiveC.NSObject, StripePayments.STPAPIResponseDecodable {
   @objc public var weChatAppURL: Swift.String? {
     get
@@ -3282,9 +3150,9 @@ extension PassKit.PKPayment {
 @_spi(STP) public typealias STPLinkAccountSessionsAttachPaymentIntentBlock = (StripePayments.STPPaymentIntent?, (any Swift.Error)?) -> Swift.Void
 @_spi(STP) public typealias STPLinkAccountSessionsAttachSetupIntentBlock = (StripePayments.STPSetupIntent?, (any Swift.Error)?) -> Swift.Void
 @_spi(STP) extension StripeCore.STPAPIClient {
-  @_spi(STP) public func createLinkAccountSession(setupIntentID: Swift.String, clientSecret: Swift.String, paymentMethodType: StripePayments.STPPaymentMethodType, customerName: Swift.String?, customerEmailAddress: Swift.String?, linkMode: StripeCore.LinkMode?, additionalParameters: [Swift.String : Any] = [:], completion: @escaping StripePayments.STPLinkAccountSessionBlock)
-  @_spi(STP) public func createLinkAccountSession(paymentIntentID: Swift.String, clientSecret: Swift.String, paymentMethodType: StripePayments.STPPaymentMethodType, customerName: Swift.String?, customerEmailAddress: Swift.String?, linkMode: StripeCore.LinkMode?, additionalParameters: [Swift.String : Any] = [:], completion: @escaping StripePayments.STPLinkAccountSessionBlock)
-  @_spi(STP) public func createLinkAccountSessionForDeferredIntent(sessionId: Swift.String, amount: Swift.Int?, currency: Swift.String?, onBehalfOf: Swift.String?, linkMode: StripeCore.LinkMode?, additionalParameters: [Swift.String : Any] = [:], completion: @escaping StripePayments.STPLinkAccountSessionBlock)
+  @_spi(STP) public func createLinkAccountSession(setupIntentID: Swift.String, clientSecret: Swift.String, paymentMethodType: StripePayments.STPPaymentMethodType, customerName: Swift.String?, customerEmailAddress: Swift.String?, additionalParameteres: [Swift.String : Any] = [:], completion: @escaping StripePayments.STPLinkAccountSessionBlock)
+  @_spi(STP) public func createLinkAccountSession(paymentIntentID: Swift.String, clientSecret: Swift.String, paymentMethodType: StripePayments.STPPaymentMethodType, customerName: Swift.String?, customerEmailAddress: Swift.String?, additionalParameteres: [Swift.String : Any] = [:], completion: @escaping StripePayments.STPLinkAccountSessionBlock)
+  @_spi(STP) public func createLinkAccountSessionForDeferredIntent(sessionId: Swift.String, amount: Swift.Int?, currency: Swift.String?, onBehalfOf: Swift.String?, additionalParameters: [Swift.String : Any] = [:], completion: @escaping StripePayments.STPLinkAccountSessionBlock)
   @_spi(STP) public func attachLinkAccountSession(setupIntentID: Swift.String, linkAccountSessionID: Swift.String, clientSecret: Swift.String, completion: @escaping StripePayments.STPLinkAccountSessionsAttachSetupIntentBlock)
   @_spi(STP) public func attachLinkAccountSession(paymentIntentID: Swift.String, linkAccountSessionID: Swift.String, clientSecret: Swift.String, completion: @escaping StripePayments.STPLinkAccountSessionsAttachPaymentIntentBlock)
 }
@@ -3317,7 +3185,6 @@ extension StripeCore.STPAPIClient {
   #if compiler(>=5.3) && $AsyncAwait
   @_spi(STP) public func retrievePaymentIntent(clientSecret: Swift.String, expand: [Swift.String] = []) async throws -> StripePayments.STPPaymentIntent
   #endif
-  @_spi(STP) @objc dynamic public func refreshPaymentIntent(withClientSecret secret: Swift.String, completion: @escaping StripePayments.STPPaymentIntentCompletionBlock)
   @objc(confirmPaymentIntentWithParams:completion:) dynamic public func confirmPaymentIntent(with paymentIntentParams: StripePayments.STPPaymentIntentParams, completion: @escaping StripePayments.STPPaymentIntentCompletionBlock)
   @objc(confirmPaymentIntentWithParams:expand:completion:) dynamic public func confirmPaymentIntent(with paymentIntentParams: StripePayments.STPPaymentIntentParams, expand: [Swift.String]?, completion: @escaping StripePayments.STPPaymentIntentCompletionBlock)
 }
@@ -3329,7 +3196,6 @@ extension StripeCore.STPAPIClient {
   #endif
   @objc(confirmSetupIntentWithParams:completion:) dynamic public func confirmSetupIntent(with setupIntentParams: StripePayments.STPSetupIntentConfirmParams, completion: @escaping StripePayments.STPSetupIntentCompletionBlock)
   @objc(confirmSetupIntentWithParams:expand:completion:) dynamic public func confirmSetupIntent(with setupIntentParams: StripePayments.STPSetupIntentConfirmParams, expand: [Swift.String]?, completion: @escaping StripePayments.STPSetupIntentCompletionBlock)
-  @_spi(STP) @objc dynamic public func refreshSetupIntent(withClientSecret secret: Swift.String, completion: @escaping StripePayments.STPSetupIntentCompletionBlock)
 }
 extension StripeCore.STPAPIClient {
   @objc(createPaymentMethodWithParams:completion:) dynamic public func createPaymentMethod(with paymentMethodParams: StripePayments.STPPaymentMethodParams, completion: @escaping StripePayments.STPPaymentMethodCompletionBlock)
@@ -3348,14 +3214,10 @@ extension StripeCore.STPAPIClient {
   public func verifySetupIntentWithMicrodeposits(clientSecret: Swift.String, descriptorCode: Swift.String, completion: @escaping StripePayments.STPSetupIntentCompletionBlock)
 }
 extension StripeCore.STPAPIClient {
-  @_spi(STP) public func listPaymentMethods(forCustomer customerID: Swift.String, using ephemeralKeySecret: Swift.String, types: [StripePayments.STPPaymentMethodType] = [.card], limit: Swift.Int? = nil, completion: @escaping StripePayments.STPPaymentMethodsCompletionBlock)
-  @_spi(STP) public func detachPaymentMethodRemoveDuplicates(_ paymentMethodID: Swift.String, customerId: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String, withCustomerSessionClientSecret customerSessionClientSecret: Swift.String, completion: @escaping StripePayments.STPErrorBlock)
+  @_spi(STP) public func listPaymentMethods(forCustomer customerID: Swift.String, using ephemeralKeySecret: Swift.String, types: [StripePayments.STPPaymentMethodType] = [.card], completion: @escaping StripePayments.STPPaymentMethodsCompletionBlock)
+  @_spi(STP) public func detachPaymentMethodRemoveDuplicates(_ paymentMethodID: Swift.String, customerId: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String, completion: @escaping StripePayments.STPErrorBlock)
   #if compiler(>=5.3) && $AsyncAwait
-  @_spi(STP) public func detachPaymentMethodRemoveDuplicates(_ paymentMethodID: Swift.String, customerId: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String, withCustomerSessionClientSecret customerSessionClientSecret: Swift.String) async throws
-  #endif
-  @_spi(STP) public func detachPaymentMethod(_ paymentMethodID: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String, withCustomerSessionClientSecret customerSessionClientSecret: Swift.String, completion: @escaping StripePayments.STPErrorBlock)
-  #if compiler(>=5.3) && $AsyncAwait
-  @_spi(STP) public func detachPaymentMethod(_ paymentMethodID: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String, withCustomerSessionClientSecret customerSessionClientSecret: Swift.String) async throws
+  @_spi(STP) public func detachPaymentMethodRemoveDuplicates(_ paymentMethodID: Swift.String, customerId: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String) async throws
   #endif
   @_spi(STP) public func detachPaymentMethod(_ paymentMethodID: Swift.String, fromCustomerUsing ephemeralKeySecret: Swift.String, completion: @escaping StripePayments.STPErrorBlock)
   #if compiler(>=5.3) && $AsyncAwait
@@ -3654,7 +3516,6 @@ extension StripePayments.STPTokenType : Swift.CustomStringConvertible {
 @_spi(STP) public typealias STPRetrieveBINRangesCompletionBlock = (Swift.Result<[StripePayments.STPBINRange], any Swift.Error>) -> Swift.Void
 @_spi(STP) @_hasMissingDesignatedInitializers public class STPBINController {
   @_spi(STP) public static let shared: StripePayments.STPBINController
-  @_spi(STP) public func reset()
   @_spi(STP) public func isLoadingCardMetadata(forPrefix binPrefix: Swift.String) -> Swift.Bool
   @_spi(STP) public func allRanges() -> [StripePayments.STPBINRange]
   @_spi(STP) public func binRanges(forNumber number: Swift.String) -> [StripePayments.STPBINRange]
@@ -3686,14 +3547,13 @@ extension StripePayments.STPTokenType : Swift.CustomStringConvertible {
   @objc(collectBankAccountForPaymentWithClientSecret:params:from:completion:) public func collectBankAccountForPayment(clientSecret: Swift.String, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, completion: @escaping StripePayments.STPBankAccountCollector.STPCollectBankAccountForPaymentCompletionBlock)
   @objc(collectBankAccountForPaymentWithClientSecret:returnURL:params:from:completion:) public func collectBankAccountForPayment(clientSecret: Swift.String, returnURL: Swift.String?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, completion: @escaping StripePayments.STPBankAccountCollector.STPCollectBankAccountForPaymentCompletionBlock)
   public func collectBankAccountForPayment(clientSecret: Swift.String, returnURL: Swift.String?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, completion: @escaping StripePayments.STPBankAccountCollector.STPCollectBankAccountForPaymentCompletionBlock)
-  @_spi(STP) public typealias CollectBankAccountCompletionBlock = (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void
-  @_spi(STP) public func collectBankAccountForPayment(clientSecret: Swift.String, returnURL: Swift.String?, additionalParameters: [Swift.String : Any] = [:], elementsSessionContext: StripeCore.ElementsSessionContext?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, financialConnectionsCompletion: @escaping (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void)
+  @_spi(STP) public func collectBankAccountForPayment(clientSecret: Swift.String, returnURL: Swift.String?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, financialConnectionsCompletion: @escaping (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void)
   public typealias STPCollectBankAccountForSetupCompletionBlock = (StripePayments.STPSetupIntent?, Foundation.NSError?) -> Swift.Void
   @objc(collectBankAccountForSetupWithClientSecret:params:from:completion:) public func collectBankAccountForSetup(clientSecret: Swift.String, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, completion: @escaping StripePayments.STPBankAccountCollector.STPCollectBankAccountForSetupCompletionBlock)
   @objc(collectBankAccountForSetupWithClientSecret:returnURL:params:from:completion:) public func collectBankAccountForSetup(clientSecret: Swift.String, returnURL: Swift.String?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, completion: @escaping StripePayments.STPBankAccountCollector.STPCollectBankAccountForSetupCompletionBlock)
   public func collectBankAccountForSetup(clientSecret: Swift.String, returnURL: Swift.String?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, completion: @escaping StripePayments.STPBankAccountCollector.STPCollectBankAccountForSetupCompletionBlock)
-  @_spi(STP) public func collectBankAccountForSetup(clientSecret: Swift.String, returnURL: Swift.String?, additionalParameters: [Swift.String : Any] = [:], elementsSessionContext: StripeCore.ElementsSessionContext? = nil, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, financialConnectionsCompletion: @escaping (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void)
-  @_spi(STP) public func collectBankAccountForDeferredIntent(sessionId: Swift.String, returnURL: Swift.String?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, amount: Swift.Int?, currency: Swift.String?, onBehalfOf: Swift.String?, additionalParameters: [Swift.String : Any] = [:], elementsSessionContext: StripeCore.ElementsSessionContext?, from viewController: UIKit.UIViewController, financialConnectionsCompletion: @escaping (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void)
+  @_spi(STP) public func collectBankAccountForSetup(clientSecret: Swift.String, returnURL: Swift.String?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, params: StripePayments.STPCollectBankAccountParams, from viewController: UIKit.UIViewController, financialConnectionsCompletion: @escaping (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void)
+  @_spi(STP) public func collectBankAccountForDeferredIntent(sessionId: Swift.String, returnURL: Swift.String?, onEvent: ((StripeCore.FinancialConnectionsEvent) -> Swift.Void)?, amount: Swift.Int?, currency: Swift.String?, onBehalfOf: Swift.String?, from viewController: UIKit.UIViewController, financialConnectionsCompletion: @escaping (StripeCore.FinancialConnectionsSDKResult?, StripePayments.LinkAccountSession?, Foundation.NSError?) -> Swift.Void)
   @objc deinit
 }
 @objc public enum STPPaymentStatus : Swift.Int {
@@ -3837,20 +3697,6 @@ extension SwiftUI.View {
     @_spi(STP) get
   }
 }
-@objc @_inheritsConvenienceInitializers public class STPPaymentMethodCryptoParams : ObjectiveC.NSObject, StripePayments.STPFormEncodable {
-  @objc public var additionalAPIParameters: [Swift.AnyHashable : Any]
-  @objc public class func rootObjectName() -> Swift.String?
-  @objc public class func propertyNamesToFormFieldNamesMapping() -> [Swift.String : Swift.String]
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class STPPaymentMethodSatispayParams : ObjectiveC.NSObject, StripePayments.STPFormEncodable {
-  @objc public var additionalAPIParameters: [Swift.AnyHashable : Any]
-  @objc public class func rootObjectName() -> Swift.String?
-  @objc public class func propertyNamesToFormFieldNamesMapping() -> [Swift.String : Swift.String]
-  @objc override dynamic public init()
-  @objc deinit
-}
 extension Foundation.NSDecimalNumber {
   @_spi(STP) @objc dynamic public class func stp_decimalNumber(withAmount amount: Swift.Int, currency: Swift.String?) -> Foundation.NSDecimalNumber
   @_spi(STP) @objc dynamic public func stp_amount(withCurrency currency: Swift.String?) -> Swift.Int
@@ -3881,7 +3727,7 @@ extension StripeCore.STPAPIClient {
     @_spi(STP) get
   }
 }
-@_spi(STP) public protocol STPPaymentHandlerActionParams : ObjectiveC.NSObject, AuthenticationServices.ASWebAuthenticationPresentationContextProviding {
+@_spi(STP) public protocol STPPaymentHandlerActionParams : ObjectiveC.NSObject {
   @_spi(STP) var threeDS2Service: Stripe3DS2.STDSThreeDS2Service? { get }
   @_spi(STP) var threeDS2Transaction: Stripe3DS2.STDSTransaction? { get set }
   @_spi(STP) var authenticationContext: any StripePayments.STPAuthenticationContext { get }
@@ -3908,7 +3754,6 @@ extension StripeCore.STPAPIClient {
   }
   @_spi(STP) public func nextAction() -> StripePayments.STPIntentAction?
   @_spi(STP) public func complete(with status: StripePayments.STPPaymentHandlerActionStatus, error: Foundation.NSError?)
-  @_spi(STP) @objc public func presentationAnchor(for session: AuthenticationServices.ASWebAuthenticationSession) -> AuthenticationServices.ASPresentationAnchor
   @_spi(STP) @objc deinit
 }
 @objc public protocol STPAuthenticationContext : ObjectiveC.NSObjectProtocol {
@@ -3953,7 +3798,7 @@ public typealias STPPaymentHandlerActionSetupIntentCompletionBlock = (StripePaym
   @objc public static let errorDomain: Swift.String
   @objc public static let sharedHandler: StripePayments.STPPaymentHandler
   @objc public class func shared() -> StripePayments.STPPaymentHandler
-  @_spi(STP) public init(apiClient: StripeCore.STPAPIClient = .shared, threeDSCustomizationSettings: StripePayments.STPThreeDSCustomizationSettings = STPThreeDSCustomizationSettings())
+  @_spi(STP) public init(apiClient: StripeCore.STPAPIClient = .shared, threeDSCustomizationSettings: StripePayments.STPThreeDSCustomizationSettings = STPThreeDSCustomizationSettings(), formSpecPaymentHandler: (any StripePayments.FormSpecPaymentHandler)? = nil)
   @objc public var apiClient: StripeCore.STPAPIClient
   @objc public var threeDSCustomizationSettings: StripePayments.STPThreeDSCustomizationSettings
   @objc public var simulateAppToAppRedirect: Swift.Bool {
@@ -3968,8 +3813,8 @@ public typealias STPPaymentHandlerActionSetupIntentCompletionBlock = (StripePaym
   @objc(confirmSetupIntent:withAuthenticationContext:completion:) public func confirmSetupIntent(_ setupIntentConfirmParams: StripePayments.STPSetupIntentConfirmParams, with authenticationContext: any StripePayments.STPAuthenticationContext, completion: @escaping StripePayments.STPPaymentHandlerActionSetupIntentCompletionBlock)
   @objc(handleNextActionForSetupIntent:withAuthenticationContext:returnURL:completion:) public func handleNextAction(forSetupIntent setupIntentClientSecret: Swift.String, with authenticationContext: any StripePayments.STPAuthenticationContext, returnURL: Swift.String?, completion: @escaping StripePayments.STPPaymentHandlerActionSetupIntentCompletionBlock)
   @_spi(STP) public func handleNextAction(for setupIntent: StripePayments.STPSetupIntent, with authenticationContext: any StripePayments.STPAuthenticationContext, returnURL: Swift.String?, shouldSendAnalytic: Swift.Bool = true, completion: @escaping StripePayments.STPPaymentHandlerActionSetupIntentCompletionBlock)
-  @_spi(STP) public func followRedirect(to url: Foundation.URL) -> Foundation.URL
-  @_spi(STP) public func _handleRedirect(to url: Foundation.URL, withReturn returnURL: Foundation.URL?, useWebAuthSession: Swift.Bool)
+  @_spi(STP) public func followRedirects(to url: Foundation.URL, urlSession: Foundation.URLSession) -> Foundation.URL
+  @_spi(STP) public func _handleRedirect(to url: Foundation.URL, withReturn returnURL: Foundation.URL?)
   @_spi(STP) public func _handleRedirectToExternalBrowser(to url: Foundation.URL, withReturn returnURL: Foundation.URL?)
   @_spi(STP) public func _error(for errorCode: StripePayments.STPPaymentHandlerErrorCode, apiErrorCode: Swift.String? = nil, loggingSafeErrorMessage: Swift.String? = nil, localizedDescription: Swift.String? = nil) -> Foundation.NSError
   @objc deinit
@@ -3987,6 +3832,11 @@ extension StripePayments.STPPaymentHandler {
   @_spi(STP) func present(_ authenticationViewController: UIKit.UIViewController, completion: @escaping () -> Swift.Void)
   @_spi(STP) func dismiss(_ authenticationViewController: UIKit.UIViewController, completion: (() -> Swift.Void)?)
   @_spi(STP) func presentPollingVCForAction(action: StripePayments.STPPaymentHandlerPaymentIntentActionParams, type: StripePayments.STPPaymentMethodType, safariViewController: SafariServices.SFSafariViewController?)
+}
+@_spi(STP) public protocol FormSpecPaymentHandler {
+  @_spi(STP) func isPIStatusSpecFinishedForPostConfirmPIStatus(paymentIntent: StripePayments.STPPaymentIntent?, paymentHandler: StripePayments.STPPaymentHandler) -> Swift.Bool
+  @_spi(STP) func handleNextActionSpec(for paymentIntent: StripePayments.STPPaymentIntent, action: StripePayments.STPPaymentHandlerPaymentIntentActionParams, paymentHandler: StripePayments.STPPaymentHandler) -> Swift.Bool
+  @_spi(STP) func handlePostConfirmPIStatusSpec(for paymentIntent: StripePayments.STPPaymentIntent?, action: StripePayments.STPPaymentHandlerPaymentIntentActionParams, paymentHandler: StripePayments.STPPaymentHandler) -> Swift.Bool
 }
 @objc public enum STPThreeDSCustomizationButtonType : Swift.Int {
   case submit = 0
@@ -4260,6 +4110,7 @@ extension StripePayments.STPPaymentMethodUSBankAccountHolderType : Swift.RawRepr
 extension StripePayments.STPPaymentMethodUSBankAccountType : Swift.Equatable {}
 extension StripePayments.STPPaymentMethodUSBankAccountType : Swift.Hashable {}
 extension StripePayments.STPPaymentMethodUSBankAccountType : Swift.RawRepresentable {}
+extension StripePayments.STPCardBrand : Swift.Equatable {}
 extension StripePayments.STPCardBrand : Swift.Hashable {}
 extension StripePayments.STPCardBrand : Swift.RawRepresentable {}
 extension StripePayments.STPPaymentMethodAllowRedisplay : Swift.Equatable {}
