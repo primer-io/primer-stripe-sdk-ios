@@ -35,7 +35,7 @@ The built `PrimerStripeSDK.xcframework` can be found in the `build` folder, and 
 
 ### Swift Package Manager
 
-Add `https://github.com/primer-io/primer-sdk-ios` to your app with the Exact Version rule, set to the PrimerSDK version that ends in `-3ds-stripe` (for example `2.53.1-3ds-stripe`). That version brings in PrimerStripeSDK. Do not add this package next to PrimerSDK yourself, because PrimerSDK may then build without it.
+Add `https://github.com/primer-io/primer-sdk-ios` to your app with the Exact Version rule, set to the PrimerSDK version that ends in `-3ds-stripe`. That version brings in PrimerStripeSDK. Do not add this package next to PrimerSDK yourself, because PrimerSDK may then build without it.
 
 ### CocoaPods
 
