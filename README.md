@@ -30,3 +30,20 @@ The built `PrimerStripeSDK.xcframework` can be found in the `build` folder, and 
   - `StripeUICore.xcframework`
   - `StripeFinancialConnections.xcframework`
 - Run `fastlane build_xcframeworks`
+
+## Installation
+
+### Swift Package Manager
+
+Add `https://github.com/primer-io/primer-sdk-ios` to your app with the Exact Version rule, set to the PrimerSDK version that ends in `-3ds-stripe`. That version brings in PrimerStripeSDK. Do not add this package next to PrimerSDK yourself, because PrimerSDK may then build without it.
+
+### CocoaPods
+
+Add the Primer spec repo and the CocoaPods CDN at the top of your Podfile, in this order. Then add the pod:
+
+```ruby
+source 'https://github.com/primer-io/primer-sdk-ios-specs.git'
+source 'https://cdn.cocoapods.org/'
+
+pod 'PrimerStripeSDK'
+```
